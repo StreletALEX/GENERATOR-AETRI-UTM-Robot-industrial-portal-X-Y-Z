@@ -310,6 +310,16 @@ function applyEls(spanXml, els, newTexts) {
 
 // slot-boundary DP lives in slot_lib.js
 
+// bold every run in a row's XML (used to mark the wheel with max nmot)
+function boldRow(xml) {
+  let out = xml.replace(/<w:rPr>([\s\S]*?)<\/w:rPr>/g, (m, inner) =>
+    inner.includes('<w:b') || inner.includes('<w:b ') ? m : '<w:rPr><w:b/>' + inner + '</w:rPr>');
+  out = out.replace(/<w:r(\s[^>]*[^/])?>(<w:t)/g, '<w:r$1><w:rPr><w:b/></w:rPr>$2');
+  return out;
+}
+function unboldRow(xml) {
+  return xml.replace(/<w:b\s*\/>/g, '').replace(/<w:bCs\s*\/>/g, '');
+}
 // ---------- main ----------
 function main() {
   const V = compute(getInputs(v));
@@ -351,6 +361,10 @@ function main() {
         if (rowSpans.length !== tbUnit.rows.length) throw new Error(`table ${tbUnit.id}: rows ${rowSpans.length} != ${tbUnit.rows.length}`);
         let tOut = '';
         let rp = 0;
+        // for wheel tables, compute max nmot to bold the best wheel
+        const isWheel = (tbUnit.id === 279 || tbUnit.id === 360);
+        const nmotCol = 4; // "nmot [rot/min]" column index
+        const maxNmot = isWheel ? Math.max(...gen.map(r => parseInt(String(r[nmotCol]).replace(/\D/g, ''), 10) || 0)) : 0;
         rowSpans.forEach((row, ri) => {
           const rowXml = spanXml.slice(row.s, row.e);
           const cellSpans = findInnerSpans(rowXml, 'w:tc');
@@ -370,6 +384,11 @@ function main() {
             cp = cell.e;
           });
           rOut += rowXml.slice(cp);
+          if (isWheel) {
+            const rowNmot = parseInt(String(gen[ri][nmotCol]).replace(/\D/g, ''), 10) || 0;
+            console.error('DBG wheel id='+tbUnit.id+' ri='+ri+' rowNmot='+rowNmot+' maxNmot='+maxNmot);
+            if (ri > 0) rOut = (rowNmot === maxNmot) ? boldRow(rOut) : unboldRow(rOut);
+          }
           tOut += spanXml.slice(rp, row.s) + rOut;
           rp = row.e;
         });
