@@ -100,6 +100,7 @@ function buildTables(V) {
   // ---------- T279 / T360 roțile dințate (ids 279, 360) ----------
   const wheelRows = (vmax, useVmax4, A) => {
     const rows = [];
+    const allRatios = [...CAT.RP_rapoarte['1_treapta'], ...CAT.RP_rapoarte['2_trepte']];  // 3,4,5,7,10,12,16,20,25,40,50,100
     for (const z of [20, 25, 32, 40]) {
       const dp = z * 10 / Math.PI;                 // mm
       if (A && z === 32) {                         // adopted wheel: the adopted reductor ratio
@@ -108,7 +109,9 @@ function buildTables(V) {
       }
       const vmaxv = useVmax4 ? Number(vmax.toFixed(4)) : vmax;
       const nr = 60 * vmaxv / (Math.PI * dp / 1000);
-      const i = nr * 12 <= 2850 ? 12 : 7;          // (tabelul A.3: considerate i = 7, 12)
+      // maximum acceptable ratio from the full catalog list (1 treapta + 2 trepte)
+      let i = allRatios[0];
+      for (const r of allRatios) { if (nr * r <= 2850) i = r; else break; }
       const nmot = Math.round(nr * i);
       const rred = dp / 2 / i;
       rows.push([String(z), f(dp, 1), f(nr, 1), String(i), fi(nmot), z === 20 ? f(rred, 2) : f(rred, 3)]);

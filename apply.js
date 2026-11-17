@@ -8,7 +8,7 @@ const AdmZip = require('adm-zip');
 
 const v = parseInt(process.argv[2] || '13', 10);
 const SRC = 'C:/Users/DSV/Desktop/Lucrare/New folder/Proiect_Varianta20_verificat.docx';
-const OUT = `C:/Users/DSV/Desktop/Lucrare/New folder/${v === 13 ? 'Varianta mea' : 'Varianta ' + v}.docx`;
+const OUT = process.argv[3] || `C:/Users/DSV/Desktop/Lucrare/New folder/${v === 13 ? 'Varianta mea' : 'Varianta ' + v}.docx`;
 
 const { compute, getInputs } = require('./compute');
 const templates = require('./templates');
