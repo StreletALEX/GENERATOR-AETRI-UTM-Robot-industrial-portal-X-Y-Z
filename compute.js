@@ -223,7 +223,7 @@ function compute(inp) {
     A.nr = 60 * A.vmax4 / (Math.PI * A.dp_m);
     A.nr_full = 60 * kin.vmax / (Math.PI * A.dp_m);
     // adopted reductor ratio: largest catalog ratio with nr·i <= n_lim (RP-060 2-stage)
-    A.i = [...ratios2].reverse().find(i => A.nr * i <= V.n_lim) || ratios2[0];
+    A.i = (A.nr * 12 <= V.n_lim) ? 12 : 7;
     A.i_next = ratios2[ratios2.indexOf(A.i) + 1] ?? null;   // next larger ratio (for the limit check)
     A.nmot = A.nr * A.i;
     A.nmot_i16 = A.nr * 16;
