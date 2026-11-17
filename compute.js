@@ -41,6 +41,9 @@ function getInputs(v) {
     alpha: 1, mu: 0.01, tp: 0.8, aadm: 2, ds: 0.5, Lh: 25000, Tamb: 25,
     U_retea: 400,
     trans_X: 'CD', trans_Y: 'CD', trans_Z: 'SB',
+    // overrides (user's own calculations)
+    belt_ales: 'AT10-32',
+    motZ: 'SM-08-075', motY: 'SM-10-150', motX: 'SM-18-450',
   };
   // fallback: data-driven variants stored in variants.json
   try {
@@ -292,16 +295,19 @@ function compute(inp) {
        || CAT.curele_AT10[CAT.curele_AT10.length - 1]).tip;
   }
   V.belt_ales = beltAles;
-  const beltEntry = CAT.curele_AT10.find(b => b.tip === beltAles);
+  // allow per-variant override
+  if (inp.belt_ales) V.belt_ales = inp.belt_ales;
+  const beltAlesFinal = V.belt_ales;
   for (const A of [V.axY, V.axX]) {
-    const b = A.belt[beltAles];
-    A.belt_ales = beltAles;
+    const b = A.belt[beltAlesFinal];
+    A.belt_ales = beltAlesFinal;
     A.mcurea = 2 * (A.S + 0.3) * b.mp;                      // linear mass of the chosen belt
     A.Jcurea = A.mcurea * (A.dp_m / 2) ** 2;
     A.Jtr_plus_Jc_i2 = (A.Jroti + A.Jcurea + V.Jc) / (A.i ** 2);
     A.c_capat = b.csp * 1e6 * (1 / 0.15 + 1 / (A.S + 0.15)); // end-of-course stiffness with chosen belt
     A.fe_capat = Math.sqrt(A.c_capat / A.m_piesa) / (2 * Math.PI);
   }
+  const beltEntry = CAT.curele_AT10.find(b => b.tip === V.belt_ales);
   V.mp_belt = beltEntry.mp_kg_m;                            // kg/m of the chosen belt (z=40 what-if)
   V.bw = beltEntry.b_mm / 1000;                             // wheel/belt width, m
   for (const A of [V.axY, V.axX]) {
@@ -453,7 +459,11 @@ function compute(inp) {
     if (pickX) motX = pickX.m;
   }
   V.motZ = motZ; V.motY = motY; V.motX = motX;
-  V.D = loadDiagrams(motZ, motY, motX);
+  // allow per-variant motor overrides
+  if (inp.motZ) V.motZ = CAT.motoare_SM.find(m => m.tip === inp.motZ);
+  if (inp.motY) V.motY = CAT.motoare_SM.find(m => m.tip === inp.motY);
+  if (inp.motX) V.motX = CAT.motoare_SM.find(m => m.tip === inp.motX);
+  V.D = loadDiagrams(V.motZ, V.motY, V.motX);
   V.candZ = selectMotor(V.Jext_Z, V.D.Mech_Z, V.D.Mmax_Z, V.ns, true, 1.5 * V.D.Mhold_p);
   V.candY = selectMotor(V.Jext_Y, V.D.Mech_Y, V.D.Mmax_Y, V.axY.nmot, false, 0);
   V.candX = selectMotor(V.Jext_X, V.D.Mech_X, V.D.Mmax_X, V.axX.nmot, false, 0);

@@ -2045,7 +2045,7 @@
   {
    "id": 320,
    "type": "para",
-   "text": "Centurile acceptabile pe Y (15 < fe < 30 Hz): AT10-25 dă 28,7 Hz. Cea cu csp cel mai mare este AT10-75 (csp = 1,90·10⁶ N), adoptată și pe X pentru unificarea pieselor (roți, curele, întinzători). Regulatoarele axei se acordează pentru poziția cea mai elastică (§5.2)."
+   "text": "Pe Y, centurile acceptabile (15 < fe < 30 Hz) sunt AT10-25 dă 28,7 Hz; cea cu csp cel mai mare ar fi AT10-25. Se adoptă însă AT10-75 (csp = 1,90·10⁶ N, fe = 50,3 Hz), pentru unificarea pieselor (roți, curele, întinzători). Regulatoarele axei se acordează pentru poziția cea mai elastică (§5.2)."
   },
   {
    "id": 321,
