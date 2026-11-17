@@ -386,7 +386,6 @@ function main() {
           rOut += rowXml.slice(cp);
           if (isWheel) {
             const rowNmot = parseInt(String(gen[ri][nmotCol]).replace(/\D/g, ''), 10) || 0;
-            console.error('DBG wheel id='+tbUnit.id+' ri='+ri+' rowNmot='+rowNmot+' maxNmot='+maxNmot);
             if (ri > 0) rOut = (rowNmot === maxNmot) ? boldRow(rOut) : unboldRow(rOut);
           }
           tOut += spanXml.slice(rp, row.s) + rOut;

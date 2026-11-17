@@ -87,7 +87,7 @@ function buildB(V, t) {
   t[612] = () => `unde: MN = 18 N·m și Mmax = 30 N·m \u2014 cuplul nominal și cuplul de accelerare admis ale RP-060-R (tabelul A.4). Reductorul este încărcat la ${f(X.Mout_ech / 18 * 100, 0)} % continuu și ${f(X.Mout_peak_12 / 30 * 100, 0)} % la vârf (cu rezerva inclusă).`;
   t[613] = () => {
     const a = V.alt_z40;
-    const adoptat = Y.i === X.i ? `z = 32, i = ${Y.i}` : `z = 32, i = ${Y.i} pe Y, i = ${X.i} pe X`;
+    const adoptat = Y.i === X.i ? `z = ${Y.z_ales}, i = ${Y.i}` : `z = ${Y.z_ales} pe Y, ${X.z_ales} pe X, i = ${Y.i} pe Y, ${X.i} pe X`;
     if (a.X.ok && a.X.Mout12 <= 30) {
       return `Variantă de analizat: catalogul reductorului mai are raportul i = 16, cu care roata z = 40 (dp = 127,3 mm) ar da turații ale motorului apropiate de limita de 2850 rot/min (X: ${fi(a.X.nmot16)} rot/min, Y: ${fi(a.Y.nmot16)} rot/min) și o rază de raportare de ${f(a.rred_mm, 2)} mm; inerția exterioară a axei X ar scădea la ${f(a.X.Jext_e4, 1)}·10${M4} kg·m${E2} (raport ${f(a.X.rap, 1)}, adică sub 10), cu prețul unui cuplu de vârf la ieșirea reductorului de ${f(a.X.Mout_peak, 1)} N·m (1,2 ×  = ${f(a.X.Mout12, 1)} N·m ≤ 30 N·m). Soluția adoptată (${adoptat}) păstrează transmisia din calculele de proiect; varianta cu z = 40, i = 16 rămâne de confirmat cu conducătorul.`;
     }

@@ -100,18 +100,15 @@ function buildTables(V) {
   // ---------- T279 / T360 roțile dințate (ids 279, 360) ----------
   const wheelRows = (vmax, useVmax4, A) => {
     const rows = [];
-    const allRatios = [...CAT.RP_rapoarte['1_treapta'], ...CAT.RP_rapoarte['2_trepte']];  // 3,4,5,7,10,12,16,20,25,40,50,100
     for (const z of [20, 25, 32, 40]) {
       const dp = z * 10 / Math.PI;                 // mm
-      if (A && z === 32) {                         // adopted wheel: the adopted reductor ratio
+      if (A && z === A.z_ales) {                   // adopted wheel: the adopted reductor ratio
         rows.push([String(z), f(dp, 1), f(A.nr, 1), String(A.i), fi(A.nmot), f(A.rred * 1000, 3)]);
         continue;
       }
       const vmaxv = useVmax4 ? Number(vmax.toFixed(4)) : vmax;
       const nr = 60 * vmaxv / (Math.PI * dp / 1000);
-      // maximum acceptable ratio from the full catalog list (1 treapta + 2 trepte)
-      let i = allRatios[0];
-      for (const r of allRatios) { if (nr * r <= 2850) i = r; else break; }
+      const i = nr * 12 <= 2850 ? 12 : 7;          // (Indrumar tabel A.3: i = 7, 12)
       const nmot = Math.round(nr * i);
       const rred = dp / 2 / i;
       rows.push([String(z), f(dp, 1), f(nr, 1), String(i), fi(nmot), z === 20 ? f(rred, 2) : f(rred, 3)]);
@@ -215,7 +212,7 @@ function buildTables(V) {
 
     ['RP-060-R', `${Y.i === X.i ? `i = ${Y.i} (2 trepte)` : `i = ${Y.i} (Y), ${X.i} (X) (2 trepte)`}; MN ${fi(rp.MN)} N·m; Mmax ${fi(rp.Mmax)} N·m; J1 ${fN(rp['J1_1e-4'])}·10${M4}; J2 ${fN(rp['J2_1e-4'])}·10${M4} kg·m${SUP2}; η 0,94; joc 10 arcmin (2 trepte, standard), 5 arcmin (varianta cu joc redus); nin,max ${fi(rp.nin_max)}; 1,0 kg`],
     ['ȘB 16×16', `dr ${f(sb.dr, 1)} mm; Ca ${fi(sb.Ca)} N; C0a ${fiG(sb.C0a)} N; J′ ${fN(sb['Jp_1e-4'])}·10${M4} kg·m${SUP2}/m; η 0,93`],
-    [V.belt_ales, `b = ${fi(V.bw * 1000)} mm; Fadm ${fi(beltAles.Fadm)} N; csp ${f(beltAles.csp_1e6, 2)}·10${SUP6} N; ${fN(beltAles.mp_kg_m)} kg/m; roți z = 32, dp = ${f(320 / Math.PI, 1)} mm (AT10-25: 900 N, 0,62·10${SUP6} N${V.belt_ales === 'AT10-32' ? '; AT10-75: csp 1,9·10' + SUP6 + ' N' : '; AT10-32: 1200 N, 0,80·10' + SUP6 + ' N'})`],
+    [V.belt_ales, `b = ${fi(V.bw * 1000)} mm; Fadm ${fi(beltAles.Fadm)} N; csp ${f(beltAles.csp_1e6, 2)}·10${SUP6} N; ${fN(beltAles.mp_kg_m)} kg/m; roți z = ${Y.z_ales}, dp = ${f(Y.dp, 1)} mm (AT10-25: 900 N, 0,62·10${SUP6} N${V.belt_ales === 'AT10-32' ? '; AT10-75: csp 1,9·10' + SUP6 + ' N' : '; AT10-32: 1200 N, 0,80·10' + SUP6 + ' N'})`],
     [conv.tip, `${conv.alim.replace('×', ' × ')}; ${fi(conv.IN)} / ${fi(conv.Imax)} A; ≤ ${fN(conv.Pmotor_max_kW)} kW; chopper intern ${fi(conv.Pbr_W)} W; Rmin ${fi(conv.Rmin_ohm)} Ω; Udc ${fi(conv.Udc)} V; STO; EtherCAT`],
   ];
 

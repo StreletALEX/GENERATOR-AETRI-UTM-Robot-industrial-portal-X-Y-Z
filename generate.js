@@ -103,6 +103,6 @@ if (!variant) { console.error('Usage: node generate.js <variant>  OR  node gener
 // ---------- run pipeline ----------
 console.log(`\n=== Generating variant ${variant} ===`);
 run('node', ['apply.js', String(variant)]);
-run('node', ['extract.js', `${BASE}/Varianta ${variant === 13 ? 'mea' : variant}.docx`, `units_${variant}.json`]);
+run('node', ['extract.js', `${BASE}/Varianta ${variant === 13 ? 'mea' : variant}.docx`, variant === 13 ? 'units_out.json' : `units_${variant}.json`]);
 run('node', ['verify_final.js', String(variant)]);
 console.log(`\nDONE. Output: ${BASE}/${variant === 13 ? 'Varianta mea' : 'Varianta ' + variant}.docx`);

@@ -147,7 +147,7 @@ function build(V) {
   };
   belt({ nr: 267, nmot12: 270, nmot16: 272, rred: 275, Mout: 282, Mout12: 285, Mech: 288, Fbelt: 299, cCapat: 302, feCapat: 304, Lmij: 307, c25: 310, fe25: 312, c32: 315, fe32: 317, mcurea: 328, Jcurea: 331, mr2p: 334, mr2g: 336, Jtri2: 339, mr2i2: 342 }, Y, inp.SY, V.Fmax_Y);
   belt({ nr: 348, nmot12: 351, nmot16: 353, rred: 356, Mout: 363, Mout12: 366, Mech: 369, Fbelt: 373, cCapat: 376, feCapat: 378, Lmij: 381, c25: 384, fe25: 386, c32: 389, fe32: 391, mcurea: 396, Jcurea: 399, mr2p: 402, mr2g: 404, Jtri2: 407, mr2i2: 410 }, X, inp.SX, V.Fmax_X);
-  T(263, () => `dp=z pπ=32·10π=101,86 mm`);
+  T(263, () => `dp=z pπ=${Y.z_ales}·10π=${f(Y.dp, 2)} mm`);
   T(292, () => `Δsjoc=joc60·π180·dp2=1060·π180·50,93=${f(Y.ds_joc_std,3)} mm`);
   T(295, () => `Δsjoc=joc60·π180·dp2=560·π180·50,93=${f(Y.ds_joc_R,3)} mm`);
   T(322, () => `mr=ρ πdp22b=7850·π·0,050932·${f(V.bw,3)}=${f(Y.mr,2)} kg`);

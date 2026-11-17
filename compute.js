@@ -201,7 +201,16 @@ function compute(inp) {
     const A = {};
     A.vmax4 = Number(kin.vmax.toFixed(4));                  // doc uses 4-dec vmax here
     A.S = S; A.m_piesa = m_piesa;
-    A.z_ales = 32;                                          // same wheel as model (unification)
+    // adopted wheel = z with the largest nmot using i = 7 or 12 (per Indrumar)
+    let _bestZ = 20, _bestN = 0;
+    for (const _z of [20, 25, 32, 40]) {
+      const _dp = _z * 10 / Math.PI;
+      const _nr = 60 * A.vmax4 / (Math.PI * _dp / 1000);
+      const _i = _nr * 12 <= V.n_lim ? 12 : 7;
+      const _nmot = _nr * _i;
+      if (_nmot > _bestN) { _bestN = _nmot; _bestZ = _z; }
+    }
+    A.z_ales = _bestZ;
     A.dp = A.z_ales * 10 / Math.PI;                         // mm
     A.dp_m = A.dp / 1000;
     A.wheels = CAT.roti_AT10_z.map(z => {
