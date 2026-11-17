@@ -1,0 +1,56 @@
+# dependencies
+node_modules/
+
+# generated dumps / debug artifacts
+*.txt
+*.log
+outXml_debug.xml
+outXml_debug*.xml
+full_dump.txt
+
+# extracted docx units (keep only the two regression baselines)
+units_*.json
+!units.json
+!units_out.json
+
+# gen dumps
+gen*_*.json
+dump*.json
+probe*.json
+v12_*.json
+v12_*.txt
+
+# debug/probe/patch scripts
+debug_*.js
+probe*.js
+patch*.js
+check_*.js
+audit_*.js
+survey_*.js
+validate_*.js
+trace_*.js
+list_*.js
+inspect_*.js
+dup_*.js
+diff_*.js
+dump*.js
+dump_*.js
+parse_probe*.js
+spot_check*.js
+selfclose.js
+pdf_extract.js
+
+# generated docx (binaries) - keep source template reference out
+*.docx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# misc helpers
+apply_debug_lib.js
+cmpdump.js
+para_scan.js
+verify.js
+verify_specials.js
+

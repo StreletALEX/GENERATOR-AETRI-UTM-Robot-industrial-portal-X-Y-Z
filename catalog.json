@@ -1,0 +1,89 @@
+{
+  "motoare_SM": [
+    { "tip": "SM-04-010", "flansa": 40,  "PN_kW": 0.1,  "nN": 3000, "nmax": 6000, "MN": 0.32, "Mmax": 0.96,  "IN": 0.9,  "Imax": 2.7,  "U": "230/400", "kM": 0.36, "Jr_1e-4": 0.037, "Mfr": 0.32, "Jfr_1e-4": 0.01, "m_kg": 0.5 },
+    { "tip": "SM-06-020", "flansa": 60,  "PN_kW": 0.2,  "nN": 3000, "nmax": 6000, "MN": 0.64, "Mmax": 1.92,  "IN": 1.55, "Imax": 4.7,  "U": "230/400", "kM": 0.41, "Jr_1e-4": 0.18,  "Mfr": 1.3,  "Jfr_1e-4": 0.03, "m_kg": 1.0 },
+    { "tip": "SM-06-040", "flansa": 60,  "PN_kW": 0.4,  "nN": 3000, "nmax": 5000, "MN": 1.27, "Mmax": 3.82,  "IN": 2.6,  "Imax": 7.8,  "U": "230/400", "kM": 0.49, "Jr_1e-4": 0.28,  "Mfr": 1.3,  "Jfr_1e-4": 0.03, "m_kg": 1.4 },
+    { "tip": "SM-08-075", "flansa": 80,  "PN_kW": 0.75, "nN": 3000, "nmax": 4500, "MN": 2.39, "Mmax": 7.16,  "IN": 5.1,  "Imax": 15.3, "U": "230/400", "kM": 0.47, "Jr_1e-4": 1.13,  "Mfr": 2.5,  "Jfr_1e-4": 0.09, "m_kg": 2.9 },
+    { "tip": "SM-10-100", "flansa": 100, "PN_kW": 1.0,  "nN": 3000, "nmax": 4500, "MN": 3.18, "Mmax": 9.55,  "IN": 7.3,  "Imax": 21.9, "U": "400",      "kM": 0.44, "Jr_1e-4": 2.65,  "Mfr": 4.0,  "Jfr_1e-4": 0.15, "m_kg": 4.3 },
+    { "tip": "SM-10-150", "flansa": 100, "PN_kW": 1.5,  "nN": 3000, "nmax": 4500, "MN": 4.77, "Mmax": 14.3,  "IN": 8.3,  "Imax": 24.9, "U": "400",      "kM": 0.57, "Jr_1e-4": 3.6,   "Mfr": 8.0,  "Jfr_1e-4": 0.23, "m_kg": 5.6 },
+    { "tip": "SM-13-200", "flansa": 130, "PN_kW": 2.0,  "nN": 3000, "nmax": 4000, "MN": 6.37, "Mmax": 19.1,  "IN": 11,   "Imax": 33,   "U": "400",      "kM": 0.58, "Jr_1e-4": 8.2,   "Mfr": 12,   "Jfr_1e-4": 0.45, "m_kg": 8.5 },
+    { "tip": "SM-13-300", "flansa": 130, "PN_kW": 3.0,  "nN": 3000, "nmax": 4000, "MN": 9.55, "Mmax": 28.6,  "IN": 16,   "Imax": 48,   "U": "400",      "kM": 0.6,  "Jr_1e-4": 11.8,  "Mfr": 12,   "Jfr_1e-4": 0.45, "m_kg": 11.5 },
+    { "tip": "SM-18-450", "flansa": 180, "PN_kW": 4.5,  "nN": 2000, "nmax": 3000, "MN": 21.5, "Mmax": 64.5,  "IN": 24,   "Imax": 72,   "U": "400",      "kM": 0.9,  "Jr_1e-4": 47,    "Mfr": 30,   "Jfr_1e-4": 1.8,  "m_kg": 22 },
+    { "tip": "SM-18-550", "flansa": 180, "PN_kW": 5.5,  "nN": 2000, "nmax": 3000, "MN": 26.3, "Mmax": 78.9,  "IN": 28,   "Imax": 84,   "U": "400",      "kM": 0.94, "Jr_1e-4": 58,    "Mfr": 30,   "Jfr_1e-4": 1.8,  "m_kg": 26 }
+  ],
+  "reductoare_RP": [
+    { "tip": "RP-040", "MN": 6,   "Mmax": 10,  "J1_1e-4": 0.03, "J2_1e-4": 0.025, "joc_1tr_arcmin": 12, "joc_2tr_arcmin": 15, "nin_max": 6000, "m_kg": 0.4 },
+    { "tip": "RP-060", "MN": 18,  "Mmax": 30,  "J1_1e-4": 0.1,  "J2_1e-4": 0.08,  "joc_1tr_arcmin": 8,  "joc_2tr_arcmin": 10, "nin_max": 6000, "m_kg": 1.0 },
+    { "tip": "RP-080", "MN": 44,  "Mmax": 70,  "J1_1e-4": 0.3,  "J2_1e-4": 0.22,  "joc_1tr_arcmin": 6,  "joc_2tr_arcmin": 8,  "nin_max": 5000, "m_kg": 2.1 },
+    { "tip": "RP-120", "MN": 110, "Mmax": 180, "J1_1e-4": 1.5,  "J2_1e-4": 1.1,   "joc_1tr_arcmin": 5,  "joc_2tr_arcmin": 7,  "nin_max": 4500, "m_kg": 5.6 },
+    { "tip": "RP-160", "MN": 260, "Mmax": 420, "J1_1e-4": 5,    "J2_1e-4": 3.6,   "joc_1tr_arcmin": 4,  "joc_2tr_arcmin": 6,  "nin_max": 4000, "m_kg": 12.5 }
+  ],
+  "RP_rapoarte": { "1_treapta": [3, 4, 5, 7, 10], "2_trepte": [12, 16, 20, 25, 40, 50, 100] },
+  "RP_randamente": { "1_treapta": 0.97, "2_trepte": 0.94 },
+  "RP_joc_redus_arcmin": { "1_treapta": 3, "2_trepte": 5 },
+  "suruburi_SB": [
+    { "tip": "ȘB 12×4",  "d0": 12, "P": 4,  "dr": 9.9,  "Ca": 4200,  "C0a": 7100,   "Jp_1e-4": 0.16, "eta": 0.90 },
+    { "tip": "ȘB 12×10", "d0": 12, "P": 10, "dr": 9.5,  "Ca": 3200,  "C0a": 5200,   "Jp_1e-4": 0.16, "eta": 0.92 },
+    { "tip": "ȘB 16×5",  "d0": 16, "P": 5,  "dr": 13.2, "Ca": 9400,  "C0a": 17000,  "Jp_1e-4": 0.5,  "eta": 0.90 },
+    { "tip": "ȘB 16×10", "d0": 16, "P": 10, "dr": 12.8, "Ca": 7300,  "C0a": 12500,  "Jp_1e-4": 0.5,  "eta": 0.92 },
+    { "tip": "ȘB 16×16", "d0": 16, "P": 16, "dr": 12.5, "Ca": 6400,  "C0a": 10800,  "Jp_1e-4": 0.5,  "eta": 0.93 },
+    { "tip": "ȘB 20×5",  "d0": 20, "P": 5,  "dr": 16.8, "Ca": 11500, "C0a": 23000,  "Jp_1e-4": 1.23, "eta": 0.90 },
+    { "tip": "ȘB 20×10", "d0": 20, "P": 10, "dr": 16.2, "Ca": 13000, "C0a": 25000,  "Jp_1e-4": 1.23, "eta": 0.92 },
+    { "tip": "ȘB 20×20", "d0": 20, "P": 20, "dr": 15.8, "Ca": 9600,  "C0a": 17200,  "Jp_1e-4": 1.23, "eta": 0.93 },
+    { "tip": "ȘB 25×5",  "d0": 25, "P": 5,  "dr": 21.5, "Ca": 13500, "C0a": 31000,  "Jp_1e-4": 3.0,  "eta": 0.90 },
+    { "tip": "ȘB 25×10", "d0": 25, "P": 10, "dr": 20.9, "Ca": 20500, "C0a": 42000,  "Jp_1e-4": 3.0,  "eta": 0.92 },
+    { "tip": "ȘB 25×25", "d0": 25, "P": 25, "dr": 20.5, "Ca": 16000, "C0a": 28000,  "Jp_1e-4": 3.0,  "eta": 0.93 },
+    { "tip": "ȘB 32×10", "d0": 32, "P": 10, "dr": 27.8, "Ca": 33000, "C0a": 75000,  "Jp_1e-4": 8.1,  "eta": 0.92 },
+    { "tip": "ȘB 32×20", "d0": 32, "P": 20, "dr": 27.0, "Ca": 28000, "C0a": 58000,  "Jp_1e-4": 8.1,  "eta": 0.93 },
+    { "tip": "ȘB 40×10", "d0": 40, "P": 10, "dr": 35.2, "Ca": 45000, "C0a": 112000, "Jp_1e-4": 19.7, "eta": 0.92 },
+    { "tip": "ȘB 40×20", "d0": 40, "P": 20, "dr": 34.4, "Ca": 42000, "C0a": 98000,  "Jp_1e-4": 19.7, "eta": 0.93 }
+  ],
+  "coef_rezemare": [
+    { "rezemare": "încastrat – liber",        "fn": 4.3,  "fk": 2.6 },
+    { "rezemare": "rezemat – rezemat",         "fn": 12.1, "fk": 10.2 },
+    { "rezemare": "încastrat – rezemat (uzual)","fn": 18.9, "fk": 20.4 },
+    { "rezemare": "încastrat – încastrat",     "fn": 27.4, "fk": 40.6 }
+  ],
+  "curele_AT10": [
+    { "tip": "AT10-25", "b_mm": 25, "Fadm": 900,  "csp_1e6": 0.62, "mp_kg_m": 0.11 },
+    { "tip": "AT10-32", "b_mm": 32, "Fadm": 1200, "csp_1e6": 0.80, "mp_kg_m": 0.14 },
+    { "tip": "AT10-50", "b_mm": 50, "Fadm": 1900, "csp_1e6": 1.25, "mp_kg_m": 0.22 },
+    { "tip": "AT10-75", "b_mm": 75, "Fadm": 2900, "csp_1e6": 1.90, "mp_kg_m": 0.33 }
+  ],
+  "roti_AT10_z": [20, 25, 32, 40, 50, 60],
+  "cremaliera_pinion": [
+    { "tip": "m2 z20", "dp_mm": 40, "Ft_adm": 2500 },
+    { "tip": "m2 z25", "dp_mm": 50, "Ft_adm": 2500 },
+    { "tip": "m3 z20", "dp_mm": 60, "Ft_adm": 5500 },
+    { "tip": "m3 z25", "dp_mm": 75, "Ft_adm": 5500 },
+    { "tip": "m4 z20", "dp_mm": 80, "Ft_adm": 9500 }
+  ],
+  "servoconvertoare_SC": [
+    { "tip": "SC-230-1.5", "alim": "1×230 V", "IN": 1.5, "Imax": 4.5,  "Pmotor_max_kW": 0.2,  "Pbr_W": 50,  "Rmin_ohm": 100, "Udc": 320 },
+    { "tip": "SC-230-3",   "alim": "1×230 V", "IN": 3,   "Imax": 9,    "Pmotor_max_kW": 0.4,  "Pbr_W": 60,  "Rmin_ohm": 60,  "Udc": 320 },
+    { "tip": "SC-230-6",   "alim": "1×230 V", "IN": 6,   "Imax": 18,   "Pmotor_max_kW": 0.75, "Pbr_W": 80,  "Rmin_ohm": 40,  "Udc": 320 },
+    { "tip": "SC-230-9",   "alim": "1×230 V", "IN": 9,   "Imax": 27,   "Pmotor_max_kW": 1.5,  "Pbr_W": 100, "Rmin_ohm": 30,  "Udc": 320 },
+    { "tip": "SC-400-3",   "alim": "3×400 V", "IN": 3,   "Imax": 9,    "Pmotor_max_kW": 1,    "Pbr_W": 100, "Rmin_ohm": 100, "Udc": 560 },
+    { "tip": "SC-400-6",   "alim": "3×400 V", "IN": 6,   "Imax": 18,   "Pmotor_max_kW": 2,    "Pbr_W": 150, "Rmin_ohm": 60,  "Udc": 560 },
+    { "tip": "SC-400-9",   "alim": "3×400 V", "IN": 9,   "Imax": 27,   "Pmotor_max_kW": 3,    "Pbr_W": 200, "Rmin_ohm": 40,  "Udc": 560 },
+    { "tip": "SC-400-12",  "alim": "3×400 V", "IN": 12,  "Imax": 36,   "Pmotor_max_kW": 4,    "Pbr_W": 250, "Rmin_ohm": 33,  "Udc": 560 },
+    { "tip": "SC-400-18",  "alim": "3×400 V", "IN": 18,  "Imax": 54,   "Pmotor_max_kW": 5.5,  "Pbr_W": 300, "Rmin_ohm": 27,  "Udc": 560 },
+    { "tip": "SC-400-30",  "alim": "3×400 V", "IN": 30,  "Imax": 90,   "Pmotor_max_kW": 11,   "Pbr_W": 500, "Rmin_ohm": 18,  "Udc": 560 }
+  ],
+  "encodere": [
+    { "tip": "EI-2500",   "fel": "incremental",      "poz_rot": 10000,   "multiturna": false },
+    { "tip": "EA-17",     "fel": "absolut monotură",  "poz_rot": 131072,  "multiturna": false },
+    { "tip": "EA-20-12",  "fel": "absolut multitură", "poz_rot": 1048576, "multiturna": true, "ture": 4096 },
+    { "tip": "EA-23-16",  "fel": "absolut multitură", "poz_rot": 8388608, "multiturna": true, "ture": 65536 }
+  ],
+  "constant": {
+    "g": 9.81,
+    "rho_otel": 7850,
+    "eta_curea": 0.96,
+    "eta_cremaliera": 0.95,
+    "limita_d0n": 70000,
+    "prag_fe_Hz": 15,
+    "rezerva_curea": 1.3,
+    "rezerva_cuplu_belt": 1.2
+  }
+}
