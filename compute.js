@@ -275,14 +275,22 @@ function compute(inp) {
   axisName = 'X';
   V.axX = beltAxis(V.kinX, inp.SX, V.mSX_piesa, V.mSX_gol, V.Fmax_X, V.FfX_piesa, V.FfX_gol, V.F_X);
 
-  // unified belt — document logic: the model belt AT10-32 is kept on X if its mid-course
-  // frequency is at/above the 15 Hz threshold or within ~1 % below it ("practic pragul");
-  // otherwise the narrowest belt with fe_mid >= 15 Hz and Fadm >= 1.3·Fmax on X is adopted;
-  // Y then adopts the same belt "ca pe X, pentru unificarea pieselor".
-  const fe32_X = V.axX.belt['AT10-32'].fe_mid;
-  const beltAles = fe32_X >= 15 * 0.99 ? 'AT10-32'
-    : (CAT.curele_AT10.find(b => V.axX.belt[b.tip].fe_mid >= 15 && V.axX.belt[b.tip].Fadm >= V.axX.F_belt_min)
+  // unified belt — select the belt with the biggest csp among those with
+  // 15 < fe_mid < 30 (and Fadm >= 1.3·Fmax) on X; Y adopts the same belt.
+  const acceptableBelts = CAT.curele_AT10.filter(b => {
+    const fe = V.axX.belt[b.tip].fe_mid;
+    return fe > 15 && fe < 30 && V.axX.belt[b.tip].Fadm >= V.axX.F_belt_min;
+  });
+  let beltAles;
+  if (acceptableBelts.length > 0) {
+    beltAles = acceptableBelts.reduce((best, b) =>
+      V.axX.belt[b.tip].csp > V.axX.belt[best.tip].csp ? b : best
+    ).tip;
+  } else {
+    // fallback: narrowest belt with fe_mid >= 15 and Fadm >= F_belt_min
+    beltAles = (CAT.curele_AT10.find(b => V.axX.belt[b.tip].fe_mid >= 15 && V.axX.belt[b.tip].Fadm >= V.axX.F_belt_min)
        || CAT.curele_AT10[CAT.curele_AT10.length - 1]).tip;
+  }
   V.belt_ales = beltAles;
   const beltEntry = CAT.curele_AT10.find(b => b.tip === beltAles);
   for (const A of [V.axY, V.axX]) {

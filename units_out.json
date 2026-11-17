@@ -1950,27 +1950,27 @@
   {
    "id": 301,
    "type": "para",
-   "text": "unde: Fmax = 188,4 N — forța de vârf a axei Y (tabelul 2.2); 1,3 — coeficientul de siguranță al curelei (Îndrumar, §2.6.2). Ar ajunge deci AT10-25 (Fadm = 900 N, tabelul A.8). Decide însă rigiditatea. Cele două ramuri lucrează în paralel, c = csp/L1 + csp/L2, iar frecvența proprie a căruciorului este fe = (1/2π)√(c/m) (Îndrumar, §2.6.2). Cu căruciorul la capătul cursei (L1 = 0,15 m, L2 = 1,05 m), cureaua de 32 mm:"
+   "text": "unde: Fmax = 188,4 N — forța de vârf a axei Y (tabelul 2.2); 1,3 — coeficientul de siguranță al curelei (Îndrumar, §2.6.2). Ar ajunge deci AT10-25 (Fadm = 900 N, tabelul A.8). Decide însă rigiditatea. Cele două ramuri lucrează în paralel, c = csp/L1 + csp/L2, iar frecvența proprie a căruciorului este fe = (1/2π)√(c/m) (Îndrumar, §2.6.2). Cu căruciorul la capătul cursei (L1 = 0,15 m, L2 = 1,05 m), cureaua de 75 mm:"
   },
   {
    "id": 302,
    "type": "math",
-   "text": "c=csp1L1+1L2=0,80·106·10,15+11,05=6,10·106 N/m"
+   "text": "c=csp1L1+1L2=1,90·106·10,15+11,05=14,48·106 N/m"
   },
   {
    "id": 303,
    "type": "para",
-   "text": "⟦c=csp1L1+1L2=0,80·106·10,15+11,05=6,10·106 N/m⟧"
+   "text": "⟦c=csp1L1+1L2=1,90·106·10,15+11,05=14,48·106 N/m⟧"
   },
   {
    "id": 304,
    "type": "math",
-   "text": "fe=12πcm=12π6,10·10663,5=49,3 Hz"
+   "text": "fe=12πcm=12π14,48·10663,5=76,0 Hz"
   },
   {
    "id": 305,
    "type": "para",
-   "text": "⟦fe=12πcm=12π6,10·10663,5=49,3 Hz⟧"
+   "text": "⟦fe=12πcm=12π14,48·10663,5=76,0 Hz⟧"
   },
   {
    "id": 306,
@@ -2020,32 +2020,32 @@
   {
    "id": 315,
    "type": "math",
-   "text": "c=csp1L1+1L2=0,80·106·10,60+10,60=2,67·106 N/m"
+   "text": "c=csp1L1+1L2=1,90·106·10,60+10,60=6,33·106 N/m"
   },
   {
    "id": 316,
    "type": "para",
-   "text": "⟦c=csp1L1+1L2=0,80·106·10,60+10,60=2,67·106 N/m⟧"
+   "text": "⟦c=csp1L1+1L2=1,90·106·10,60+10,60=6,33·106 N/m⟧"
   },
   {
    "id": 317,
    "type": "math",
-   "text": "fe=12πcm=12π2,67·10663,5=32,6 Hz"
+   "text": "fe=12πcm=12π6,33·10663,5=50,3 Hz"
   },
   {
    "id": 318,
    "type": "para",
-   "text": "⟦fe=12πcm=12π2,67·10663,5=32,6 Hz⟧"
+   "text": "⟦fe=12πcm=12π6,33·10663,5=50,3 Hz⟧"
   },
   {
    "id": 319,
    "type": "para",
-   "text": "unde: csp = 0,62·10⁶ N (AT10-25), respectiv 0,80·10⁶ N (AT10-32) — rigiditatea specifică a unei ramuri (tabelul A.8); L1 și L2 — lungimile celor două ramuri: capătul liber al curelei plus cursa, S + 0,3 m = 1,2 m în total (Îndrumar, §2.6.2); m = mΣY = 63,5 kg — masa în mișcare cu piesă (§2.1)."
+   "text": "unde: csp = 0,62·10⁶ N (AT10-25), respectiv 1,90·10⁶ N (AT10-75) — rigiditatea specifică a unei ramuri (tabelul A.8); L1 și L2 — lungimile celor două ramuri: capătul liber al curelei plus cursa, S + 0,3 m = 1,2 m în total (Îndrumar, §2.6.2); m = mΣY = 63,5 kg — masa în mișcare cu piesă (§2.1)."
   },
   {
    "id": 320,
    "type": "para",
-   "text": "Ambele curele trec de pragul minim de 15 Hz: AT10-25 dă 28,7 Hz — în domeniul „acceptabil pentru o axă de transport, cu măsuri”, 15–30 Hz —, AT10-32 dă 32,6 Hz la mijloc, peste acest domeniu, iar la capătul cursei 49,3 Hz. Se adoptă AT10-32 și pe Y, ca pe X, pentru unificarea pieselor (roți, curele, întinzători); AT10-25 ar fi suficientă doar la Y. Regulatoarele axei se acordează pentru poziția cea mai elastică (§5.2)."
+   "text": "Centurile acceptabile pe Y (15 < fe < 30 Hz): AT10-25 dă 28,7 Hz. Cea cu csp cel mai mare este AT10-75 (csp = 1,90·10⁶ N), adoptată și pe X pentru unificarea pieselor (roți, curele, întinzători). Regulatoarele axei se acordează pentru poziția cea mai elastică (§5.2)."
   },
   {
    "id": 321,
@@ -2055,12 +2055,12 @@
   {
    "id": 322,
    "type": "math",
-   "text": "mr=ρ πdp22b=7850·π·0,050932·0,032=3,20 kg"
+   "text": "mr=ρ πdp22b=7850·π·0,050932·0,075=7,50 kg"
   },
   {
    "id": 323,
    "type": "para",
-   "text": "⟦mr=ρ πdp22b=7850·π·0,050932·0,032=3,20 kg⟧"
+   "text": "⟦mr=ρ πdp22b=7850·π·0,050932·0,075=7,50 kg⟧"
   },
   {
    "id": 324,
@@ -2070,12 +2070,12 @@
   {
    "id": 325,
    "type": "math",
-   "text": "Jroți=2·12 mrdp22=2·12·3,20·0,050932=129,6·10-4 kg·m2"
+   "text": "Jroți=2·12 mrdp22=2·12·7,50·0,050932=303,8·10-4 kg·m2"
   },
   {
    "id": 326,
    "type": "para",
-   "text": "⟦Jroți=2·12 mrdp22=2·12·3,20·0,050932=129,6·10-4 kg·m2⟧"
+   "text": "⟦Jroți=2·12 mrdp22=2·12·7,50·0,050932=303,8·10-4 kg·m2⟧"
   },
   {
    "id": 327,
@@ -2085,12 +2085,12 @@
   {
    "id": 328,
    "type": "math",
-   "text": "mcurea=2 S+0,3 m'=2·0,9+0,3·0,14=0,336 kg"
+   "text": "mcurea=2 S+0,3 m'=2·0,9+0,3·0,33=0,792 kg"
   },
   {
    "id": 329,
    "type": "para",
-   "text": "⟦mcurea=2 S+0,3 m'=2·0,9+0,3·0,14=0,336 kg⟧"
+   "text": "⟦mcurea=2 S+0,3 m'=2·0,9+0,3·0,33=0,792 kg⟧"
   },
   {
    "id": 330,
@@ -2100,12 +2100,12 @@
   {
    "id": 331,
    "type": "math",
-   "text": "mcureadp22=0,336·0,050932=13,6·10-4 kg·m2"
+   "text": "mcureadp22=0,792·0,050932=32,1·10-4 kg·m2"
   },
   {
    "id": 332,
    "type": "para",
-   "text": "⟦mcureadp22=0,336·0,050932=13,6·10-4 kg·m2⟧"
+   "text": "⟦mcureadp22=0,792·0,050932=32,1·10-4 kg·m2⟧"
   },
   {
    "id": 333,
@@ -2135,17 +2135,17 @@
   {
    "id": 338,
    "type": "para",
-   "text": "unde: ρ = 7850 kg/m³ — densitatea oțelului (valoare adoptată, proprietate de material); dp/2 = 0,05093 m — raza primitivă a roții; b = 0,032 m — lățimea curelei AT10-32 (tabelul A.8); S = 0,9 m — cursa (fișa individuală); 0,3 m — capetele curelei (Îndrumar, §2.6.2); m′ = 0,14 kg/m — masa pe metru a curelei AT10-32 (tabelul A.8); mΣY = 63,5 kg cu piesă, 53,5 kg în gol (§2.1). Toate se reduc la arborele motorului împărțind la i² — elementele rotative ale transmisiei împreună cu cupla dintre motor și reductor (Jc = 0,2·10⁻⁴ kg·m², capăt de arbore sub 20 mm, Îndrumar, §2.6.1):"
+   "text": "unde: ρ = 7850 kg/m³ — densitatea oțelului (valoare adoptată, proprietate de material); dp/2 = 0,05093 m — raza primitivă a roții; b = 0,075 m — lățimea curelei AT10-75 (tabelul A.8); S = 0,9 m — cursa (fișa individuală); 0,3 m — capetele curelei (Îndrumar, §2.6.2); m′ = 0,33 kg/m — masa pe metru a curelei AT10-75 (tabelul A.8); mΣY = 63,5 kg cu piesă, 53,5 kg în gol (§2.1). Toate se reduc la arborele motorului împărțind la i² — elementele rotative ale transmisiei împreună cu cupla dintre motor și reductor (Jc = 0,2·10⁻⁴ kg·m², capăt de arbore sub 20 mm, Îndrumar, §2.6.1):"
   },
   {
    "id": 339,
    "type": "math",
-   "text": "Jtr+Jci2=129,6+13,6+0,2·10-4162=0,56·10-4 kg·m2"
+   "text": "Jtr+Jci2=303,8+32,1+0,2·10-4162=1,31·10-4 kg·m2"
   },
   {
    "id": 340,
    "type": "para",
-   "text": "⟦Jtr+Jci2=129,6+13,6+0,2·10-4162=0,56·10-4 kg·m2⟧"
+   "text": "⟦Jtr+Jci2=303,8+32,1+0,2·10-4162=1,31·10-4 kg·m2⟧"
   },
   {
    "id": 341,
@@ -2165,7 +2165,7 @@
   {
    "id": 344,
    "type": "para",
-   "text": "unde: Jtr = Jroți + mcurea(dp/2)² = (129,6 + 13,6)·10⁻⁴ kg·m² — roțile și cureaua (calculate mai sus); m rtr² = 0,2574 kg·m² — masa cu piesă redusă la arborele roții (calculată mai sus); i = 16 — raportul reductorului (adoptat mai sus). În gol, masa redusă la motor este 0,2168/256 = 8,47·10⁻⁴ kg·m². Reductorul împarte inerția de 0,257 kg·m² de la roată cu 256."
+   "text": "unde: Jtr = Jroți + mcurea(dp/2)² = (303,8 + 32,1)·10⁻⁴ kg·m² — roțile și cureaua (calculate mai sus); m rtr² = 0,2574 kg·m² — masa cu piesă redusă la arborele roții (calculată mai sus); i = 16 — raportul reductorului (adoptat mai sus). În gol, masa redusă la motor este 0,2168/256 = 8,47·10⁻⁴ kg·m². Reductorul împarte inerția de 0,257 kg·m² de la roată cu 256."
   },
   {
    "id": 345,
@@ -2361,27 +2361,27 @@
   {
    "id": 375,
    "type": "para",
-   "text": "unde: Fmax = 296,5 N — forța de vârf a axei X (tabelul 2.2); 1,3 — coeficientul de siguranță al curelei (Îndrumar, §2.6.2). Ar ajunge deci AT10-25 (Fadm = 900 N, tabelul A.8). Decide însă rigiditatea. Cele două ramuri lucrează în paralel, c = csp/L1 + csp/L2, iar frecvența proprie a căruciorului este fe = (1/2π)√(c/m) (Îndrumar, §2.6.2). Cu căruciorul la capătul cursei (L1 = 0,15 m, L2 = 1,95 m), cureaua de 32 mm:"
+   "text": "unde: Fmax = 296,5 N — forța de vârf a axei X (tabelul 2.2); 1,3 — coeficientul de siguranță al curelei (Îndrumar, §2.6.2). Ar ajunge deci AT10-25 (Fadm = 900 N, tabelul A.8). Decide însă rigiditatea. Cele două ramuri lucrează în paralel, c = csp/L1 + csp/L2, iar frecvența proprie a căruciorului este fe = (1/2π)√(c/m) (Îndrumar, §2.6.2). Cu căruciorul la capătul cursei (L1 = 0,15 m, L2 = 1,95 m), cureaua de 75 mm:"
   },
   {
    "id": 376,
    "type": "math",
-   "text": "c=csp1L1+1L2=0,80·106·10,15+11,95=5,74·106 N/m"
+   "text": "c=csp1L1+1L2=1,90·106·10,15+11,95=13,64·106 N/m"
   },
   {
    "id": 377,
    "type": "para",
-   "text": "⟦c=csp1L1+1L2=0,80·106·10,15+11,95=5,74·106 N/m⟧"
+   "text": "⟦c=csp1L1+1L2=1,90·106·10,15+11,95=13,64·106 N/m⟧"
   },
   {
    "id": 378,
    "type": "math",
-   "text": "fe=12πcm=12π5,74·106133,5=33,0 Hz"
+   "text": "fe=12πcm=12π13,64·106133,5=50,9 Hz"
   },
   {
    "id": 379,
    "type": "para",
-   "text": "⟦fe=12πcm=12π5,74·106133,5=33,0 Hz⟧"
+   "text": "⟦fe=12πcm=12π13,64·106133,5=50,9 Hz⟧"
   },
   {
    "id": 380,
@@ -2431,32 +2431,32 @@
   {
    "id": 389,
    "type": "math",
-   "text": "c=csp1L1+1L2=0,80·106·11,05+11,05=1,52·106 N/m"
+   "text": "c=csp1L1+1L2=1,90·106·11,05+11,05=3,62·106 N/m"
   },
   {
    "id": 390,
    "type": "para",
-   "text": "⟦c=csp1L1+1L2=0,80·106·11,05+11,05=1,52·106 N/m⟧"
+   "text": "⟦c=csp1L1+1L2=1,90·106·11,05+11,05=3,62·106 N/m⟧"
   },
   {
    "id": 391,
    "type": "math",
-   "text": "fe=12πcm=12π1,52·106133,5=17,0 Hz"
+   "text": "fe=12πcm=12π3,62·106133,5=26,2 Hz"
   },
   {
    "id": 392,
    "type": "para",
-   "text": "⟦fe=12πcm=12π1,52·106133,5=17,0 Hz⟧"
+   "text": "⟦fe=12πcm=12π3,62·106133,5=26,2 Hz⟧"
   },
   {
    "id": 393,
    "type": "para",
-   "text": "unde: csp = 0,62·10⁶ N (AT10-25), respectiv 0,80·10⁶ N (AT10-32) — rigiditatea specifică a unei ramuri (tabelul A.8); L1 și L2 — lungimile celor două ramuri: capătul liber al curelei plus cursa, S + 0,3 m = 2,1 m în total (Îndrumar, §2.6.2); m = mΣX = 133,5 kg — masa în mișcare cu piesă (§2.1)."
+   "text": "unde: csp = 0,62·10⁶ N (AT10-25), respectiv 1,90·10⁶ N (AT10-75) — rigiditatea specifică a unei ramuri (tabelul A.8); L1 și L2 — lungimile celor două ramuri: capătul liber al curelei plus cursa, S + 0,3 m = 2,1 m în total (Îndrumar, §2.6.2); m = mΣX = 133,5 kg — masa în mișcare cu piesă (§2.1)."
   },
   {
    "id": 394,
    "type": "para",
-   "text": "Cureaua de 32 mm dă la mijloc 17,0 Hz, peste pragul minim de 15 Hz, iar AT10-25 doar 15,0 Hz — la limită; la capătul cursei AT10-32 dă 33,0 Hz. Se adoptă AT10-32 (aceeași curea ca pe Y), cu măsurile cerute de Îndrumar: regulatoarele axei X se acordează pentru poziția cea mai elastică (§5.2) și poziționarea finală la B se face după stabilizare și se prevede rigla liniară (§4.4); dacă la punerea în funcțiune banda buclei de viteză se dovedește prea îngustă, se trece la AT10-75 (csp = 1,9·10⁶ N), care ar da la mijloc 26,2 Hz ✓. Alternativa constructivă ar fi principiul „omega” (motorul pe cărucior, cureaua fixă la capete, ramuri de lungime constantă) sau cremaliera cu pinion."
+   "text": "Centurile acceptabile pe X (15 < fe < 30 Hz, Fadm ≥ 385 N): AT10-32 dă 17,0 Hz, AT10-50 dă 21,3 Hz, AT10-75 dă 26,2 Hz. Cea cu csp cel mai mare este AT10-75 (csp = 1,90·10⁶ N, Fadm = 2900 N). Se adoptă AT10-75 și pe Y, pentru unificarea pieselor (roți, curele, întinzători). Rămân măsurile cerute de Îndrumar: regulatoarele axei X se acordează pentru poziția cea mai elastică (§5.2), poziționarea finală la B se face după stabilizare; alungirea statică rămâne sub ±0,15 mm pe ambele axe (0,08 mm pe X, 0,03 mm pe Y), deci rigla liniară este aici o rezervă, nu o necesitate. Alternativa constructivă ar fi principiul „omega” (motorul pe cărucior, cureaua fixă la capete, ramuri de lungime constantă) sau cremaliera cu pinion."
   },
   {
    "id": 395,
@@ -2466,12 +2466,12 @@
   {
    "id": 396,
    "type": "math",
-   "text": "mcurea=2 S+0,3 m'=2·1,8+0,3·0,14=0,588 kg"
+   "text": "mcurea=2 S+0,3 m'=2·1,8+0,3·0,33=1,386 kg"
   },
   {
    "id": 397,
    "type": "para",
-   "text": "⟦mcurea=2 S+0,3 m'=2·1,8+0,3·0,14=0,588 kg⟧"
+   "text": "⟦mcurea=2 S+0,3 m'=2·1,8+0,3·0,33=1,386 kg⟧"
   },
   {
    "id": 398,
@@ -2481,12 +2481,12 @@
   {
    "id": 399,
    "type": "math",
-   "text": "mcureadp22=0,588·0,050932=15,3·10-4 kg·m2"
+   "text": "mcureadp22=1,386·0,050932=36,0·10-4 kg·m2"
   },
   {
    "id": 400,
    "type": "para",
-   "text": "⟦mcureadp22=0,588·0,050932=15,3·10-4 kg·m2⟧"
+   "text": "⟦mcureadp22=1,386·0,050932=36,0·10-4 kg·m2⟧"
   },
   {
    "id": 401,
@@ -2516,17 +2516,17 @@
   {
    "id": 406,
    "type": "para",
-   "text": "unde: ρ = 7850 kg/m³ — densitatea oțelului (valoare adoptată, proprietate de material); dp/2 = 0,05093 m — raza primitivă a roții; b = 0,032 m — lățimea curelei AT10-32 (tabelul A.8); S = 1,8 m — cursa (fișa individuală); 0,3 m — capetele curelei (Îndrumar, §2.6.2); m′ = 0,14 kg/m — masa pe metru a curelei AT10-32 (tabelul A.8); mΣX = 133,5 kg cu piesă, 123,5 kg în gol (§2.1). Toate se reduc la arborele motorului împărțind la i² — elementele rotative ale transmisiei împreună cu cupla dintre motor și reductor (Jc = 0,2·10⁻⁴ kg·m², capăt de arbore sub 20 mm, Îndrumar, §2.6.1):"
+   "text": "unde: ρ = 7850 kg/m³ — densitatea oțelului (valoare adoptată, proprietate de material); dp/2 = 0,05093 m — raza primitivă a roții; b = 0,075 m — lățimea curelei AT10-75 (tabelul A.8); S = 1,8 m — cursa (fișa individuală); 0,3 m — capetele curelei (Îndrumar, §2.6.2); m′ = 0,33 kg/m — masa pe metru a curelei AT10-75 (tabelul A.8); mΣX = 133,5 kg cu piesă, 123,5 kg în gol (§2.1). Toate se reduc la arborele motorului împărțind la i² — elementele rotative ale transmisiei împreună cu cupla dintre motor și reductor (Jc = 0,2·10⁻⁴ kg·m², capăt de arbore sub 20 mm, Îndrumar, §2.6.1):"
   },
   {
    "id": 407,
    "type": "math",
-   "text": "Jtr+Jci2=53,1+15,3+0,2·10-4122=0,48·10-4 kg·m2"
+   "text": "Jtr+Jci2=124,4+36,0+0,2·10-4122=1,12·10-4 kg·m2"
   },
   {
    "id": 408,
    "type": "para",
-   "text": "⟦Jtr+Jci2=53,1+15,3+0,2·10-4122=0,48·10-4 kg·m2⟧"
+   "text": "⟦Jtr+Jci2=124,4+36,0+0,2·10-4122=1,12·10-4 kg·m2⟧"
   },
   {
    "id": 409,
@@ -2546,7 +2546,7 @@
   {
    "id": 412,
    "type": "para",
-   "text": "unde: Jtr = Jroți + mcurea(dp/2)² = (53,1 + 15,3)·10⁻⁴ kg·m² — roțile și cureaua (calculate mai sus); m rtr² = 0,3463 kg·m² — masa cu piesă redusă la arborele roții (calculată mai sus); i = 12 — raportul reductorului (adoptat mai sus). În gol, masa redusă la motor este 0,3203/144 = 22,25·10⁻⁴ kg·m². Reductorul împarte inerția de 0,346 kg·m² de la roată cu 144."
+   "text": "unde: Jtr = Jroți + mcurea(dp/2)² = (124,4 + 36,0)·10⁻⁴ kg·m² — roțile și cureaua (calculate mai sus); m rtr² = 0,3463 kg·m² — masa cu piesă redusă la arborele roții (calculată mai sus); i = 12 — raportul reductorului (adoptat mai sus). În gol, masa redusă la motor este 0,3203/144 = 22,25·10⁻⁴ kg·m². Reductorul împarte inerția de 0,346 kg·m² de la roată cu 144."
   },
   {
    "id": 413,
@@ -2636,7 +2636,7 @@
   {
    "id": 430,
    "type": "para",
-   "text": "Inerțiile reduse. Motoarele finale (cap. 3) sunt SM-08-075 cu frână pe axa Z și SM-08-075 pe Y și SM-10-100 pe X; cifrele de mai jos sunt cele ale iterației finale, cu inerțiile rotoarelor reale. Axa Z, cu piesă, cu (2.14) și i = 1 (șurub montat direct pe motor):"
+   "text": "Inerțiile reduse. Motoarele finale (cap. 3) sunt SM-08-075 cu frână pe axa Z și SM-10-100 pe axele Y și X; cifrele de mai jos sunt cele ale iterației finale, cu inerțiile rotoarelor reale. Axa Z, cu piesă, cu (2.14) și i = 1 (șurub montat direct pe motor):"
   },
   {
    "id": 431,
@@ -2676,32 +2676,32 @@
   {
    "id": 438,
    "type": "math",
-   "text": "JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=1,13+0+0,08+0,56+10,05·10-4=11,82·10-4 kg·m2"
+   "text": "JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=2,65+0+0,08+1,31+10,05·10-4=14,10·10-4 kg·m2"
   },
   {
    "id": 439,
    "type": "para",
-   "text": "⟦JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=1,13+0+0,08+0,56+10,05·10-4=11,82·10-4 kg·m2⟧"
+   "text": "⟦JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=2,65+0+0,08+1,31+10,05·10-4=14,10·10-4 kg·m2⟧"
   },
   {
    "id": 440,
    "type": "math",
-   "text": "Jext=JΣ-Jr-Jfr=11,82-1,13-0·10-4=10,69·10-4 kg·m2"
+   "text": "Jext=JΣ-Jr-Jfr=14,10-2,65-0·10-4=11,45·10-4 kg·m2"
   },
   {
    "id": 441,
    "type": "para",
-   "text": "⟦Jext=JΣ-Jr-Jfr=11,82-1,13-0·10-4=10,69·10-4 kg·m2⟧"
+   "text": "⟦Jext=JΣ-Jr-Jfr=14,10-2,65-0·10-4=11,45·10-4 kg·m2⟧"
   },
   {
    "id": 442,
    "type": "math",
-   "text": "Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+0,56+8,47·10-4=9,11·10-4 kg·m2 (în gol)"
+   "text": "Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+1,31+8,47·10-4=9,86·10-4 kg·m2 (în gol)"
   },
   {
    "id": 443,
    "type": "para",
-   "text": "⟦Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+0,56+8,47·10-4=9,11·10-4 kg·m2 (în gol)⟧"
+   "text": "⟦Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+1,31+8,47·10-4=9,86·10-4 kg·m2 (în gol)⟧"
   },
   {
    "id": 444,
@@ -2711,42 +2711,42 @@
   {
    "id": 445,
    "type": "math",
-   "text": "JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=2,65+0+0,08+0,48+24,05·10-4=27,25·10-4 kg·m2"
+   "text": "JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=2,65+0+0,08+1,12+24,05·10-4=27,89·10-4 kg·m2"
   },
   {
    "id": 446,
    "type": "para",
-   "text": "⟦JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=2,65+0+0,08+0,48+24,05·10-4=27,25·10-4 kg·m2⟧"
+   "text": "⟦JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=2,65+0+0,08+1,12+24,05·10-4=27,89·10-4 kg·m2⟧"
   },
   {
    "id": 447,
    "type": "math",
-   "text": "Jext=JΣ-Jr-Jfr=27,25-2,65-0·10-4=24,60·10-4 kg·m2"
+   "text": "Jext=JΣ-Jr-Jfr=27,89-2,65-0·10-4=25,24·10-4 kg·m2"
   },
   {
    "id": 448,
    "type": "para",
-   "text": "⟦Jext=JΣ-Jr-Jfr=27,25-2,65-0·10-4=24,60·10-4 kg·m2⟧"
+   "text": "⟦Jext=JΣ-Jr-Jfr=27,89-2,65-0·10-4=25,24·10-4 kg·m2⟧"
   },
   {
    "id": 449,
    "type": "math",
-   "text": "Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+0,48+22,25·10-4=22,80·10-4 kg·m2 (în gol)"
+   "text": "Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+1,12+22,25·10-4=23,44·10-4 kg·m2 (în gol)"
   },
   {
    "id": 450,
    "type": "para",
-   "text": "⟦Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+0,48+22,25·10-4=22,80·10-4 kg·m2 (în gol)⟧"
+   "text": "⟦Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+1,12+22,25·10-4=23,44·10-4 kg·m2 (în gol)⟧"
   },
   {
    "id": 451,
    "type": "para",
-   "text": "unde: Jr = 1,13·10⁻⁴ kg·m² (SM-08-075) pe Y și 2,65·10⁻⁴ kg·m² (SM-10-100) pe X (tabelul A.2); Jfr = 0 — motoarele axelor orizontale nu au frână; Jred = 0,08·10⁻⁴ kg·m² — inerția reductorului RP-060-R la intrare (tabelul A.4); ceilalți termeni — din §2.4.2 și §2.4.3. Tabelul 2.5 adună aceste cifre."
+   "text": "unde: Jr = 2,65·10⁻⁴ kg·m² — rotorul SM-10-100, pe ambele axe (tabelul A.2); Jfr = 0 — motoarele axelor orizontale nu au frână; Jred = 0,08·10⁻⁴ kg·m² — inerția reductorului RP-060-R la intrare (tabelul A.4); ceilalți termeni — din §2.4.2 și §2.4.3. Tabelul 2.5 adună aceste cifre."
   },
   {
    "id": 452,
    "type": "para",
-   "text": "Tabelul 2.5. Momentele de inerție reduse la arborele motorului, în 10⁻⁴ kg·m² (cu motoarele finale din cap. 3: SM-08-075 pe Z, SM-08-075 pe Y, SM-10-100 pe X)"
+   "text": "Tabelul 2.5. Momentele de inerție reduse la arborele motorului, în 10⁻⁴ kg·m² (cu motoarele finale din cap. 3: SM-08-075 pe Z, SM-10-100 pe Y și X)"
   },
   {
    "id": 453,
@@ -2779,12 +2779,12 @@
     [
      "Y",
      "3,979",
-     "1,13",
+     "2,65",
      "0,08",
-     "0,56",
+     "1,31",
      "10,05",
-     "10,69",
-     "11,82",
+     "11,45",
+     "14,10",
      "602",
      "261  (2492 rot/min)"
     ],
@@ -2793,10 +2793,10 @@
      "4,244",
      "2,65",
      "0,08",
-     "0,48",
+     "1,12",
      "24,05",
-     "24,60",
-     "27,25",
+     "25,24",
+     "27,89",
      "394",
      "289  (2761 rot/min)"
     ]
@@ -2810,7 +2810,7 @@
   {
    "id": 455,
    "type": "para",
-   "text": "Se vede de ce axa X are inerția exterioară cea mai mare: 98 % din ea este masa în translație (133,5 kg reflectați prin rred = 4,244 mm), iar roțile, cureaua și reductorul contează puțin. Față de axa Z, inerția exterioară a axei X este de 7,8 ori mai mare, deși masa ei este de numai 3,2 ori mai mare, pentru că raza de raportare a curelei (4,2 mm) este mai mare decât a șurubului (2,5 mm)."
+   "text": "Se vede de ce axa X are inerția exterioară cea mai mare: 95 % din ea este masa în translație (133,5 kg reflectați prin rred = 4,244 mm), iar roțile, cureaua și reductorul contează puțin. Față de axa Z, inerția exterioară a axei X este de 8,0 ori mai mare, deși masa ei este de numai 3,2 ori mai mare, pentru că raza de raportare a curelei (4,2 mm) este mai mare decât a șurubului (2,5 mm)."
   },
   {
    "id": 456,
@@ -2840,27 +2840,27 @@
   {
    "id": 461,
    "type": "math",
-   "text": "MJ=Jr+Jfr+Jred+Jtr+Jci2εmot=1,13+0+0,08+0,56·10-4·602=0,107 N·m"
+   "text": "MJ=Jr+Jfr+Jred+Jtr+Jci2εmot=2,65+0+0,08+1,31·10-4·602=0,244 N·m"
   },
   {
    "id": 462,
    "type": "para",
-   "text": "⟦MJ=Jr+Jfr+Jred+Jtr+Jci2εmot=1,13+0+0,08+0,56·10-4·602=0,107 N·m⟧"
+   "text": "⟦MJ=Jr+Jfr+Jred+Jtr+Jci2εmot=2,65+0+0,08+1,31·10-4·602=0,244 N·m⟧"
   },
   {
    "id": 463,
    "type": "math",
-   "text": "MJ=Jr+Jfr+Jred+Jtr+Jci2εmot=2,65+0+0,08+0,48·10-4·394=0,126 N·m"
+   "text": "MJ=Jr+Jfr+Jred+Jtr+Jci2εmot=2,65+0+0,08+1,12·10-4·394=0,152 N·m"
   },
   {
    "id": 464,
    "type": "para",
-   "text": "⟦MJ=Jr+Jfr+Jred+Jtr+Jci2εmot=2,65+0+0,08+0,48·10-4·394=0,126 N·m⟧"
+   "text": "⟦MJ=Jr+Jfr+Jred+Jtr+Jci2εmot=2,65+0+0,08+1,12·10-4·394=0,152 N·m⟧"
   },
   {
    "id": 465,
    "type": "para",
-   "text": "unde: Jr = 1,13·10⁻⁴ kg·m² (SM-08-075, axa Z) și 1,13·10⁻⁴ kg·m² (SM-08-075) pe Y și 2,65·10⁻⁴ kg·m² (SM-10-100) pe X — inerțiile rotoarelor (tabelul A.2); Jfr = 0,09·10⁻⁴ kg·m² — discul frânei, numai pe Z (tabelul A.2); Jred = 0,08·10⁻⁴ kg·m² — reductorul RP-060-R, numai pe Y și X (tabelul A.4); (Jtr + Jc)/i² = 0,450; 0,56; 0,48·10⁻⁴ kg·m² — șurubul și cupla (Z), respectiv roțile, cureaua și cupla reduse prin i = 16 (Y) și 12 (X) (tabelul 2.5); εmot = 966; 602; 394 rad/s² — accelerațiile unghiulare ale motoarelor (§2.5). Masa în translație nu apare aici: dinamica ei este deja în forța Fdin."
+   "text": "unde: Jr = 1,13·10⁻⁴ kg·m² (SM-08-075, axa Z) și 2,65·10⁻⁴ kg·m² (SM-10-100, axele Y și X) — inerțiile rotoarelor (tabelul A.2); Jfr = 0,09·10⁻⁴ kg·m² — discul frânei, numai pe Z (tabelul A.2); Jred = 0,08·10⁻⁴ kg·m² — reductorul RP-060-R, numai pe Y și X (tabelul A.4); (Jtr + Jc)/i² = 0,450; 1,31; 1,12·10⁻⁴ kg·m² — șurubul și cupla (Z), respectiv roțile, cureaua și cupla reduse prin i = 16 (Y) și 12 (X) (tabelul 2.5); εmot = 966; 602; 394 rad/s² — accelerațiile unghiulare ale motoarelor (§2.5). Masa în translație nu apare aici: dinamica ei este deja în forța Fdin."
   },
   {
    "id": 466,
@@ -3166,17 +3166,17 @@
   {
    "id": 502,
    "type": "math",
-   "text": "M=MF+MJ=0,831+0,107=0,937 N·m"
+   "text": "M=MF+MJ=0,831+0,244=1,074 N·m"
   },
   {
    "id": 503,
    "type": "para",
-   "text": "⟦M=MF+MJ=0,831+0,107=0,937 N·m⟧"
+   "text": "⟦M=MF+MJ=0,831+0,244=1,074 N·m⟧"
   },
   {
    "id": 504,
    "type": "para",
-   "text": "unde: F = 188,4 N — forța de vârf (tabelul 2.2); rred = 3,979·10⁻³ m — raza de raportare curea + reductor (§2.4.2); ηc = 0,96 — randamentul curelei dințate (tabelul A.8); ηred = 0,94 — randamentul reductorului planetar cu două trepte (tabelul A.4); MJ = 0,107 N·m — cuplul dinamic al maselor rotative ale axei Y (calculat mai sus). Celelalte cinci faze se calculează identic; rezultatele sunt în tabelul 2.7."
+   "text": "unde: F = 188,4 N — forța de vârf (tabelul 2.2); rred = 3,979·10⁻³ m — raza de raportare curea + reductor (§2.4.2); ηc = 0,96 — randamentul curelei dințate (tabelul A.8); ηred = 0,94 — randamentul reductorului planetar cu două trepte (tabelul A.4); MJ = 0,244 N·m — cuplul dinamic al maselor rotative ale axei Y (calculat mai sus). Celelalte cinci faze se calculează identic; rezultatele sunt în tabelul 2.7."
   },
   {
    "id": 505,
@@ -3201,22 +3201,22 @@
   {
    "id": 509,
    "type": "math",
-   "text": "M=MF+MJ=1,395+0,126=1,521 N·m"
+   "text": "M=MF+MJ=1,395+0,152=1,546 N·m"
   },
   {
    "id": 510,
    "type": "para",
-   "text": "⟦M=MF+MJ=1,395+0,126=1,521 N·m⟧"
+   "text": "⟦M=MF+MJ=1,395+0,152=1,546 N·m⟧"
   },
   {
    "id": 511,
    "type": "para",
-   "text": "unde: F = 296,5 N — forța de vârf (tabelul 2.2); rred = 4,244·10⁻³ m — raza de raportare curea + reductor (§2.4.2); ηc = 0,96 — randamentul curelei dințate (tabelul A.8); ηred = 0,94 — randamentul reductorului planetar cu două trepte (tabelul A.4); MJ = 0,126 N·m — cuplul dinamic al maselor rotative ale axei X (calculat mai sus). Celelalte cinci faze se calculează identic; rezultatele sunt în tabelul 2.7."
+   "text": "unde: F = 296,5 N — forța de vârf (tabelul 2.2); rred = 4,244·10⁻³ m — raza de raportare curea + reductor (§2.4.2); ηc = 0,96 — randamentul curelei dințate (tabelul A.8); ηred = 0,94 — randamentul reductorului planetar cu două trepte (tabelul A.4); MJ = 0,152 N·m — cuplul dinamic al maselor rotative ale axei X (calculat mai sus). Celelalte cinci faze se calculează identic; rezultatele sunt în tabelul 2.7."
   },
   {
    "id": 512,
    "type": "para",
-   "text": "Tabelul 2.7. Diagramele de sarcină ale axelor Y (SM-08-075; porțiuni de 0,433 s) și X (SM-10-100, RP-060-R i = 12; porțiuni de 0,733 s)"
+   "text": "Tabelul 2.7. Diagramele de sarcină ale axelor Y (SM-10-100; porțiuni de 0,433 s) și X (SM-10-100, RP-060-R i = 12; porțiuni de 0,733 s)"
   },
   {
    "id": 513,
@@ -3237,8 +3237,8 @@
      "accelerare",
      "+188,4",
      "+0,831",
-     "+0,107",
-     "+0,937"
+     "+0,244",
+     "+1,074"
     ],
     [
      "",
@@ -3255,8 +3255,8 @@
      "frânare",
      "−115,9",
      "−0,416",
-     "−0,107",
-     "−0,523"
+     "−0,244",
+     "−0,660"
     ],
     [
      "",
@@ -3264,8 +3264,8 @@
      "accelerare",
      "+163,5",
      "+0,721",
-     "+0,107",
-     "+0,827"
+     "+0,244",
+     "+0,964"
     ],
     [
      "",
@@ -3282,8 +3282,8 @@
      "frânare",
      "−93,0",
      "−0,334",
-     "−0,107",
-     "−0,440"
+     "−0,244",
+     "−0,577"
     ],
     [
      "X",
@@ -3291,8 +3291,8 @@
      "accelerare",
      "+296,5",
      "+1,395",
-     "+0,126",
-     "+1,521"
+     "+0,152",
+     "+1,546"
     ],
     [
      "",
@@ -3309,8 +3309,8 @@
      "frânare",
      "−150,3",
      "−0,576",
-     "−0,126",
-     "−0,702"
+     "−0,152",
+     "−0,727"
     ],
     [
      "",
@@ -3318,8 +3318,8 @@
      "accelerare",
      "+278,8",
      "+1,311",
-     "+0,126",
-     "+1,438"
+     "+0,152",
+     "+1,463"
     ],
     [
      "",
@@ -3336,8 +3336,8 @@
      "frânare",
      "−134,6",
      "−0,515",
-     "−0,126",
-     "−0,642"
+     "−0,152",
+     "−0,667"
     ]
    ]
   },
@@ -3354,12 +3354,12 @@
   {
    "id": 516,
    "type": "math",
-   "text": "Mech=∑Mi2 tiTc=0,4333·0,9372+0,1602+0,5232+0,8272+0,1552+0,44028,6=0,32 N·m"
+   "text": "Mech=∑Mi2 tiTc=0,4333·1,0742+0,1602+0,6602+0,9642+0,1552+0,57728,6=0,38 N·m"
   },
   {
    "id": 517,
    "type": "para",
-   "text": "⟦Mech=∑Mi2 tiTc=0,4333·0,9372+0,1602+0,5232+0,8272+0,1552+0,44028,6=0,32 N·m⟧"
+   "text": "⟦Mech=∑Mi2 tiTc=0,4333·1,0742+0,1602+0,6602+0,9642+0,1552+0,57728,6=0,38 N·m⟧"
   },
   {
    "id": 518,
@@ -3369,17 +3369,17 @@
   {
    "id": 519,
    "type": "math",
-   "text": "Mech=∑Mi2 tiTc=0,7333·1,5212+0,3442+0,7022+1,4382+0,3392+0,64228,6=0,69 N·m"
+   "text": "Mech=∑Mi2 tiTc=0,7333·1,5462+0,3442+0,7272+1,4632+0,3392+0,66728,6=0,70 N·m"
   },
   {
    "id": 520,
    "type": "para",
-   "text": "⟦Mech=∑Mi2 tiTc=0,7333·1,5212+0,3442+0,7022+1,4382+0,3392+0,64228,6=0,69 N·m⟧"
+   "text": "⟦Mech=∑Mi2 tiTc=0,7333·1,5462+0,3442+0,7272+1,4632+0,3392+0,66728,6=0,70 N·m⟧"
   },
   {
    "id": 521,
    "type": "para",
-   "text": "unde: Mi — cuplurile din tabelul 2.7, axa Y, respectiv axa X; ti = 0,4333 s — durata unei porțiuni a axei Y, tY/3, și 0,7333 s — a axei X, tX/3 (§1.4); Tc = 8,6 s (§1.2). Cuplurile de vârf: Mmax,Y = 0,94 N·m, Mmax,X = 1,52 N·m. La ambele axe termenul inerțiilor rotative (MJ = 0,11 N·m pe Y, 0,13 N·m pe X) este mai mic decât cel al forței (frecare + inerția maselor în translație); randamentul dublu (curea × reductor = 0,96 · 0,94 = 0,90) mărește cuplul motor cu 11 % la accelerare."
+   "text": "unde: Mi — cuplurile din tabelul 2.7, axa Y, respectiv axa X; ti = 0,4333 s — durata unei porțiuni a axei Y, tY/3, și 0,7333 s — a axei X, tX/3 (§1.4); Tc = 8,6 s (§1.2). Cuplurile de vârf: Mmax,Y = 1,07 N·m, Mmax,X = 1,55 N·m. La ambele axe termenul inerțiilor rotative (MJ = 0,24 N·m pe Y, 0,15 N·m pe X) este mai mic decât cel al forței (frecare + inerția maselor în translație); randamentul dublu (curea × reductor = 0,96 · 0,94 = 0,90) mărește cuplul motor cu 11 % la accelerare."
   },
   {
    "id": 522,
@@ -3604,102 +3604,102 @@
   {
    "id": 566,
    "type": "para",
-   "text": "Datele (§2.5–2.6): Mech = 0,32 N·m, Mmax = 0,94 N·m, nmot = 2492 rot/min, Jext = 10,69·10⁻⁴ kg·m² cu piesă, 9,11·10⁻⁴ kg·m² în gol. Aici cuplul nu decide nimic (și motorul de 0,4 kW l-ar da); decide raportul inerțiilor, calculat pentru cei trei candidați — SM-06-040, SM-08-075, SM-10-100:"
+   "text": "Datele (§2.5–2.6): Mech = 0,38 N·m, Mmax = 1,07 N·m, nmot = 2492 rot/min, Jext = 11,45·10⁻⁴ kg·m² cu piesă, 9,86·10⁻⁴ kg·m² în gol. Aici cuplul nu decide nimic (și motorul de 0,4 kW l-ar da); decide raportul inerțiilor, calculat pentru cei trei candidați — SM-06-040, SM-08-075, SM-10-100:"
   },
   {
    "id": 567,
    "type": "math",
-   "text": "JextJr=10,690,28=38,2"
+   "text": "JextJr=11,450,28=40,9"
   },
   {
    "id": 568,
    "type": "para",
-   "text": "⟦JextJr=10,690,28=38,2⟧"
+   "text": "⟦JextJr=11,450,28=40,9⟧"
   },
   {
    "id": 569,
    "type": "math",
-   "text": "JextJr=10,691,13=9,5"
+   "text": "JextJr=11,451,13=10,1"
   },
   {
    "id": 570,
    "type": "para",
-   "text": "⟦JextJr=10,691,13=9,5⟧"
+   "text": "⟦JextJr=11,451,13=10,1⟧"
   },
   {
    "id": 571,
    "type": "math",
-   "text": "JextJr=10,691,13=9,5"
+   "text": "JextJr=11,452,65=4,3"
   },
   {
    "id": 572,
    "type": "para",
-   "text": "⟦JextJr=10,691,13=9,5⟧"
+   "text": "⟦JextJr=11,452,65=4,3⟧"
   },
   {
    "id": 573,
    "type": "para",
-   "text": "unde: Jext = 10,69·10⁻⁴ kg·m² — inerția exterioară rotorului, cu piesă: masa de 63,5 kg reflectată prin curea și reductor, roțile, cureaua și cupla (§2.5, tabelul 2.5); Jr = 0,28; 1,13; 2,65·10⁻⁴ kg·m² — rotoarele SM-06-040, SM-08-075, SM-10-100 (tabelul A.2). Motorul de 0,4 kW este exclus (38 ✗); cel de 0,75 kW are 9,5 ✓; cel de 1 kW are 4,0 ✓. Adoptăm SM-08-075 (tabelele A.1–A.2): PN = 0,8 kW, MN = 2,39 N·m, Mmax,mot = 7,16 N·m, nN = 3000 rot/min, IN = 5,1 A, kM = 0,47 N·m/A, Jr = 1,13·10⁻⁴ kg·m². Raportul în gol:"
+   "text": "unde: Jext = 11,45·10⁻⁴ kg·m² — inerția exterioară rotorului, cu piesă: masa de 63,5 kg reflectată prin curea și reductor, roțile, cureaua și cupla (§2.5, tabelul 2.5); Jr = 0,28; 1,13; 2,65·10⁻⁴ kg·m² — rotoarele SM-06-040, SM-08-075, SM-10-100 (tabelul A.2). Motorul de 0,4 kW este exclus (41 ✗); cel de 0,75 kW are 10,1 (peste 10, sub 20); cel de 1 kW are 4,3 ✓. Adoptăm SM-10-100 (tabelele A.1–A.2): PN = 1,0 kW, MN = 3,18 N·m, Mmax,mot = 9,55 N·m, nN = 3000 rot/min, IN = 7,3 A, kM = 0,44 N·m/A, Jr = 2,65·10⁻⁴ kg·m². Raportul în gol:"
   },
   {
    "id": 574,
    "type": "math",
-   "text": "JextJr=9,111,13=8,1"
+   "text": "JextJr=9,862,65=3,7"
   },
   {
    "id": 575,
    "type": "para",
-   "text": "⟦JextJr=9,111,13=8,1⟧"
+   "text": "⟦JextJr=9,862,65=3,7⟧"
   },
   {
    "id": 576,
    "type": "para",
-   "text": "unde: Jext = 9,11·10⁻⁴ kg·m² — inerția exterioară în gol (§2.5); Jr = 2,65·10⁻⁴ kg·m² (tabelul A.2). Verificările (pasul 3.2): (1) încălzirea, Mech = 0,32 N·m (§2.6) ≤ kambMN = 1,0 · 2,39 = 2,39 N·m ✓, cu încărcarea"
+   "text": "unde: Jext = 9,86·10⁻⁴ kg·m² — inerția exterioară în gol (§2.5); Jr = 2,65·10⁻⁴ kg·m² (tabelul A.2). Verificările (pasul 3.2): (1) încălzirea, Mech = 0,38 N·m (§2.6) ≤ kambMN = 1,0 · 3,18 = 3,18 N·m ✓, cu încărcarea"
   },
   {
    "id": 577,
    "type": "math",
-   "text": "MechMN=0,322,39=0,14"
+   "text": "MechMN=0,383,18=0,12"
   },
   {
    "id": 578,
    "type": "para",
-   "text": "⟦MechMN=0,322,39=0,14⟧"
+   "text": "⟦MechMN=0,383,18=0,12⟧"
   },
   {
    "id": 579,
    "type": "para",
-   "text": "adică 14 %; (2) suprasarcina:"
+   "text": "adică 12 %; (2) suprasarcina:"
   },
   {
    "id": 580,
    "type": "math",
-   "text": "1,2 Mmax=1,2·0,94=1,12 N·m≤Mmax,mot=7,16 N·m"
+   "text": "1,2 Mmax=1,2·1,07=1,29 N·m≤Mmax,mot=9,55 N·m"
   },
   {
    "id": 581,
    "type": "para",
-   "text": "⟦1,2 Mmax=1,2·0,94=1,12 N·m≤Mmax,mot=7,16 N·m⟧"
+   "text": "⟦1,2 Mmax=1,2·1,07=1,29 N·m≤Mmax,mot=9,55 N·m⟧"
   },
   {
    "id": 582,
    "type": "para",
-   "text": "unde: Mmax = 0,94 N·m — cuplul de vârf cerut (tabelul 2.7); Mmax,mot = 7,16 N·m — cuplul maxim al SM-08-075 (tabelul A.1) ✓; (3) turația: nmot = 2492 rot/min (§2.4.2) ≤ nN = 3000 rot/min ✓; (4) raportul inerțiilor: 4,0 ≤ 10 ✓; (5) fără frână — axa este orizontală, iar curelele nu se autoblochează, dar căruciorul Y nu are tendință de deplasare spontană (nu există forță statică pe direcția Y). Puterea de vârf la motor:"
+   "text": "unde: Mmax = 1,07 N·m — cuplul de vârf cerut (tabelul 2.7); Mmax,mot = 9,55 N·m — cuplul maxim al SM-10-100 (tabelul A.1) ✓; (3) turația: nmot = 2492 rot/min (§2.4.2) ≤ nN = 3000 rot/min ✓; (4) raportul inerțiilor: 4,3 ≤ 10 ✓; (5) fără frână — axa este orizontală, iar curelele nu se autoblochează, dar căruciorul Y nu are tendință de deplasare spontană (nu există forță statică pe direcția Y). Puterea de vârf la motor:"
   },
   {
    "id": 583,
    "type": "math",
-   "text": "Pvârf=Mmax Ωmot=0,937·261,0=245 W"
+   "text": "Pvârf=Mmax Ωmot=1,074·261,0=280 W"
   },
   {
    "id": 584,
    "type": "para",
-   "text": "⟦Pvârf=Mmax Ωmot=0,937·261,0=245 W⟧"
+   "text": "⟦Pvârf=Mmax Ωmot=1,074·261,0=280 W⟧"
   },
   {
    "id": 585,
    "type": "para",
-   "text": "unde: Mmax = 0,937 N·m (tabelul 2.7); Ωmot = 261,0 rad/s — viteza unghiulară a motorului la 2492 rot/min (§2.5). Alegem un motor de 1 kW pentru un cuplu echivalent de 0,32 N·m ca să avem un rotor destul de greu — situația descrisă în Îndrumar la pasul 3.1."
+   "text": "unde: Mmax = 1,074 N·m (tabelul 2.7); Ωmot = 261,0 rad/s — viteza unghiulară a motorului la 2492 rot/min (§2.5). Alegem un motor de 1 kW pentru un cuplu echivalent de 0,38 N·m ca să avem un rotor destul de greu — situația descrisă în Îndrumar la pasul 3.1."
   },
   {
    "id": 586,
@@ -3709,67 +3709,67 @@
   {
    "id": 587,
    "type": "para",
-   "text": "Datele (§2.5–2.6): Mech = 0,69 N·m, Mmax = 1,52 N·m, nmot = 2761 rot/min, Jext = 24,60·10⁻⁴ kg·m² cu piesă, 22,80·10⁻⁴ kg·m² în gol. Raportul inerțiilor pentru cei trei candidați — SM-08-075, SM-10-100, SM-10-100:"
+   "text": "Datele (§2.5–2.6): Mech = 0,70 N·m, Mmax = 1,55 N·m, nmot = 2761 rot/min, Jext = 25,24·10⁻⁴ kg·m² cu piesă, 23,44·10⁻⁴ kg·m² în gol. Raportul inerțiilor pentru cei trei candidați — SM-08-075, SM-10-100, SM-10-150:"
   },
   {
    "id": 588,
    "type": "math",
-   "text": "JextJr=24,601,13=21,8"
+   "text": "JextJr=25,241,13=22,3"
   },
   {
    "id": 589,
    "type": "para",
-   "text": "⟦JextJr=24,601,13=21,8⟧"
+   "text": "⟦JextJr=25,241,13=22,3⟧"
   },
   {
    "id": 590,
    "type": "math",
-   "text": "JextJr=24,602,65=9,3"
+   "text": "JextJr=25,242,65=9,5"
   },
   {
    "id": 591,
    "type": "para",
-   "text": "⟦JextJr=24,602,65=9,3⟧"
+   "text": "⟦JextJr=25,242,65=9,5⟧"
   },
   {
    "id": 592,
    "type": "math",
-   "text": "JextJr=24,603,6=6,8"
+   "text": "JextJr=25,243,6=7,0"
   },
   {
    "id": 593,
    "type": "para",
-   "text": "⟦JextJr=24,603,6=6,8⟧"
+   "text": "⟦JextJr=25,243,6=7,0⟧"
   },
   {
    "id": 594,
    "type": "para",
-   "text": "unde: Jext = 24,60·10⁻⁴ kg·m² — inerția exterioară rotorului, cu piesă: masa de 133,5 kg reflectată prin curea și reductor (§2.5, tabelul 2.5); Jr = 1,13; 2,65; 2,65·10⁻⁴ kg·m² — rotoarele SM-08-075, SM-10-100, SM-10-100 (tabelul A.2). Motorul de 0,75 kW este exclus (21,8 ✗ — peste 20); cel de 1 kW are 9,3 ✗ — peste 20; cel de 1 kW, 9,3 ✓ (motorul de 1,5 kW, SM-10-150, ar da 6,8 — în domeniu, dar datele de catalog complete ale SM-10-150 nu sunt în extrasul folosit aici). Adoptăm SM-10-100 (tabelele A.1–A.2): PN = 1 kW, MN = 3,18 N·m, Mmax,mot = 9,55 N·m, nN = 3000 rot/min, IN = 7 A, kM = 0,44 N·m/A, Jr = 2,65·10⁻⁴ kg·m². Raportul în gol:"
+   "text": "unde: Jext = 25,24·10⁻⁴ kg·m² — inerția exterioară rotorului, cu piesă: masa de 133,5 kg reflectată prin curea și reductor (§2.5, tabelul 2.5); Jr = 1,13; 2,65; 3,6·10⁻⁴ kg·m² — rotoarele SM-08-075, SM-10-100, SM-10-150 (tabelul A.2). Motorul de 0,75 kW este exclus (22,3 ✗ — peste 20); cel de 1 kW are 9,5 ✓, sub limita recomandată de 10; cel de 1,5 kW, 7,0 ✓ (datele de catalog complete ale SM-10-150 nu sunt în extrasul folosit aici). Adoptăm SM-10-100 (datele de catalog ca la axa Y), cu raportul inerțiilor 9,5 ✓. Raportul în gol:"
   },
   {
    "id": 595,
    "type": "math",
-   "text": "JextJr=22,802,65=8,6"
+   "text": "JextJr=23,442,65=8,8"
   },
   {
    "id": 596,
    "type": "para",
-   "text": "⟦JextJr=22,802,65=8,6⟧"
+   "text": "⟦JextJr=23,442,65=8,8⟧"
   },
   {
    "id": 597,
    "type": "para",
-   "text": "unde: Jext = 22,80·10⁻⁴ kg·m² — inerția exterioară în gol (§2.5); Jr = 2,65·10⁻⁴ kg·m² (tabelul A.2). Verificările (pasul 3.2): (1) încălzirea, Mech = 0,69 N·m (§2.6) ≤ kambMN = 1,0 · 3,18 = 3,18 N·m ✓, cu încărcarea"
+   "text": "unde: Jext = 23,44·10⁻⁴ kg·m² — inerția exterioară în gol (§2.5); Jr = 2,65·10⁻⁴ kg·m² (tabelul A.2). Verificările (pasul 3.2): (1) încălzirea, Mech = 0,70 N·m (§2.6) ≤ kambMN = 1,0 · 3,18 = 3,18 N·m ✓, cu încărcarea"
   },
   {
    "id": 598,
    "type": "math",
-   "text": "MechMN=0,693,18=0,22"
+   "text": "MechMN=0,703,18=0,22"
   },
   {
    "id": 599,
    "type": "para",
-   "text": "⟦MechMN=0,693,18=0,22⟧"
+   "text": "⟦MechMN=0,703,18=0,22⟧"
   },
   {
    "id": 600,
@@ -3779,32 +3779,32 @@
   {
    "id": 601,
    "type": "math",
-   "text": "1,2 Mmax=1,2·1,52=1,83 N·m≤Mmax,mot=9,55 N·m"
+   "text": "1,2 Mmax=1,2·1,55=1,86 N·m≤Mmax,mot=9,55 N·m"
   },
   {
    "id": 602,
    "type": "para",
-   "text": "⟦1,2 Mmax=1,2·1,52=1,83 N·m≤Mmax,mot=9,55 N·m⟧"
+   "text": "⟦1,2 Mmax=1,2·1,55=1,86 N·m≤Mmax,mot=9,55 N·m⟧"
   },
   {
    "id": 603,
    "type": "para",
-   "text": "unde: Mmax = 1,52 N·m — cuplul de vârf cerut (tabelul 2.7); Mmax,mot = 9,55 N·m (tabelul A.1) ✓; (3) turația: nmot = 2761 rot/min (§2.4.3) ≤ nN = 3000 rot/min ✓; (4) raportul inerțiilor: 9,3 ≤ 10 ✓; (5) fără frână. Puterea de vârf la motor:"
+   "text": "unde: Mmax = 1,55 N·m — cuplul de vârf cerut (tabelul 2.7); Mmax,mot = 9,55 N·m (tabelul A.1) ✓; (3) turația: nmot = 2761 rot/min (§2.4.3) ≤ nN = 3000 rot/min ✓; (4) raportul inerțiilor: 9,5 ≤ 10 ✓; (5) fără frână. Puterea de vârf la motor:"
   },
   {
    "id": 604,
    "type": "math",
-   "text": "Pvârf=Mmax Ωmot=1,521·289,2=440 W"
+   "text": "Pvârf=Mmax Ωmot=1,546·289,2=447 W"
   },
   {
    "id": 605,
    "type": "para",
-   "text": "⟦Pvârf=Mmax Ωmot=1,521·289,2=440 W⟧"
+   "text": "⟦Pvârf=Mmax Ωmot=1,546·289,2=447 W⟧"
   },
   {
    "id": 606,
    "type": "para",
-   "text": "unde: Mmax = 1,521 N·m (tabelul 2.7); Ωmot = 289,2 rad/s — viteza unghiulară a motorului la 2761 rot/min (§2.5)."
+   "text": "unde: Mmax = 1,546 N·m (tabelul 2.7); Ωmot = 289,2 rad/s — viteza unghiulară a motorului la 2761 rot/min (§2.5)."
   },
   {
    "id": 607,
@@ -3839,7 +3839,7 @@
   {
    "id": 613,
    "type": "para",
-   "text": "Variantă de analizat: catalogul reductorului mai are raportul i = 16, cu care roata z = 40 (dp = 127,3 mm) ar da pe axa Y 2492 rot/min — sub limita de 2850 ✓ —, dar pe axa X 2946 rot/min, peste limita de 2850 ✗; pe axa X raportul 16 nu încape, iar pe axa Y nu este necesar, pentru că raportul de inerții cu SM-10-100 este deja 4,0. Soluția adoptată (z = 40 pe Y, 32 pe X, i = 16 pe Y, 12 pe X) păstrează transmisia din calculele de proiect; varianta cu z = 40, i = 16 pe axa Y rămâne de confirmat cu conducătorul."
+   "text": "Variantă de analizat: catalogul reductorului mai are raportul i = 16, cu care roata z = 40 (dp = 127,3 mm) ar da pe axa Y 2492 rot/min — sub limita de 2850 ✓ —, dar pe axa X 2946 rot/min, peste limita de 2850 ✗; pe axa X raportul 16 nu încape, iar pe axa Y nu este necesar, pentru că raportul de inerții cu SM-10-100 este deja 4,3. Soluția adoptată (z = 40 pe Y, 32 pe X, i = 16 pe Y, 12 pe X) păstrează transmisia din calculele de proiect; varianta cu z = 40, i = 16 pe axa Y rămâne de confirmat cu conducătorul."
   },
   {
    "id": 614,
@@ -3920,29 +3920,29 @@
     ],
     [
      "Y",
-     "SM-08-075",
-     "0,75",
-     "245",
-     "135",
-     "16",
-     "14 %"
+     "SM-10-100",
+     "1,0",
+     "280",
+     "151",
+     "18",
+     "12 %"
     ],
     [
      "X",
      "SM-10-100",
      "1,0",
-     "440",
-     "459",
-     "53",
+     "447",
+     "464",
+     "54",
      "22 %"
     ],
     [
      "total",
      "",
-     "2,50",
+     "2,75",
      "",
-     "742",
-     "86",
+     "762",
+     "89",
      ""
     ]
    ]
@@ -3960,17 +3960,17 @@
   {
    "id": 628,
    "type": "math",
-   "text": "Pinst=∑PN=0,75+0,8+1,0=2,50 kW"
+   "text": "Pinst=∑PN=0,75+1,0+1,0=2,75 kW"
   },
   {
    "id": 629,
    "type": "para",
-   "text": "⟦Pinst=∑PN=0,75+0,8+1,0=2,50 kW⟧"
+   "text": "⟦Pinst=∑PN=0,75+1,0+1,0=2,75 kW⟧"
   },
   {
    "id": 630,
    "type": "para",
-   "text": "unde: PN = 0,75 kW (SM-08-075, axa Z), 0,8 kW (SM-08-075, axa Y) și 1 kW (SM-10-100, axa X) — puterile nominale ale motoarelor adoptate (tabelul A.1). Puterea mecanică medie este de 86 W, plus pierderile din motoare la menținere — la axa Z curentul de menținere cu piesă:"
+   "text": "unde: PN = 0,75 kW (SM-08-075, axa Z) și 1,0 kW (SM-10-100, axele Y și X) — puterile nominale ale motoarelor adoptate (tabelul A.1). Puterea mecanică medie este de 89 W, plus pierderile din motoare la menținere — la axa Z curentul de menținere cu piesă:"
   },
   {
    "id": 631,
@@ -3990,17 +3990,17 @@
   {
    "id": 634,
    "type": "math",
-   "text": "PinstPmed=250086=29"
+   "text": "PinstPmed=275089=31"
   },
   {
    "id": 635,
    "type": "para",
-   "text": "⟦PinstPmed=250086=29⟧"
+   "text": "⟦PinstPmed=275089=31⟧"
   },
   {
    "id": 636,
    "type": "para",
-   "text": "unde: Pinst = 2500 W (calculată mai sus); Pmed = 86 W — suma puterilor medii din tabelul 3.1. Raportul de 29 este tipic pentru roboți și justifică alegerea convertoarelor pe curent, nu pe puterea motoarelor. La portal, axa cea mai „muncită” este X (masa cea mai mare și cursa cea mai lungă: 459 J din 742 J pe ciclu), nu Z ca la robotul cilindric — contragreutatea a mutat centrul de greutate al problemei."
+   "text": "unde: Pinst = 2750 W (calculată mai sus); Pmed = 89 W — suma puterilor medii din tabelul 3.1. Raportul de 31 este tipic pentru roboți și justifică alegerea convertoarelor pe curent, nu pe puterea motoarelor. La portal, axa cea mai „muncită” este X (masa cea mai mare și cursa cea mai lungă: 464 J din 762 J pe ciclu), nu Z ca la robotul cilindric — contragreutatea a mutat centrul de greutate al problemei."
   },
   {
    "id": 637,
@@ -4015,7 +4015,7 @@
   {
    "id": 639,
    "type": "para",
-   "text": "Servo este prescris; argumentul cantitativ: axa X cere 1,52 N·m la 2761 rot/min cu o sarcină de 133,5 kg lansată la 1,23 m/s — un motor pas cu pas ar trebui să lucreze sub 600 rot/min (Îndrumar, pasul 3.3), deci raportul de transmisie ar trebui redus de:"
+   "text": "Servo este prescris; argumentul cantitativ: axa X cere 1,55 N·m la 2761 rot/min cu o sarcină de 133,5 kg lansată la 1,23 m/s — un motor pas cu pas ar trebui să lucreze sub 600 rot/min (Îndrumar, pasul 3.3), deci raportul de transmisie ar trebui redus de:"
   },
   {
    "id": 640,
@@ -4030,7 +4030,7 @@
   {
    "id": 642,
    "type": "para",
-   "text": "unde: nmot = 2761 rot/min — turația cerută motorului axei X la vmax (§2.4.3); 600 rot/min — turația maximă utilă a motorului pas cu pas (Îndrumar, pasul 3.3). Cu o roată de 4,6 ori mai mare sau un reductor cu raportul de 4,6 ori mai mic, raza de raportare crește de 4,6 ori și inerția reflectată de 4,6² ≈ 21 de ori (24,60·10⁻⁴ → ≈ 521·10⁻⁴ kg·m², de peste o sută de ori rotorul celui mai mare motor pas cu pas din tabelul A.3, Jr = 4,8·10⁻⁴ kg·m²); motorul ar pierde pași la prima cutie mai grea, fără ca cineva să afle înainte de paleta stricată. Reacția de poziție este obligatorie și pentru compensarea elasticității curelei (§2.4.3)."
+   "text": "unde: nmot = 2761 rot/min — turația cerută motorului axei X la vmax (§2.4.3); 600 rot/min — turația maximă utilă a motorului pas cu pas (Îndrumar, pasul 3.3). Cu o roată de 4,6 ori mai mare sau un reductor cu raportul de 4,6 ori mai mic, raza de raportare crește de 4,6 ori și inerția reflectată de 4,6² ≈ 21 de ori (25,24·10⁻⁴ → ≈ 535·10⁻⁴ kg·m², de peste o sută de ori rotorul celui mai mare motor pas cu pas din tabelul A.3, Jr = 4,8·10⁻⁴ kg·m²); motorul ar pierde pași la prima cutie mai grea, fără ca cineva să afle înainte de paleta stricată. Reacția de poziție este obligatorie și pentru compensarea elasticității curelei (§2.4.3)."
   },
   {
    "id": 643,
@@ -4080,32 +4080,32 @@
   {
    "id": 652,
    "type": "math",
-   "text": "Iech=MechkM=0,320,47=0,69 A"
+   "text": "Iech=MechkM=0,380,44=0,87 A"
   },
   {
    "id": 653,
    "type": "para",
-   "text": "⟦Iech=MechkM=0,320,47=0,69 A⟧"
+   "text": "⟦Iech=MechkM=0,380,44=0,87 A⟧"
   },
   {
    "id": 654,
    "type": "math",
-   "text": "Iv=MmaxkM=0,940,47=1,99 A"
+   "text": "Iv=MmaxkM=1,070,44=2,44 A"
   },
   {
    "id": 655,
    "type": "para",
-   "text": "⟦Iv=MmaxkM=0,940,47=1,99 A⟧"
+   "text": "⟦Iv=MmaxkM=1,070,44=2,44 A⟧"
   },
   {
    "id": 656,
    "type": "math",
-   "text": "1,2 Iv=1,2·1,99=2,39 A"
+   "text": "1,2 Iv=1,2·2,44=2,93 A"
   },
   {
    "id": 657,
    "type": "para",
-   "text": "⟦1,2 Iv=1,2·1,99=2,39 A⟧"
+   "text": "⟦1,2 Iv=1,2·2,44=2,93 A⟧"
   },
   {
    "id": 658,
@@ -4115,37 +4115,37 @@
   {
    "id": 659,
    "type": "math",
-   "text": "Iech=MechkM=0,690,44=1,56 A"
+   "text": "Iech=MechkM=0,700,44=1,59 A"
   },
   {
    "id": 660,
    "type": "para",
-   "text": "⟦Iech=MechkM=0,690,44=1,56 A⟧"
+   "text": "⟦Iech=MechkM=0,700,44=1,59 A⟧"
   },
   {
    "id": 661,
    "type": "math",
-   "text": "Iv=MmaxkM=1,520,44=3,46 A"
+   "text": "Iv=MmaxkM=1,550,44=3,51 A"
   },
   {
    "id": 662,
    "type": "para",
-   "text": "⟦Iv=MmaxkM=1,520,44=3,46 A⟧"
+   "text": "⟦Iv=MmaxkM=1,550,44=3,51 A⟧"
   },
   {
    "id": 663,
    "type": "math",
-   "text": "1,2 Iv=1,2·3,46=4,15 A"
+   "text": "1,2 Iv=1,2·3,51=4,22 A"
   },
   {
    "id": 664,
    "type": "para",
-   "text": "⟦1,2 Iv=1,2·3,46=4,15 A⟧"
+   "text": "⟦1,2 Iv=1,2·3,51=4,22 A⟧"
   },
   {
    "id": 665,
    "type": "para",
-   "text": "unde: Mech = 0,48; 0,32; 0,69 N·m și Mmax = 1,09; 0,94; 1,52 N·m — cuplul echivalent și cuplul de vârf ale axelor Z, Y, X (§2.6); kM = 0,47 N·m/A (SM-08-075, axa Z) și 0,47 N·m/A (SM-08-075, axa Y), 0,44 N·m/A (SM-10-100, axa X) — constantele de cuplu (tabelul A.2); 1,2 — rezerva pentru vârf (Îndrumar, pasul 4.2). Pentru toate trei axele este suficient SC-400-3 (IN = 3 A, Imax = 9 A, motoare până la 1 kW, chopper intern 100 W, Rmin = 100 Ω, EtherCAT, STO): la axa X, cea mai încărcată, Iech = 1,56 A ≤ IN = 3 A ✓ (52 %) și 1,2 Iv = 4,15 A ≤ Imax = 9 A ✓. Convertorul este mai mic și decât motoarele orizontale (IN = 5,1 A pe Y, 7,3 A pe X), deci cuplul de vârf disponibil devine cel permis de curentul maxim al convertorului:"
+   "text": "unde: Mech = 0,48; 0,38; 0,70 N·m și Mmax = 1,09; 1,07; 1,55 N·m — cuplul echivalent și cuplul de vârf ale axelor Z, Y, X (§2.6); kM = 0,47 N·m/A (SM-08-075, axa Z) și 0,44 N·m/A (SM-10-100, axele Y și X) — constantele de cuplu (tabelul A.2); 1,2 — rezerva pentru vârf (Îndrumar, pasul 4.2). Pentru toate trei axele este suficient SC-400-3 (IN = 3 A, Imax = 9 A, motoare până la 1 kW, chopper intern 100 W, Rmin = 100 Ω, EtherCAT, STO): la axa X, cea mai încărcată, Iech = 1,59 A ≤ IN = 3 A ✓ (53 %) și 1,2 Iv = 4,22 A ≤ Imax = 9 A ✓. Convertorul este mai mic decât motoarele de 1 kW (IN = 7,3 A), deci cuplul de vârf disponibil pe Y și X devine cel permis de curentul maxim al convertorului:"
   },
   {
    "id": 666,
@@ -4160,7 +4160,7 @@
   {
    "id": 668,
    "type": "para",
-   "text": "unde: kM = 0,44 N·m/A (tabelul A.2); Imax = 9 A — curentul de vârf al SC-400-3 (tabelul A.9); acest cuplu este de 2,2 ori peste 1,2 Mmax = 1,83 N·m pe X, deci verificarea (2) din §3.3 rămâne trecută și cu convertorul; pe Z, kM Imax = 4,23 N·m ≥ 1,2 Mmax = 1,31 N·m ✓. Trei module de axă SC-400-3 pe magistrala de curent continuu comună, modul de rețea 3 kW cu filtru EMC și chopper de frânare."
+   "text": "unde: kM = 0,44 N·m/A (tabelul A.2); Imax = 9 A — curentul de vârf al SC-400-3 (tabelul A.9); acest cuplu este de 2,1 ori peste 1,2 Mmax = 1,86 N·m pe X, deci verificarea (2) din §3.3 rămâne trecută și cu convertorul; pe Z, kM Imax = 4,23 N·m ≥ 1,2 Mmax = 1,31 N·m ✓. Trei module de axă SC-400-3 pe magistrala de curent continuu comună, modul de rețea 3 kW cu filtru EMC și chopper de frânare."
   },
   {
    "id": 669,
@@ -4385,27 +4385,27 @@
   {
    "id": 713,
    "type": "math",
-   "text": "Fc=296,51,52·106=0,19 mm (X)"
+   "text": "Fc=296,53,62·106=0,08 mm (X)"
   },
   {
    "id": 714,
    "type": "para",
-   "text": "⟦Fc=296,51,52·106=0,19 mm (X)⟧"
+   "text": "⟦Fc=296,53,62·106=0,08 mm (X)⟧"
   },
   {
    "id": 715,
    "type": "math",
-   "text": "Fc=188,42,67·106=0,07 mm (Y)"
+   "text": "Fc=188,46,33·106=0,03 mm (Y)"
   },
   {
    "id": 716,
    "type": "para",
-   "text": "⟦Fc=188,42,67·106=0,07 mm (Y)⟧"
+   "text": "⟦Fc=188,46,33·106=0,03 mm (Y)⟧"
   },
   {
    "id": 717,
    "type": "para",
-   "text": "unde: F = 296,5 N (X) și 188,4 N (Y) — forțele de vârf la accelerare cu piesă (tabelul 2.2); c = 1,52·10⁶ N/m (X) și 2,67·10⁶ N/m (Y) — rigiditatea curelei redusă la cărucior (§2.4); rezultatul iese în metri și se scrie în milimetri. Alungirea statică la mijlocul cursei pe X, 0,19 mm, este peste ±0,15 mm (pe Y, 0,07 mm, este sub). Concluzie de proiectare: poziționarea finală la B se face după ce accelerația a încetat (fereastra de „poziție atinsă” cu timp de stabilizare), iar pentru precizie garantată în tot spațiul de lucru se prevede o riglă liniară (encoder liniar magnetic, rezoluție 5 µm) pe axa X, cu buclă de poziție închisă pe riglă și buclă de viteză pe motor („buclă dublă”). O includem în lista de aparate ca opțiune recomandată."
+   "text": "unde: F = 296,5 N (X) și 188,4 N (Y) — forțele de vârf la accelerare cu piesă (tabelul 2.2); c = 3,62·10⁶ N/m (X) și 6,33·10⁶ N/m (Y) — rigiditatea curelei redusă la cărucior (§2.4); rezultatul iese în metri și se scrie în milimetri. Alungirea statică la mijlocul cursei pe X, 0,08 mm, este sub ±0,15 mm (pe Y, 0,03 mm, este sub). Concluzie de proiectare: poziționarea finală la B se face după ce accelerația a încetat (fereastra de „poziție atinsă” cu timp de stabilizare); alungirea statică rămâne sub ±0,15 mm pe ambele axe, deci rigla liniară (encoder liniar magnetic, rezoluție 5 µm) pe axa X este o opțiune de rezervă pentru precizia garantată în tot spațiul de lucru — o includem în lista de aparate ca opțiune recomandată."
   },
   {
    "id": 718,
@@ -4415,37 +4415,37 @@
   {
    "id": 719,
    "type": "para",
-   "text": "Puterea instalată este Pinst = 2,5 kW (§3.4); puterea aparentă cerută rețelei se estimează cu randamentul global și factorul de putere al redresorului, redusă cu factorul de simultaneitate al ciclului intermitent (Îndrumar, pasul 4.5):"
+   "text": "Puterea instalată este Pinst = 2,75 kW (§3.4); puterea aparentă cerută rețelei se estimează cu randamentul global și factorul de putere al redresorului, redusă cu factorul de simultaneitate al ciclului intermitent (Îndrumar, pasul 4.5):"
   },
   {
    "id": 720,
    "type": "math",
-   "text": "S=Pinstηcosφ·0,7=2,500,85·0,9·0,7=2,3 kVA"
+   "text": "S=Pinstηcosφ·0,7=2,750,85·0,9·0,7=2,5 kVA"
   },
   {
    "id": 721,
    "type": "para",
-   "text": "⟦S=Pinstηcosφ·0,7=2,500,85·0,9·0,7=2,3 kVA⟧"
+   "text": "⟦S=Pinstηcosφ·0,7=2,750,85·0,9·0,7=2,5 kVA⟧"
   },
   {
    "id": 722,
    "type": "para",
-   "text": "unde: Pinst = 2,5 kW — suma puterilor nominale ale motoarelor (§3.4); η = 0,85 — randamentul global motor + convertor (valoare adoptată, Îndrumar, pasul 4.5); cosφ = 0,9 — factorul de putere al redresorului cu bobină de rețea (valoare adoptată, Îndrumar, pasul 4.5); 0,7 — factorul de simultaneitate, pentru că axele nu accelerează toate în același timp (valoare adoptată din intervalul 0,6–0,7 al Îndrumarului; la portal X și Y accelerează simultan, de aceea am luat capătul de sus al intervalului). Curentul de linie corespunzător:"
+   "text": "unde: Pinst = 2,75 kW — suma puterilor nominale ale motoarelor (§3.4); η = 0,85 — randamentul global motor + convertor (valoare adoptată, Îndrumar, pasul 4.5); cosφ = 0,9 — factorul de putere al redresorului cu bobină de rețea (valoare adoptată, Îndrumar, pasul 4.5); 0,7 — factorul de simultaneitate, pentru că axele nu accelerează toate în același timp (valoare adoptată din intervalul 0,6–0,7 al Îndrumarului; la portal X și Y accelerează simultan, de aceea am luat capătul de sus al intervalului). Curentul de linie corespunzător:"
   },
   {
    "id": 723,
    "type": "math",
-   "text": "I=S3 U=22883·400=3,3 A"
+   "text": "I=S3 U=25163·400=3,6 A"
   },
   {
    "id": 724,
    "type": "para",
-   "text": "⟦I=S3 U=22883·400=3,3 A⟧"
+   "text": "⟦I=S3 U=25163·400=3,6 A⟧"
   },
   {
    "id": 725,
    "type": "para",
-   "text": "unde: S = 2288 VA (calculată mai sus); U = 400 V — tensiunea de linie a rețelei (fișa individuală). Întreruptor 3P 16 A curba C (curba C pentru curentul de încărcare a condensatoarelor busului la pornire), diferențial tip B 30 mA, modul de rețea 3 kW cu filtru EMC, sursă 24 V / 5 A, cabluri ecranate flexibile în lanțuri portcablu pe X și Y."
+   "text": "unde: S = 2516 VA (calculată mai sus); U = 400 V — tensiunea de linie a rețelei (fișa individuală). Întreruptor 3P 16 A curba C (curba C pentru curentul de încărcare a condensatoarelor busului la pornire), diferențial tip B 30 mA, modul de rețea 3 kW cu filtru EMC, sursă 24 V / 5 A, cabluri ecranate flexibile în lanțuri portcablu pe X și Y."
   },
   {
    "id": 726,
@@ -4473,8 +4473,8 @@
     [
      "2",
      "servomotor axa Y, cu encoder absolut",
-     "SM-08-075",
-     "0,8 kW, 2,39 N·m",
+     "SM-10-100",
+     "1,0 kW, 3,18 N·m",
      "1"
     ],
     [
@@ -4493,23 +4493,23 @@
     ],
     [
      "5",
-     "roți dințate AT10 z = 40, b = 32 mm",
+     "roți dințate AT10 z = 40, b = 75 mm",
      "—",
      "dp 127,3 mm",
      "4"
     ],
     [
      "6",
-     "curea dințată AT10-32, axa X, L ≈ 4,6 m (2 · 2,1 m + π dp)",
-     "AT10-32",
-     "Fadm 1200 N",
+     "curea dințată AT10-75, axa X, L ≈ 4,6 m (2 · 2,1 m + π dp)",
+     "AT10-75",
+     "Fadm 2900 N",
      "1"
     ],
     [
      "7",
-     "curea dințată AT10-32, axa Y, L ≈ 2,8 m (2 · 1,2 m + π dp)",
-     "AT10-32",
-     "Fadm 1200 N",
+     "curea dințată AT10-75, axa Y, L ≈ 2,8 m (2 · 1,2 m + π dp)",
+     "AT10-75",
+     "Fadm 2900 N",
      "1"
     ],
     [
@@ -4714,7 +4714,7 @@
   {
    "id": 738,
    "type": "para",
-   "text": "Cascada curent–viteză–poziție (fig. 5.1) cu feed-forward; benzi: curent 1,5 kHz; viteză 150–250 Hz pe Z (șurub, raport de inerție 2,8), dar numai 15–25 Hz pe Y și 10–15 Hz pe X, unde cureaua (fe = 32,6 Hz pe Y și 17,0 Hz pe X la mijlocul cursei, 49 și 33 Hz la capătul cursei) cere ca bucla de viteză să rămână sub frecvența proprie, iar cea de poziție sub o treime din ea, adică la ≈ 10 Hz pe Y și ≈ 5 Hz pe X în varianta cu encoder pe motor; de aici nevoia riglei liniare și a acordării „pe poziție” la portalul lung; poziție 20–40 Hz pe Z. Acordare prin autotuning cu cutia în prehensor și căruciorul la mijlocul cursei (cazul cel mai elastic), apoi verificare la capete."
+   "text": "Cascada curent–viteză–poziție (fig. 5.1) cu feed-forward; benzi: curent 1,5 kHz; viteză 150–250 Hz pe Z (șurub, raport de inerție 2,8), dar numai 15–25 Hz pe Y și 10–15 Hz pe X, unde cureaua (fe = 50,3 Hz pe Y și 26,2 Hz pe X la mijlocul cursei, 76 și 51 Hz la capătul cursei) cere ca bucla de viteză să rămână sub frecvența proprie, iar cea de poziție sub o treime din ea, adică la ≈ 16 Hz pe Y și ≈ 8 Hz pe X în varianta cu encoder pe motor; de aici acordarea „pe poziție” la portalul lung, cu rigla liniară ca rezervă; poziție 20–40 Hz pe Z. Acordare prin autotuning cu cutia în prehensor și căruciorul la mijlocul cursei (cazul cel mai elastic), apoi verificare la capete."
   },
   {
    "id": 739,
@@ -4804,12 +4804,12 @@
   {
    "id": 756,
    "type": "math",
-   "text": "aqs=kM Imax rredJΣ=3,96·4,244·10-327,25·10-4=6,2 m/s2"
+   "text": "aqs=kM Imax rredJΣ=3,96·4,244·10-327,89·10-4=6,0 m/s2"
   },
   {
    "id": 757,
    "type": "para",
-   "text": "⟦aqs=kM Imax rredJΣ=3,96·4,244·10-327,25·10-4=6,2 m/s2⟧"
+   "text": "⟦aqs=kM Imax rredJΣ=3,96·4,244·10-327,89·10-4=6,0 m/s2⟧"
   },
   {
    "id": 758,
@@ -4819,17 +4819,17 @@
   {
    "id": 759,
    "type": "math",
-   "text": "sfr=vmax22 aqs=1,22722·6,2=0,12 m"
+   "text": "sfr=vmax22 aqs=1,22722·6,0=0,12 m"
   },
   {
    "id": 760,
    "type": "para",
-   "text": "⟦sfr=vmax22 aqs=1,22722·6,2=0,12 m⟧"
+   "text": "⟦sfr=vmax22 aqs=1,22722·6,0=0,12 m⟧"
   },
   {
    "id": 761,
    "type": "para",
-   "text": "unde: kM = 0,44 N·m/A — constanta de cuplu a SM-10-100 (tabelul A.2); Imax = 9 A — curentul de vârf al SC-400-3 (tabelul A.9); rred = 4,244·10⁻³ m — raza de raportare a axei X (§2.4.3); JΣ = 27,25·10⁻⁴ kg·m² — inerția totală redusă, cu piesă (§2.5); vmax = 1,227 m/s (§1.4). Decelerația de 6,2 m/s² este de 3,7 ori accelerația profilului — în intervalul 2–3 recomandat de Îndrumar (pasul 5.4) ar fi 3,3–5,0 m/s², deci convertorul permite chiar mai mult; o luăm ca limită superioară. Limitele software se fixează cu 0,15 m înaintea limitatoarelor hard:"
+   "text": "unde: kM = 0,44 N·m/A — constanta de cuplu a SM-10-100 (tabelul A.2); Imax = 9 A — curentul de vârf al SC-400-3 (tabelul A.9); rred = 4,244·10⁻³ m — raza de raportare a axei X (§2.4.3); JΣ = 27,89·10⁻⁴ kg·m² — inerția totală redusă, cu piesă (§2.5); vmax = 1,227 m/s (§1.4). Decelerația de 6,0 m/s² este de 3,6 ori accelerația profilului — în intervalul 2–3 recomandat de Îndrumar (pasul 5.4) ar fi 3,3–5,0 m/s², deci convertorul permite chiar mai mult; o luăm ca limită superioară. Limitele software se fixează cu 0,15 m înaintea limitatoarelor hard:"
   },
   {
    "id": 762,
@@ -4844,7 +4844,7 @@
   {
    "id": 764,
    "type": "para",
-   "text": "unde: sfr = 0,12 m — distanța de frânare la decelerația maximă (calculată mai sus); 0,03 m — rezerva pentru timpul de reacție al controlerului și toleranța senzorilor (valoare adoptată); limitatoarele hard declanșează STO, iar tampoanele mecanice se dimensionează pentru energia reziduală a căruciorului la viteza rămasă după 0,15 m de frânare (mult sub cei 101 J ai energiei cinetice totale de la 1,23 m/s, §4.3; tampoane de poliuretan de 50 mm). Pe axa Y, cu aceeași regulă, decelerația maximă este 14,2 m/s² și distanța de frânare 0,04 m (față de 0,23 m la decelerația profilului); pe axa Z, cu șurub, marja de 0,09 m la decelerația profilului este acoperită de cursa de siguranță a șurubului (L = S + 0,15 m, §2.4.1). Parametrii ciclului: pozițiile A și B (B din lista de paletizare), înălțimea de transport, timpii de vacuum."
+   "text": "unde: sfr = 0,12 m — distanța de frânare la decelerația maximă (calculată mai sus); 0,03 m — rezerva pentru timpul de reacție al controlerului și toleranța senzorilor (valoare adoptată); limitatoarele hard declanșează STO, iar tampoanele mecanice se dimensionează pentru energia reziduală a căruciorului la viteza rămasă după 0,15 m de frânare (mult sub cei 101 J ai energiei cinetice totale de la 1,23 m/s, §4.3; tampoane de poliuretan de 50 mm). Pe axa Y, cu aceeași regulă, decelerația maximă este 11,2 m/s² și distanța de frânare 0,05 m (față de 0,23 m la decelerația profilului); pe axa Z, cu șurub, marja de 0,09 m la decelerația profilului este acoperită de cursa de siguranță a șurubului (L = S + 0,15 m, §2.4.1). Parametrii ciclului: pozițiile A și B (B din lista de paletizare), înălțimea de transport, timpii de vacuum."
   },
   {
    "id": 765,
@@ -4859,7 +4859,7 @@
   {
    "id": 767,
    "type": "para",
-   "text": "Ca în exemplul nr. 1, cu valorile portalului. Pe alimentare: întreruptor automat 3P 16 A, protecție diferențială de tip B, filtru EMC în modulul de rețea. În modulele de axă: limitarea curentului la Imax al motorului (15,3 A pe Z, 15,3 A pe Y, 21,9 A pe X, tabelul A.1); convertorul SC-400-3 limitează însă la 9 A, ceea ce pe motoarele orizontale corespunde la cuplul (§4.2):"
+   "text": "Ca în exemplul nr. 1, cu valorile portalului. Pe alimentare: întreruptor automat 3P 16 A, protecție diferențială de tip B, filtru EMC în modulul de rețea. În modulele de axă: limitarea curentului la Imax al motorului (15,3 A pe Z, 21,9 A pe Y și X, tabelul A.1); convertorul SC-400-3 limitează însă la 9 A, ceea ce pe motoarele de 1 kW corespunde la cuplul (§4.2):"
   },
   {
    "id": 768,
@@ -4879,27 +4879,27 @@
   {
    "id": 771,
    "type": "math",
-   "text": "kM ImaxMmax=3,961,52=2,6"
+   "text": "kM ImaxMmax=3,961,55=2,6"
   },
   {
    "id": 772,
    "type": "para",
-   "text": "⟦kM ImaxMmax=3,961,52=2,6⟧"
+   "text": "⟦kM ImaxMmax=3,961,55=2,6⟧"
   },
   {
    "id": 773,
    "type": "math",
-   "text": "kM ImaxMmax=4,230,94=4,5"
+   "text": "kM ImaxMmax=3,961,07=3,7"
   },
   {
    "id": 774,
    "type": "para",
-   "text": "⟦kM ImaxMmax=4,230,94=4,5⟧"
+   "text": "⟦kM ImaxMmax=3,961,07=3,7⟧"
   },
   {
    "id": 775,
    "type": "para",
-   "text": "unde: kM = 0,47 N·m/A (SM-08-075) pe Y și 0,44 N·m/A (SM-10-100) pe X — constantele de cuplu (tabelul A.2); Imax = 9 A — curentul de vârf al SC-400-3 (tabelul A.9); Mmax = 1,52 N·m (X) și 0,94 N·m (Y) — cuplurile de vârf cerute (tabelul 2.7): suficient. Mai departe: modelul termic I²t; PTC; eroarea de urmărire (prag 3 mm pe X, 2 mm pe Y și Z — detectează cutia blocată, coliziunea, cureaua slăbită); limitarea de cuplu la 1,5·Mmax, care protejează curelele și reductoarele la coliziunea cu o cutie deplasată, pe cele trei axe:"
+   "text": "unde: kM = 0,44 N·m/A — constanta de cuplu a SM-10-100 (tabelul A.2); Imax = 9 A — curentul de vârf al SC-400-3 (tabelul A.9); Mmax = 1,55 N·m (X) și 1,07 N·m (Y) — cuplurile de vârf cerute (tabelul 2.7): suficient. Mai departe: modelul termic I²t; PTC; eroarea de urmărire (prag 3 mm pe X, 2 mm pe Y și Z — detectează cutia blocată, coliziunea, cureaua slăbită); limitarea de cuplu la 1,5·Mmax, care protejează curelele și reductoarele la coliziunea cu o cutie deplasată, pe cele trei axe:"
   },
   {
    "id": 776,
@@ -4914,42 +4914,42 @@
   {
    "id": 778,
    "type": "math",
-   "text": "1,5 Mmax=1,5·0,94=1,41 N·m"
+   "text": "1,5 Mmax=1,5·1,07=1,61 N·m"
   },
   {
    "id": 779,
    "type": "para",
-   "text": "⟦1,5 Mmax=1,5·0,94=1,41 N·m⟧"
+   "text": "⟦1,5 Mmax=1,5·1,07=1,61 N·m⟧"
   },
   {
    "id": 780,
    "type": "math",
-   "text": "1,5 Mmax=1,5·1,52=2,28 N·m"
+   "text": "1,5 Mmax=1,5·1,55=2,32 N·m"
   },
   {
    "id": 781,
    "type": "para",
-   "text": "⟦1,5 Mmax=1,5·1,52=2,28 N·m⟧"
+   "text": "⟦1,5 Mmax=1,5·1,55=2,32 N·m⟧"
   },
   {
    "id": 782,
    "type": "para",
-   "text": "unde: Mmax = 1,09 N·m (Z), 0,94 N·m (Y), 1,52 N·m (X) — cuplurile de vârf cerute, din diagramele de sarcină (tabelele 2.6–2.7); 1,5 — coeficientul ales din intervalul 1,2–1,5 recomandat de Îndrumar (pasul 6.1; valoare adoptată, ca oprirea rapidă să nu declanșeze limita). Pe X limita de cuplu de la motor ține cuplul la ieșirea reductorului sub:"
+   "text": "unde: Mmax = 1,09 N·m (Z), 1,07 N·m (Y), 1,55 N·m (X) — cuplurile de vârf cerute, din diagramele de sarcină (tabelele 2.6–2.7); 1,5 — coeficientul ales din intervalul 1,2–1,5 recomandat de Îndrumar (pasul 6.1; valoare adoptată, ca oprirea rapidă să nu declanșeze limita). Pe X limita de cuplu de la motor ține cuplul la ieșirea reductorului sub:"
   },
   {
    "id": 783,
    "type": "math",
-   "text": "Mout=1,5 Mmax·i ηred=2,28·12·0,94=26 N·m"
+   "text": "Mout=1,5 Mmax·i ηred=2,32·12·0,94=26 N·m"
   },
   {
    "id": 784,
    "type": "para",
-   "text": "⟦Mout=1,5 Mmax·i ηred=2,28·12·0,94=26 N·m⟧"
+   "text": "⟦Mout=1,5 Mmax·i ηred=2,32·12·0,94=26 N·m⟧"
   },
   {
    "id": 785,
    "type": "para",
-   "text": "unde: 1,5 Mmax = 2,28 N·m — limita de cuplu de pe axa X (calculată mai sus); i = 12 și ηred = 0,94 — reductorul RP-060-R (§2.4.3); adică sub cei 30 N·m admiși de RP-060-R ✓ (pe Y, 21 N·m ✓) și sub forța admisă a curelei (Fadm = 1200 N, adică 1200 · 0,05093 = 61 N·m la roată). Supravegherea tensiunii curelei (senzor de rupere/întindere pe rola de întindere — la portaluri obligatoriu, ruperea curelei lasă căruciorul liber); tampoane de capăt. Frâna Z, comandată de convertor, cu test la pornire — motorul aplică, cu frâna închisă, cuplul de test:"
+   "text": "unde: 1,5 Mmax = 2,32 N·m — limita de cuplu de pe axa X (calculată mai sus); i = 12 și ηred = 0,94 — reductorul RP-060-R (§2.4.3); adică sub cei 30 N·m admiși de RP-060-R ✓ (pe Y, 24 N·m ✓) și sub forța admisă a curelei (Fadm = 2900 N, adică 2900 · 0,05093 = 148 N·m la roată). Supravegherea tensiunii curelei (senzor de rupere/întindere pe rola de întindere — la portaluri obligatoriu, ruperea curelei lasă căruciorul liber); tampoane de capăt. Frâna Z, comandată de convertor, cu test la pornire — motorul aplică, cu frâna închisă, cuplul de test:"
   },
   {
    "id": 786,
@@ -5064,12 +5064,12 @@
   {
    "id": 808,
    "type": "para",
-   "text": "Soluția: axa Z — SM-08-075 cu frână, ȘB 16×16, contragreutate 10,5 kg, Mech = 0,48 N·m (20 %), raport 2,8; axa Y — SM-08-075, curea AT10-32, reductor RP-060-R i = 16, Mech = 0,32 N·m (14 %), raport 4,0; axa X — SM-10-100, reductor RP-060-R i = 12 (joc redus), roți z = 32, curea AT10-32, Mech = 0,69 N·m (22 %), raport 9,3; trei SC-400-3, encodere absolute, riglă liniară recomandată pe X, PLC cu funcții de mișcare + EtherCAT, PL d cat. 3. Putere instalată 2,5 kW, medie 86 W, productivitate 419 cicluri/h."
+   "text": "Soluția: axa Z — SM-08-075 cu frână, ȘB 16×16, contragreutate 10,5 kg, Mech = 0,48 N·m (20 %), raport 2,8; axa Y — SM-10-100, curea AT10-75, reductor RP-060-R i = 16, Mech = 0,38 N·m (12 %), raport 4,3; axa X — SM-10-100, reductor RP-060-R i = 12 (joc redus), roți z = 32, curea AT10-75, Mech = 0,70 N·m (22 %), raport 9,5; trei SC-400-3, encodere absolute, riglă liniară opțională pe X, PLC cu funcții de mișcare + EtherCAT, PL d cat. 3. Putere instalată 2,75 kW, medie 89 W, productivitate 419 cicluri/h."
   },
   {
    "id": 809,
    "type": "para",
-   "text": "Trei lucruri au decis proiectul, diferite de cele ale robotului cilindric. La axa Z, contragreutatea de 50 % a redus cuplul de menținere de la 0,83 la 0,55 N·m și cuplul echivalent de la 0,72 la 0,48 N·m; fără ea, motorul de 0,4 kW ar fi trecut toate verificările, inclusiv frâna (1,5 · 0,83 = 1,25 N·m ≤ 1,3 N·m, dar fără rezervă) și raportul inerțiilor (8,8); cu contragreutate, masa accelerată crește cu 10,5 kg și raportul inerțiilor urcă la 11,2 — peste 10 —, deci frâna câștigă rezervă (1,5 · 0,55 = 0,83 N·m), dar motorul trebuie mărit la 0,75 kW. Echilibrarea completă (α = 1) nu ar ajuta, piesa de 10 kg rămânând neechilibrată; echilibrarea pneumatică ar aduce reducerea forței statice fără masă suplimentară. La axa Y, cureaua AT10-32 este suficientă la rigiditate (fe = 32,6 Hz la mijloc), iar motorul de 1 kW este ales de raportul inerțiilor (4,0 față de 9,5 la 0,75 kW), nu de cuplu. La axa X, masa de 133,5 kg și cursa de 1,8 m duc cureaua AT10-32 abia peste pragul de rigiditate (fe = 17,0 Hz la mijloc), alungirea statică 0,19 mm rămâne sub ±0,15 mm, iar raportul inerțiilor a cerut motorul de 1 kW (9,3, față de 9,3 cu SM-10-100); aceasta limitează banda regulatoarelor și face necesară rigla liniară pentru precizia de ±0,15 mm în tot spațiul de lucru — cheltuiala pe care o economisește cureaua față de o cremalieră se plătește parțial în traductor. Alternativele evaluate — curea AT10-75 (fe = 26,2 Hz) sau motor SM-10-150 (raport 6,8) — rezolvă punctele la limită, dar cer confirmarea datelor de catalog și a conducătorului."
+   "text": "Trei lucruri au decis proiectul, diferite de cele ale robotului cilindric. La axa Z, contragreutatea de 50 % a redus cuplul de menținere de la 0,83 la 0,55 N·m și cuplul echivalent de la 0,72 la 0,48 N·m; fără ea, motorul de 0,4 kW ar fi trecut toate verificările, inclusiv frâna (1,5 · 0,83 = 1,25 N·m ≤ 1,3 N·m, dar fără rezervă) și raportul inerțiilor (8,8); cu contragreutate, masa accelerată crește cu 10,5 kg și raportul inerțiilor urcă la 11,2 — peste 10 —, deci frâna câștigă rezervă (1,5 · 0,55 = 0,83 N·m), dar motorul trebuie mărit la 0,75 kW. Echilibrarea completă (α = 1) nu ar ajuta, piesa de 10 kg rămânând neechilibrată; echilibrarea pneumatică ar aduce reducerea forței statice fără masă suplimentară. La axa Y, cureaua AT10-75, adoptată ca pe X pentru unificarea pieselor, este suficientă la rigiditate (fe = 50,3 Hz la mijloc), iar motorul de 1 kW este ales de raportul inerțiilor (4,3 față de 10,1 la 0,75 kW), nu de cuplu. La axa X, masa de 133,5 kg și cursa de 1,8 m țin cureaua aproape de pragul de rigiditate: fe = 17,0 Hz la mijloc, alungirea statică 0,08 mm depășește ±0,15 mm, iar raportul inerțiilor cu SM-10-100 este 9,5; aceasta limitează banda regulatoarelor, iar rigla liniară rămâne rezerva pentru precizia de ±0,15 mm în tot spațiul de lucru — cheltuiala pe care o economisește cureaua față de o cremalieră se plătește parțial în traductor. Alternativele evaluate — motorul SM-10-150 (raport 7,0, date de catalog incomplete) sau roata z = 40 cu i = 16 (respinsă la cuplu: 23,6 N·m > 30 N·m) — nu schimbă nimic esențial: prima are date de catalog incomplete, a doua pică la cuplul admis al reductorului, iar productivitatea rămâne sub cerință (discutată mai jos)."
   },
   {
    "id": 810,
@@ -5104,7 +5104,7 @@
   {
    "id": 816,
    "type": "para",
-   "text": "unde: S = 1,8 m (fișa individuală); t = 1,5 s — timpul ales peste tmin = 1,42 s, cu rezervă. Forța de accelerare devine 133,5 · 3,60 + 73,1 = 554 N, cuplul de vârf ≈ 2,88 N·m (sub Mmax,mot = 9,55 N·m, dar peste limita de cuplu de 2,28 N·m din §6.1, care ar trebui ridicată), productivitatea crește cu 19 % (Tc = 7,2 s, 500 cicluri/h), iar frecvența proprie a curelei rămâne redusă; pentru un salt real ar trebui un prehensor cu forță de reținere mai mare și, pe axa X, cremaliera cu pinion. Pe standul de probe se verifică: răspunsul la treaptă al axei X la capătul și la mijlocul cursei, eroarea de poziționare la B cu și fără riglă, temperatura motorului X după o oră, secvența E-stop → SS1 → STO, testul frânei Z."
+   "text": "unde: S = 1,8 m (fișa individuală); t = 1,5 s — timpul ales peste tmin = 1,42 s, cu rezervă. Forța de accelerare devine 133,5 · 3,60 + 73,1 = 554 N, cuplul de vârf ≈ 2,93 N·m (sub Mmax,mot = 9,55 N·m, dar peste limita de cuplu de 2,32 N·m din §6.1, care ar trebui ridicată), productivitatea crește cu 19 % (Tc = 7,2 s, 500 cicluri/h), iar frecvența proprie a curelei rămâne redusă; pentru un salt real ar trebui un prehensor cu forță de reținere mai mare și, pe axa X, cremaliera cu pinion. Pe standul de probe se verifică: răspunsul la treaptă al axei X la capătul și la mijlocul cursei, eroarea de poziționare la B cu și fără riglă, temperatura motorului X după o oră, secvența E-stop → SS1 → STO, testul frânei Z."
   },
   {
    "id": 817,
@@ -5164,12 +5164,12 @@
      "0,75 kW; 3000 rot/min; MN 2,39 N·m; Mmax 7,16 N·m; IN 5,1 A; Imax 15,3 A; kM 0,47 N·m/A; Jr 1,13·10⁻⁴ kg·m²; frână 2,5 N·m (Jfr 0,09·10⁻⁴)"
     ],
     [
-     "SM-10-100",
-     "1 kW; 3000 rot/min; nmax 4000; MN 3,18 N·m; Mmax 9,55 N·m; IN 7,3 A; Imax 21,9 A; kM 0,44 N·m/A; Jr 2,65·10⁻⁴ kg·m²"
+     "SM-06-040",
+     "0,4 kW; MN 1,27 N·m; Jr 0,28·10⁻⁴ kg·m²; frână 1,3 N·m (candidat neadoptat)"
     ],
     [
-     "SM-08-075",
-     "1,0 kW; 3000 rot/min; nmax 4500; MN 2,39 N·m; Mmax 7,16 N·m; IN 5,1 A; Imax 15,3 A; kM 0,47 N·m/A; Jr 1,13·10⁻⁴ kg·m²; 4,3 kg; flanșă 100 mm"
+     "SM-10-100",
+     "1,0 kW; 3000 rot/min; nmax 4500; MN 3,18 N·m; Mmax 9,55 N·m; IN 7,3 A; Imax 21,9 A; kM 0,44 N·m/A; Jr 2,65·10⁻⁴ kg·m²; 4,3 kg; flanșă 100 mm"
     ],
     [
      "RP-060-R",
@@ -5180,8 +5180,8 @@
      "dr 12,5 mm; Ca 6400 N; C0a 10 800 N; J′ 0,5·10⁻⁴ kg·m²/m; η 0,93"
     ],
     [
-     "AT10-32",
-     "b = 32 mm; Fadm 1200 N; csp 0,80·10⁶ N; 0,14 kg/m; roți z = 40, dp = 127,3 mm (AT10-25: 900 N, 0,62·10⁶ N; AT10-75: csp 1,9·10⁶ N)"
+     "AT10-75",
+     "b = 75 mm; Fadm 2900 N; csp 1,90·10⁶ N; 0,33 kg/m; roți z = 40, dp = 127,3 mm (AT10-25: 900 N, 0,62·10⁶ N; AT10-32: 1200 N, 0,80·10⁶ N)"
     ],
     [
      "SC-400-3",
