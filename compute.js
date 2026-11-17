@@ -42,7 +42,6 @@ function getInputs(v) {
     U_retea: 400,
     trans_X: 'CD', trans_Y: 'CD', trans_Z: 'SB',
     // overrides (user's own calculations)
-    belt_ales: 'AT10-32',
     motZ: 'SM-08-075', motY: 'SM-10-150', motX: 'SM-18-450',
   };
   // fallback: data-driven variants stored in variants.json
