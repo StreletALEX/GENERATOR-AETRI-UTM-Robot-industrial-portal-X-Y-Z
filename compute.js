@@ -201,14 +201,16 @@ function compute(inp) {
     const A = {};
     A.vmax4 = Number(kin.vmax.toFixed(4));                  // doc uses 4-dec vmax here
     A.S = S; A.m_piesa = m_piesa;
-    // adopted wheel = z with the largest nmot using i = 7 or 12 (per Indrumar)
+    // adopted wheel = z with the largest nmot (all catalog ratios)
     let _bestZ = 20, _bestN = 0;
+    const _allRatios = [...CAT.RP_rapoarte['1_treapta'], ...CAT.RP_rapoarte['2_trepte']];
     for (const _z of [20, 25, 32, 40]) {
       const _dp = _z * 10 / Math.PI;
       const _nr = 60 * A.vmax4 / (Math.PI * _dp / 1000);
-      const _i = _nr * 12 <= V.n_lim ? 12 : 7;
+      let _i = _allRatios[0];
+      for (const _r of _allRatios) { if (_nr * _r <= V.n_lim) _i = _r; else break; }
       const _nmot = _nr * _i;
-      if (_nmot > _bestN) { _bestN = _nmot; _bestZ = _z; }
+      if (_nmot >= _bestN) { _bestN = _nmot; _bestZ = _z; }
     }
     A.z_ales = _bestZ;
     A.dp = A.z_ales * 10 / Math.PI;                         // mm
@@ -223,8 +225,10 @@ function compute(inp) {
     A.nr = 60 * A.vmax4 / (Math.PI * A.dp_m);
     A.nr_full = 60 * kin.vmax / (Math.PI * A.dp_m);
     // adopted reductor ratio: largest catalog ratio with nr·i <= n_lim (RP-060 2-stage)
-    A.i = (A.nr * 12 <= V.n_lim) ? 12 : 7;
-    A.i_next = ratios2[ratios2.indexOf(A.i) + 1] ?? null;   // next larger ratio (for the limit check)
+    const allRatiosAdopt = [...CAT.RP_rapoarte['1_treapta'], ...CAT.RP_rapoarte['2_trepte']];
+    A.i = allRatiosAdopt[0];
+    for (const _r of allRatiosAdopt) { if (A.nr * _r <= V.n_lim) A.i = _r; else break; }
+    A.i_next = allRatiosAdopt[allRatiosAdopt.indexOf(A.i) + 1] ?? null;   // next larger ratio (for the limit check)
     A.nmot = A.nr * A.i;
     A.nmot_i16 = A.nr * 16;
     A.rred = A.dp_m / 2 / A.i;                              // m

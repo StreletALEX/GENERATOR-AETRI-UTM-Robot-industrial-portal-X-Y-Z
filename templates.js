@@ -123,11 +123,11 @@ function build(V) {
   Y.ax = 'ΣY'; Y.m_piesa_ref = V.mSY_piesa; Y.m_gol_ref = V.mSY_gol;
   X.ax = 'ΣX'; X.m_piesa_ref = V.mSX_piesa; X.m_gol_ref = V.mSX_gol;
   const belt = (P, A, S, Fmax) => {
-    T(P.nr, () => `nr=60 vmaxπ dp=60·${f(A.vmax4,4)}π·0,10186=${f(A.nr,1)} rot/min`);
+    T(P.nr, () => `nr=60 vmaxπ dp=60·${f(A.vmax4,4)}π·${f(A.dp_m, 5)}=${f(A.nr,1)} rot/min`);
     T(P.nmot12, () => `nmot=nr i=${f(A.nr,1)}·${A.i}=${fi(A.nmot)} rot/min`);
     T(P.nmot16, () => `nmot=nr i=${f(A.nr,1)}·${A.i_next}=${fi(A.nr_full * A.i_next)} rot/min`);
-    T(P.rred, () => `rred=dp2i=0,101862·${A.i}=${m10(A.rred,3,-3)} m`);
-    T(P.Mout, () => `Mout=Fmax dp2 ηc=${f(Fmax,1)}·0,101862·0,96=${f(A.Mout_peak,2)} N·m`);
+    T(P.rred, () => `rred=dp2i=${f(A.dp_m, 5)}2·${A.i}=${m10(A.rred,3,-3)} m`);
+    T(P.Mout, () => `Mout=Fmax dp2 ηc=${f(Fmax,1)}·${f(A.dp_m, 5)}2·0,96=${f(A.Mout_peak,2)} N·m`);
     T(P.Mout12, () => `1,2 Mout=1,2·${f(A.Mout_peak,2)}=${f(A.Mout_peak_12,1)} N·m`);
     T(P.Mech, () => `Mout,ech=∑iMout,i2 tiTc=${f(A.ti,4)}·${A.Mout_faze.map(M => f(Math.abs(M),2)).join('2+')}2${f(V.Tc,1)}=${f(A.Mout_ech,1)} N·m`);
     T(P.Fbelt, () => `1,3 Fmax=1,3·${f(Fmax,1)}=${fi(A.F_belt_min)} N`);
@@ -257,7 +257,7 @@ function build(V) {
   T(698, () => `P=Fdin-Ff vmax=${f(V.FdinX_piesa,1)}-${f(V.FfX_piesa,1)}·${f(kX.vmax,3)}=${fi(V.Pbr_X)} W`);
   T(703, () => `Δs5=${fN(inp.ds)}5=${f(inp.ds/5,2)} mm`);
   T(706, () => `Δsrez=P220=161${TH}048${TH}576=${m10(V.dsr_Z,1,-5)} mm`);
-  T(709, () => `Δsrez=π dp/i220=π·101,86/${Math.min(Y.i, X.i)}1${TH}048${TH}576=${m10(V.dsr_XY,1,-5)} mm`);
+  T(709, () => `Δsrez=π dp/i220=π·${f(Y.dp, 2)}/${Math.min(Y.i, X.i)}1${TH}048${TH}576=${m10(V.dsr_XY,1,-5)} mm`);
   T(713, () => `Fc=${f(V.Fmax_X,1)}${m10(X.belt[V.belt_ales].c_mid,2,6)}=${f(V.alung_X_mm,2)} mm (X)`);
   T(715, () => `Fc=${f(V.Fmax_Y,1)}${m10(Y.belt[V.belt_ales].c_mid,2,6)}=${f(V.alung_Y_mm,2)} mm (Y)`);
   T(720, () => `S=Pinstηcosφ·0,7=${f(V.Pinst,2)}0,85·0,9·0,7=${f(V.S_aparent/1e3,1)} kVA`);
