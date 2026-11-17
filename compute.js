@@ -42,6 +42,7 @@ function getInputs(v) {
     U_retea: 400,
     trans_X: 'CD', trans_Y: 'CD', trans_Z: 'SB',
     // overrides (user's own calculations)
+    belt_Y: 'AT10-32', belt_X: 'AT10-75',
     motZ: 'SM-08-075', motY: 'SM-10-150', motX: 'SM-18-450',
   };
   // fallback: data-driven variants stored in variants.json
@@ -276,42 +277,49 @@ function compute(inp) {
   V.axY = beltAxis(V.kinY, inp.SY, V.mSY_piesa, V.mSY_gol, V.Fmax_Y, V.FfY_piesa, V.FfY_gol, V.F_Y);
   axisName = 'X';
   V.axX = beltAxis(V.kinX, inp.SX, V.mSX_piesa, V.mSX_gol, V.Fmax_X, V.FfX_piesa, V.FfX_gol, V.F_X);
-
-  // unified belt — select the belt with the biggest csp among those with
-  // 15 < fe_mid < 30 (and Fadm >= 1.3·Fmax) on X; Y adopts the same belt.
-  const acceptableBelts = CAT.curele_AT10.filter(b => {
-    const fe = V.axX.belt[b.tip].fe_mid;
-    return fe > 15 && fe < 30 && V.axX.belt[b.tip].Fadm >= V.axX.F_belt_min;
-  });
-  let beltAles;
-  if (acceptableBelts.length > 0) {
-    beltAles = acceptableBelts.reduce((best, b) =>
-      V.axX.belt[b.tip].csp > V.axX.belt[best.tip].csp ? b : best
-    ).tip;
-  } else {
-    // fallback: narrowest belt with fe_mid >= 15 and Fadm >= F_belt_min
-    beltAles = (CAT.curele_AT10.find(b => V.axX.belt[b.tip].fe_mid >= 15 && V.axX.belt[b.tip].Fadm >= V.axX.F_belt_min)
-       || CAT.curele_AT10[CAT.curele_AT10.length - 1]).tip;
+  // per-axis belt selection
+  const _beltY = inp.belt_Y || null;
+  const _beltX = inp.belt_X || null;
+  let _beltXauto = null;
+  if (!_beltX) {
+    const _accX = CAT.curele_AT10.filter(b => { const fe = V.axX.belt[b.tip].fe_mid; return fe > 15 && fe < 30 && V.axX.belt[b.tip].Fadm >= V.axX.F_belt_min; });
+    _beltXauto = _accX.length ? _accX.reduce((a, b) => V.axX.belt[a.tip].csp > V.axX.belt[b.tip].csp ? a : b).tip : null;
   }
-  V.belt_ales = beltAles;
-  // allow per-variant override
-  if (inp.belt_ales) V.belt_ales = inp.belt_ales;
-  const beltAlesFinal = V.belt_ales;
-  for (const A of [V.axY, V.axX]) {
-    const b = A.belt[beltAlesFinal];
-    A.belt_ales = beltAlesFinal;
-    A.mcurea = 2 * (A.S + 0.3) * b.mp;                      // linear mass of the chosen belt
+  const _finalBeltX = _beltX || _beltXauto || 'AT10-75';
+  const _finalBeltY = _beltY || _finalBeltX;
+  V.belt_Y = _finalBeltY;
+  V.belt_X = _finalBeltX;
+  V.belt_ales = _finalBeltX;
+  // apply per-axis belts (mcurea, Jcurea, c_capat, fe_capat, bw, mp_belt, Jroti, mr)
+  for (const [A, beltTip, S] of [[V.axY, _finalBeltY, inp.SY], [V.axX, _finalBeltX, inp.SX]]) {
+    const b = A.belt[beltTip];
+    A.belt_ales = beltTip;
+    const _bw = b.b / 1000;
+    A.mr = CAT.constant.rho_otel * Math.PI * (A.dp_m / 2) ** 2 * _bw;
+    A.Jroti = 2 * A.mr * (A.dp_m / 2) ** 2;
+    A.mcurea = 2 * (S + 0.3) * b.mp;
     A.Jcurea = A.mcurea * (A.dp_m / 2) ** 2;
     A.Jtr_plus_Jc_i2 = (A.Jroti + A.Jcurea + V.Jc) / (A.i ** 2);
-    A.c_capat = b.csp * 1e6 * (1 / 0.15 + 1 / (A.S + 0.15)); // end-of-course stiffness with chosen belt
+    A.mr2_i2_piesa = A.mr2_piesa / (A.i ** 2);
+    A.mr2_i2_gol = A.mr2_gol / (A.i ** 2);
+    A.c_capat = b.csp * 1e6 * (1 / 0.15 + 1 / (S + 0.15));
     A.fe_capat = Math.sqrt(A.c_capat / A.m_piesa) / (2 * Math.PI);
+    A.bw = b.b / 1000;
+    A.mp_belt = b.mp;
   }
-  const beltEntry = CAT.curele_AT10.find(b => b.tip === V.belt_ales);
-  V.mp_belt = beltEntry.mp_kg_m;                            // kg/m of the chosen belt (z=40 what-if)
-  V.bw = beltEntry.b_mm / 1000;                             // wheel/belt width, m
+  V.bw = V.axX.bw;
+  V.bw_Y = V.axY.bw;
+  V.bw_X = V.axX.bw;
+  V.mp_belt = V.axX.mp_belt;
+  V.mp_belt_Y = V.axY.mp_belt;
+  V.mp_belt_X = V.axX.mp_belt;
+  V.alung_X = V.Fmax_X / (V.axX.belt[V.belt_X].c_mid);
+  V.alung_Y = V.Fmax_Y / (V.axY.belt[V.belt_Y].c_mid);
+  V.alung_X_mm = V.alung_X * 1000;
+  V.alung_Y_mm = V.alung_Y * 1000;
   for (const A of [V.axY, V.axX]) {
     // steel wheel width follows the belt width (b = 32 mm for AT10-32, 75 mm for AT10-75)
-    A.mr = CAT.constant.rho_otel * Math.PI * (A.dp_m / 2) ** 2 * V.bw;
+    A.mr = CAT.constant.rho_otel * Math.PI * (A.dp_m / 2) ** 2 * A.bw;
     A.Jroti = A.mr * (A.dp_m / 2) ** 2;
     A.Jtr_plus_Jc_i2 = (A.Jroti + A.Jcurea + V.Jc) / (A.i ** 2);
   }
