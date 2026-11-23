@@ -53,6 +53,7 @@ function getInputs(v) {
   } catch (e) {}
   if (v == 14) return {"varianta":14,"mp":15,"mg":5,"SX":2,"tX":2.4,"mX":90,"F0X":80,"SY":1,"tY":1.6,"mY":30,"F0Y":40,"hZ":0.5,"tZ":1.1,"mZ":28,"F0Z":55,"alpha":0.5,"mu":0.01,"tp":0.6,"aadm":3,"ds":0.2,"Lh":22000,"Tamb":25,"U_retea":400,"trans_X":"CD","trans_Y":"CD","trans_Z":"SB"};
   if (v == 16) return {"mp":6,"mg":2,"SX":1.5,"tX":2,"mX":50,"F0X":50,"SY":0.7,"tY":1.1,"mY":16,"F0Y":25,"hZ":0.3,"tZ":0.7,"mZ":12,"alpha":0,"F0Z":25,"?":0.01,"tp":0.4,"aadm":5,"ds":0.15,"Lh":20000,"Tamb":25,"mu":0.01,"U_retea":400,"trans_X":"CD","trans_Y":"CD","trans_Z":"SB","varianta":16};
+  if (v == 18) return {"mp":20,"mg":6,"SX":2.5,"tX":3.2,"mX":100,"F0X":90,"SY":1,"tY":1.6,"mY":35,"F0Y":45,"hZ":0.5,"tZ":1.1,"mZ":30,"alpha":1,"F0Z":50,"?":0.01,"tp":0.7,"aadm":2.5,"ds":0.3,"Lh":25000,"Tamb":40,"mu":0.01,"U_retea":400,"trans_X":"CD","trans_Y":"CD","trans_Z":"SB","varianta":18};
   throw new Error('unknown variant');
 }
 
