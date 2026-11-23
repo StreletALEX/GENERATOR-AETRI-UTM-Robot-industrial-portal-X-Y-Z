@@ -9,7 +9,7 @@ const paraT = require('./para_templates');
 const { buildTables } = require('./tables');
 
 const v = parseInt(process.argv[2] || '13', 10);
-const SRC = 'C:/Users/DSV/Desktop/Lucrare/New folder/Proiect_Varianta20_verificat.docx';
+const SRC = 'C:/Users/DSV/Desktop/Lucrare/Proiect_Varianta20_verificat.docx';
 const OUT = process.argv[3] || `C:/Users/DSV/Desktop/Lucrare/New folder/${v === 13 ? 'Varianta mea' : 'Varianta ' + v}.docx`;
 
 const V = compute(getInputs(v));

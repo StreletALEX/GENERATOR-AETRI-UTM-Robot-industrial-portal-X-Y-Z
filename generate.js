@@ -94,7 +94,6 @@ fs.mkdirSync(variantDir, { recursive: true });
 // copy CSV if exists
 const csvCandidates = [
   path.join(BASE, 'varianta.csv'),
-  path.join(BASE, 'New folder', 'varianta.csv'),
 ];
 let srcCsv = csvCandidates.find(p => fs.existsSync(p));
 let csvContent = null;
