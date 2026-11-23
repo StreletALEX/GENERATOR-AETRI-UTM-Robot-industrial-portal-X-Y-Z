@@ -36,7 +36,11 @@ if (srcMath.length !== outMath.length) bad('math count mismatch');
 srcMath.forEach((u, k) => {
   const gen = M[u.id];
   if (!gen) { bad(`no math template id ${u.id}`); return; }
-  const want = gen();
+  const rawWant = gen();
+  let want = rawWant;
+  if (typeof rawWant === 'string') {
+    want = rawWant.replace(/\{[^}]*\}/g, function(m) { return m.replace(/[{}]/g, '').replace(/\//g, ''); });
+  }
   if (outMath[k].text !== want) bad(`math id ${u.id} (#${k}):\n  want ${JSON.stringify(want)}\n  got  ${JSON.stringify(outMath[k].text)}`);
 });
 console.log('math checked:', srcMath.length);
@@ -56,7 +60,8 @@ srcPara.forEach((u, k) => {
     if (paired.type !== 'math') { bad(`⟦-para id ${u.id}: previous unit not math (${paired.type})`); return; }
     const gen = M[paired.id];
     if (!gen) { bad(`⟦-para id ${u.id}: no math template id ${paired.id}`); return; }
-    const want = `⟦${gen()}⟧`;
+    const rawWant = `⟦${gen()}⟧`;
+    const want = rawWant.replace(/\{[^}]*\}/g, function(m) { return m.replace(/[{}]/g, '').replace(/\//g, ''); });
     if (got !== want) bad(`⟦-para id ${u.id}: want ${JSON.stringify(want)} got ${JSON.stringify(got)}`);
   } else if (P[u.id]) {
     genN++;

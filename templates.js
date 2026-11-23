@@ -50,14 +50,14 @@ function build(V) {
   // ---------- §1.4 kinematics ----------
   const kin = (ids, k, S, tA, adm) => {
     T(ids.ta, () => `ta=t3=${fN(tA)}3=${f(k.ta,3)} s`);
-    T(ids.v, () => `vmax=3S2t=3·${fN(S)}2·${fN(tA)}=${f(k.vmax,3)} m/s`);
-    T(ids.a, () => `a=9S2t2=9·${fN(S)}2·${fN(tA)}2=${f(k.a,3)} m/s2`);
-    T(ids.tmin, () => `tmin=9S2aadm=9·${fN(S)}2·${fN(adm)}=${f(k.tmin,2)} s`);
+    T(ids.v, () => `vmax = {3S/2t} = {3·${fN(S)}/2·${fN(tA)}} = ${f(k.vmax,3)} m/s`);
+    T(ids.a, () => `a = {9S/2t²} = {9·${fN(S)}/2·${fN(tA)}} = ${f(k.a,3)} m/s²`);
+    T(ids.tmin, () => `tmin = {9S/2aadm} = {9·${fN(S)}/2·${fN(adm)}} = ${f(k.tmin,2)} s`);
   };
   kin({ ta: 59, v: 62, a: 65, tmin: 68 }, kZ, inp.hZ, inp.tZ, inp.aadm);
   kin({ ta: 72, v: 75, a: 78, tmin: 81 }, kY, inp.SY, inp.tY, inp.aadm);
   kin({ ta: 85, v: 88, a: 91, tmin: 94 }, kX, inp.SX, inp.tX, inp.aadm);
-  T(102, () => `a=aX2+aY2=${f(kX.a,2)}2+${f(kY.a,2)}2=${f(V.a_rez,2)} m/s2`);
+  T(102, () => `a = sqrt(${f(kX.a,2)}² + ${f(kY.a,2)}²) = ${f(V.a_rez,2)} m/s²`);
 
   // ---------- §2.1 masses ----------
   T(109, () => `mmort=mZ+mg=${fN(inp.mZ)}+${fN(inp.mg)}=${fN(V.mmort)} kg`);
@@ -107,7 +107,7 @@ function build(V) {
   T(235, () => `C0a2=10${TH}8002=5400 N`);
   const ns_rampa = V.ns / 2;
   const tiZdisp = () => inp.tZ === 0.9 ? f(V.ti_Z, 1) : f(V.ti_Z, 3); // doc shows "0,3" for v20
-  T(239, () => `nm=∑ni tiTc=4·${fi(ns_rampa)}+${fi(V.ns)}+${fi(ns_rampa)}·${tiZdisp()}${f(V.Tc,1)}=${f(V.nm_Z,1)} rot/min`);
+  T(239, () => `nm = {∑ni·ti/Tc} = {4·${fi(ns_rampa)}+${fi(V.ns)}+${fi(ns_rampa)}·${tiZdisp()}/${f(V.Tc,1)}} = ${f(V.nm_Z,1)} rot/min`);
   T(242, () => `Fm=∑|Fi|3 ni ti∑ni ti1/3`);
   const Zf = V.F_Z;
   const Zord = [Zf.cob_gol_acc, Zf.cob_gol_mu, Zf.cob_gol_frn, Zf.rid_piesa_acc, Zf.rid_piesa_mu, Zf.rid_piesa_frn, Zf.cob_piesa_acc, Zf.cob_piesa_mu, Zf.cob_piesa_frn, Zf.rid_gol_acc, Zf.rid_gol_mu, Zf.rid_gol_frn];
@@ -126,24 +126,24 @@ function build(V) {
     T(P.nr, () => `nr=60 vmaxπ dp=60·${f(A.vmax4,4)}π·${f(A.dp_m, 5)}=${f(A.nr,1)} rot/min`);
     T(P.nmot12, () => `nmot=nr i=${f(A.nr,1)}·${A.i}=${fi(A.nmot)} rot/min`);
     T(P.nmot16, () => `nmot=nr i=${f(A.nr,1)}·${A.i_next}=${fi(A.nr_full * A.i_next)} rot/min`);
-    T(P.rred, () => `rred=dp2i=${f(A.dp_m, 5)}2·${A.i}=${m10(A.rred,3,-3)} m`);
+    T(P.rred, () => `rred = {dp/2i} = {${f(A.dp_m, 5)}/2·${A.i}} = ${m10(A.rred,3,-3)} m`);
     T(P.Mout, () => `Mout=Fmax dp2 ηc=${f(Fmax,1)}·${f(A.dp_m, 5)}2·0,96=${f(A.Mout_peak,2)} N·m`);
     T(P.Mout12, () => `1,2 Mout=1,2·${f(A.Mout_peak,2)}=${f(A.Mout_peak_12,1)} N·m`);
     T(P.Mech, () => `Mout,ech=∑iMout,i2 tiTc=${f(A.ti,4)}·${A.Mout_faze.map(M => f(Math.abs(M),2)).join('2+')}2${f(V.Tc,1)}=${f(A.Mout_ech,1)} N·m`);
     T(P.Fbelt, () => `1,3 Fmax=1,3·${f(Fmax,1)}=${fi(A.F_belt_min)} N`);
     T(P.cCapat, () => `c=csp1L1+1L2=${f(A.belt[V.belt_ales].csp,2)}·106·10,15+1${f(S+0.15,2)}=${m10(A.c_capat,2,6)} N/m`);
-    T(P.feCapat, () => `fe=12πcm=12π${m10(A.c_capat,2,6)}${fN(A.m_piesa_ref)}=${f(A.fe_capat,1)} Hz`);
+    T(P.feCapat, () => `fe = {1/2π}·sqrt({${m10(A.c_capat,2,6)}/${fN(A.m_piesa_ref)}}) = ${f(A.fe_capat,1)} Hz`);
     T(P.Lmij, () => `L1=L2=S+0,32=${fN(S)}+0,32=${f(A.L_mij,2)} m`);
     T(P.c25, () => `c=csp1L1+1L2=0,62·106·1${f(A.L_mij,2)}+1${f(A.L_mij,2)}=${m10(A.belt['AT10-25'].c_mid,2,6)} N/m`);
-    T(P.fe25, () => `fe=12πcm=12π${m10(A.belt['AT10-25'].c_mid,2,6)}${fN(A.m_piesa_ref)}=${f(A.belt['AT10-25'].fe_mid,1)} Hz`);
+    T(P.fe25, () => `fe = {1/2π}·sqrt({${m10(A.belt['AT10-25'].c_mid,2,6)}/${fN(A.m_piesa_ref)}}) = ${f(A.belt['AT10-25'].fe_mid,1)} Hz`);
     T(P.c32, () => `c=csp1L1+1L2=${f(A.belt[V.belt_ales].csp,2)}·106·1${f(A.L_mij,2)}+1${f(A.L_mij,2)}=${m10(A.belt[V.belt_ales].c_mid,2,6)} N/m`);
-    T(P.fe32, () => `fe=12πcm=12π${m10(A.belt[V.belt_ales].c_mid,2,6)}${fN(A.m_piesa_ref)}=${f(A.belt[V.belt_ales].fe_mid,1)} Hz`);
+    T(P.fe32, () => `fe = {1/2π}·sqrt({${m10(A.belt[V.belt_ales].c_mid,2,6)}/${fN(A.m_piesa_ref)}}) = ${f(A.belt[V.belt_ales].fe_mid,1)} Hz`);
     T(P.mcurea, () => `mcurea=2 S+0,3 m'=2·${fN(S)}+0,3·${fN(V.mp_belt)}=${f(A.mcurea,3)} kg`);
     T(P.Jcurea, () => `mcureadp22=${f(A.mcurea,3)}\u00B7${f(A.dp_m / 2, 5)}2=${m10(A.Jcurea,1,-4)} kg\u00B7m2`);
     T(P.mr2p, () => `m${A.ax}dp22=${fN(A.m_piesa_ref)}\u00B7${f(A.dp_m / 2, 5)}2=${f(A.mr2_piesa,4)} kg\u00B7m2`);
     T(P.mr2g, () => `m${A.ax}dp22=${fN(A.m_gol_ref)}\u00B7${f(A.dp_m / 2, 5)}2=${f(A.mr2_gol,4)} kg\u00B7m2`);
     T(P.Jtri2, () => `Jtr+Jci2=${f(A.Jroti/1e-4,1)}+${f(A.Jcurea/1e-4,1)}+0,2·10-4${A.i}2=${m10(A.Jtr_plus_Jc_i2,2,-4)} kg·m2`);
-    T(P.mr2i2, () => `m rtr2i2=${f(A.mr2_piesa,4)}${A.i}2=${m10(A.mr2_i2_piesa,2,-4)} kg·m2`);
+    T(P.mr2i2, () => `m·rtr²/i² = {${f(A.mr2_piesa,4)}/${A.i}²} = ${m10(A.mr2_i2_piesa,2,-4)} kg·m²`);
   };
   belt({ nr: 267, nmot12: 270, nmot16: 272, rred: 275, Mout: 282, Mout12: 285, Mech: 288, Fbelt: 299, cCapat: 302, feCapat: 304, Lmij: 307, c25: 310, fe25: 312, c32: 315, fe32: 317, mcurea: 328, Jcurea: 331, mr2p: 334, mr2g: 336, Jtri2: 339, mr2i2: 342 }, Y, inp.SY, V.Fmax_Y);
   belt({ nr: 348, nmot12: 351, nmot16: 353, rred: 356, Mout: 363, Mout12: 366, Mech: 369, Fbelt: 373, cCapat: 376, feCapat: 378, Lmij: 381, c25: 384, fe25: 386, c32: 389, fe32: 391, mcurea: 396, Jcurea: 399, mr2p: 402, mr2g: 404, Jtri2: 407, mr2i2: 410 }, X, inp.SX, V.Fmax_X);
@@ -163,14 +163,14 @@ function build(V) {
 
   const e4c = x => m10(x, 2, -4);
   const JtrZ = V.Js / 1e-4;
-  T(431, () => `JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=${f(mZ['Jr_1e-4'],2)}+${f(mZ['Jfr_1e-4'],2)}+0+${f(JtrZ,3)}+0,212+${f(V.mr2_Z_piesa/1e-4,2)}12·10-4=${e4c(D.JS_Z)} kg·m2`);
+  T(431, () => `JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr²/i²=${f(mZ['Jr_1e-4'],2)}+${f(mZ['Jfr_1e-4'],2)}+0+${f(JtrZ,3)}+0,212+${f(V.mr2_Z_piesa/1e-4,2)}12·10-4=${e4c(D.JS_Z)} kg·m2`);
   T(434, () => `Jext=JΣ-Jr-Jfr=${f(D.JS_Z/1e-4,2)}-${f(mZ['Jr_1e-4'],2)}-${f(mZ['Jfr_1e-4'],2)}·10-4=${e4c(V.Jext_Z)} kg·m2`);
-  T(438, () => `JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=${f(mY['Jr_1e-4'],2)}+0+0,08+${f(Y.Jtr_plus_Jc_i2/1e-4,2)}+${f(Y.mr2_i2_piesa/1e-4,2)}·10-4=${e4c(D.JS_Y)} kg·m2`);
+  T(438, () => `JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr²/i²=${f(mY['Jr_1e-4'],2)}+0+0,08+${f(Y.Jtr_plus_Jc_i2/1e-4,2)}+${f(Y.mr2_i2_piesa/1e-4,2)}·10-4=${e4c(D.JS_Y)} kg·m2`);
   T(440, () => `Jext=JΣ-Jr-Jfr=${f(D.JS_Y/1e-4,2)}-${f(mY['Jr_1e-4'],2)}-0·10-4=${e4c(V.Jext_Y)} kg·m2`);
-  T(442, () => `Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+${f(Y.Jtr_plus_Jc_i2/1e-4,2)}+${f(Y.mr2_i2_gol/1e-4,2)}·10-4=${e4c(V.Jext_Y_gol)} kg·m2 (în gol)`);
-  T(445, () => `JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr2i2=${f(mX['Jr_1e-4'],2)}+0+0,08+${f(X.Jtr_plus_Jc_i2/1e-4,2)}+${f(X.mr2_i2_piesa/1e-4,2)}·10-4=${e4c(D.JS_X)} kg·m2`);
+  T(442, () => `Jext=Jred+Jtr+Jci2+m rtr²/i²=0,08+${f(Y.Jtr_plus_Jc_i2/1e-4,2)}+${f(Y.mr2_i2_gol/1e-4,2)}·10-4=${e4c(V.Jext_Y_gol)} kg·m2 (în gol)`);
+  T(445, () => `JΣ=Jr+Jfr+Jred+Jtr+Jci2+m rtr²/i²=${f(mX['Jr_1e-4'],2)}+0+0,08+${f(X.Jtr_plus_Jc_i2/1e-4,2)}+${f(X.mr2_i2_piesa/1e-4,2)}·10-4=${e4c(D.JS_X)} kg·m2`);
   T(447, () => `Jext=JΣ-Jr-Jfr=${f(D.JS_X/1e-4,2)}-${f(mX['Jr_1e-4'],2)}-0·10-4=${e4c(V.Jext_X)} kg·m2`);
-  T(449, () => `Jext=Jred+Jtr+Jci2+m rtr2i2=0,08+${f(X.Jtr_plus_Jc_i2/1e-4,2)}+${f(X.mr2_i2_gol/1e-4,2)}·10-4=${e4c(V.Jext_X_gol)} kg·m2 (în gol)`);
+  T(449, () => `Jext=Jred+Jtr+Jci2+m rtr²/i²=0,08+${f(X.Jtr_plus_Jc_i2/1e-4,2)}+${f(X.mr2_i2_gol/1e-4,2)}·10-4=${e4c(V.Jext_X_gol)} kg·m2 (în gol)`);
 
   // ---------- §2.6 load diagrams ----------
   T(459, () => `MJ=Jr+Jfr+Jred+Jtr+Jci2εmot=${f(mZ['Jr_1e-4'],2)}+${f(mZ['Jfr_1e-4'],2)}+0+${f((V.Js+V.Jc)/1e-4,3)}·10-4·${fi(V.eps_Z)}=${f(D.MJ_Z,3)} N·m`);
