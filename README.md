@@ -24,7 +24,32 @@ Variants delivered so far:
 | `verify_final.js` | End-to-end verification of a written docx (math, paras, tables, core.xml, XML parse, zip parts). |
 | `gen_dump.js` | Dumps all generated texts (math + paras + tables) for a variant. |
 
-## Prerequisites
+## Output folder structure
+
+Each generated variant gets its own folder (no messy shared directory):
+
+```
+C:/Users/DSV/Desktop/Lucrare/
+├── Proiect_Varianta20_verificat.docx   ← source template (read-only)
+├── varianta.csv                        ← main CSV (edit here, or pass --data)
+├── Varianta 12/
+│   ├── varianta.csv
+│   ├── Varianta 12.docx
+│   ├── ciclograma.png
+│   └── diagrame_sarcina.png
+├── Varianta 13/
+│   ├── varianta.csv
+│   ├── Varianta mea.docx
+│   ├── ciclograma.png
+│   └── diagrame_sarcina.png
+└── Varianta 16/
+    ├── varianta.csv
+    ├── Varianta 16.docx
+    ├── ciclograma.png
+    └── diagrame_sarcina.png
+```
+
+`generate.js` creates the folder, copies the CSV, generates the docx, extracts units, verifies, and generates both images — all in one command.
 
 - Node.js ≥ 18
 - `npm install` (installs `adm-zip`, `fast-xml-parser`, `pdf-parse`)
@@ -51,7 +76,8 @@ To add a new variant, add a branch in `getInputs(v)` and (if needed) parameteriz
 node apply.js <variant>
 ```
 
-Default variant is 13. Output: `Varianta <n>.docx` (or `Varianta mea.docx` for 13) in `C:/Users/DSV/Desktop/Lucrare/New folder/`.
+Default variant is 13. Output: a separate folder `Varianta <n>/` in `C:/Users/DSV/Desktop/Lucrare/`,
+containing 4 files: `varianta.csv`, `Varianta <n>.docx` (or `Varianta mea.docx` for 13), `ciclograma.png`, `diagrame_sarcina.png`.
 
 Example:
 ```
@@ -66,7 +92,7 @@ node extract.js "<path to docx>" units_<variant>.json
 
 Example:
 ```
-node extract.js "C:/Users/DSV/Desktop/Lucrare/New folder/Varianta 12.docx" units_12.json
+node extract.js "C:/Users/DSV/Desktop/Lucrare/Varianta 12/Varianta 12.docx" units_12.json
 ```
 
 ### 3. Verify the written docx end-to-end
