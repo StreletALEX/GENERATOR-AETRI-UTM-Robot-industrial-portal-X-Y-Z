@@ -1,22 +1,16 @@
-// generate.js — one-command pipeline: data -> docx -> verify
+// generate.js — one-command pipeline: data -> docx -> verify -> images
 // Usage:
 //   node generate.js <variant>                       # existing variant (12/13/20)
-//   node generate.js --data <file.json> [--variant N] # new variant from a data file
+//   node generate.js --data <file.json> [--variant N] # new variant from a JSON data file
 //   node generate.js --data <file.csv>  [--variant N] # new variant from a CSV (key,value)
 //
-// Data file format (JSON): object with the variant fields, e.g.
-//   { "mp":30, "mg":8, "SX":2.5, "tX":3.5, "mX":120, "F0X":100,
-//     "SY":1, "tY":1.8, "mY":45, "F0Y":50, "hZ":0.6, "tZ":1.4, "mZ":40,
-//     "alpha":1, "mu":0.01, "tp":0.8, "aadm":2, "ds":0.5, "Lh":25000,
-//     "Tamb":25, "U_retea":400, "trans_X":"CD", "trans_Y":"CD", "trans_Z":"SB" }
-// CSV format: "key,value" per line (varianta,<n> optional).
-//
-// Output: "Varianta <n>.docx" (or "Varianta mea.docx" for 13) + units_<n>.json
-//         in C:/Users/DSV/Desktop/Lucrare/New folder/
+// Creates a separate folder per variant: <BASE>/Varianta N/
+// Contents: varianta.csv, Varianta N.docx, ciclograma.png, diagrame_sarcina.png
 const fs = require('fs');
+const path = require('path');
 const { spawnSync } = require('child_process');
 
-const BASE = 'C:/Users/DSV/Desktop/Lucrare/New folder';
+const BASE = 'C:/Users/DSV/Desktop/Lucrare';
 const ROOT = 'C:/Users/DSV/Documents/Default Project';
 
 function run(cmd, args, opts = {}) {
@@ -38,7 +32,6 @@ function parseCSV(text) {
     const num = Number(v);
     out[k] = isNaN(num) ? v : num;
   }
-  // normalize keys to the compute.js field names
   const map = { Mp:'mp', Mg:'mg', sx:'SX', tx:'tX', Mx:'mX', F0x:'F0X', sy:'SY', ty:'tY', My:'mY', F0y:'F0Y', sz:'hZ', tz:'tZ', Mz:'mZ', a:'alpha', F0z:'F0Z', Tp:'tp', Aadm:'aadm', '????':'ds', S:'ds', Lh:'Lh', Tamb:'Tamb' };
   const norm = {};
   for (const [k, v] of Object.entries(out)) {
@@ -46,7 +39,6 @@ function parseCSV(text) {
     const nk = map[k] || k;
     norm[nk] = v;
   }
-  // defaults for fields not in CSV
   if (norm.mu === undefined) norm.mu = 0.01;
   if (norm.ds === undefined && norm['????'] !== undefined) norm.ds = norm['????'];
   if (norm.U_retea === undefined) norm.U_retea = 400;
@@ -59,7 +51,6 @@ function parseCSV(text) {
   return norm;
 }
 
-// ---------- argument parsing ----------
 const args = process.argv.slice(2);
 let variant = null;
 let dataFile = null;
@@ -74,21 +65,17 @@ if (dataFile) {
   const raw = fs.readFileSync(dataFile, 'utf8');
   const data = dataFile.toLowerCase().endsWith('.csv') ? parseCSV(raw) : JSON.parse(raw);
   if (!data.varianta) {
-    // pick next free variant number
     const existing = Object.keys(JSON.parse(fs.readFileSync(ROOT + '/variants.json', 'utf8') || '{}'));
     const nums = existing.map(Number).filter(n => !isNaN(n));
     data.varianta = variant || (Math.max(12, 13, 20, ...nums) + 1);
   }
   if (variant) data.varianta = variant;
-  // store
   let store = {};
   try { store = JSON.parse(fs.readFileSync(ROOT + '/variants.json', 'utf8')); } catch (e) {}
   store[data.varianta] = data;
   fs.writeFileSync(ROOT + '/variants.json', JSON.stringify(store, null, 2), 'utf8');
-  // register in compute.js if not already
   const computeSrc = fs.readFileSync(ROOT + '/compute.js', 'utf8');
   if (!computeSrc.includes(`if (v == ${data.varianta})`)) {
-    // insert a new branch before "throw new Error('unknown variant')"
     const branch = `  if (v == ${data.varianta}) return ${JSON.stringify(data)};\n`;
     const patched = computeSrc.replace("  throw new Error('unknown variant');", branch + "  throw new Error('unknown variant');");
     fs.writeFileSync(ROOT + '/compute.js', patched, 'utf8');
@@ -100,9 +87,47 @@ if (dataFile) {
 
 if (!variant) { console.error('Usage: node generate.js <variant>  OR  node generate.js --data <file> [--variant N]'); process.exit(1); }
 
+// ---------- create variant folder ----------
+const variantDir = path.join(BASE, `Varianta ${variant}`);
+fs.mkdirSync(variantDir, { recursive: true });
+
+// copy CSV if exists
+const srcCsv = path.join(BASE, 'New folder', 'varianta.csv');
+// also check if there's a variant-specific CSV
+let csvContent = null;
+if (dataFile && dataFile.toLowerCase().endsWith('.csv')) {
+  csvContent = fs.readFileSync(dataFile, 'utf8');
+} else if (fs.existsSync(srcCsv)) {
+  csvContent = fs.readFileSync(srcCsv, 'utf8');
+  // update varianta number in CSV
+  csvContent = csvContent.replace(/^varianta,\d+/m, `varianta,${variant}`);
+}
+if (csvContent) {
+  fs.writeFileSync(path.join(variantDir, 'varianta.csv'), csvContent, 'utf8');
+  console.log(`CSV written to ${variantDir}/varianta.csv`);
+}
+
+const docxName = (variant === 13) ? 'Varianta mea.docx' : `Varianta ${variant}.docx`;
+const docxPath = path.join(variantDir, docxName);
+const unitsFile = path.join(ROOT, `units_${variant}.json`);
+
 // ---------- run pipeline ----------
 console.log(`\n=== Generating variant ${variant} ===`);
-run('node', ['apply.js', String(variant)]);
-run('node', ['extract.js', `${BASE}/Varianta ${variant === 13 ? 'mea' : variant}.docx`, variant === 13 ? 'units_out.json' : `units_${variant}.json`]);
-run('node', ['verify_final.js', String(variant)]);
-console.log(`\nDONE. Output: ${BASE}/${variant === 13 ? 'Varianta mea' : 'Varianta ' + variant}.docx`);
+run('node', ['apply.js', String(variant), docxPath]);
+run('node', ['extract.js', docxPath, unitsFile]);
+run('node', ['verify_final.js', String(variant), docxPath]);
+
+// ---------- generate images ----------
+// Write plot data JSON for Python (input data + belt/wheel selection from compute)
+const plotDataPath = path.join(variantDir, '_plot_data.json');
+run('node', ['-e', `const c=require('./compute');const V=c.compute(c.getInputs(${variant}));const d=Object.assign({},V.inp,{z:V.axX.z_ales,i_red:V.axX.i,b_belt:V.axX.bw,m_belt_pm:V.axX.mp_belt,p_belt:V.axX.dp_m,eta_c:0.96,eta_red:0.94,Jred:0.08e-4,Jc_X:0.2e-4,Jr_X:V.motX['Jr_1e-4']*1e-4,MN_X:V.motX.MN,Jp_Y:V.axY.Jp||3.0e-4,Jc_Y:0.6e-4,Jr_Y:V.motY['Jr_1e-4']*1e-4,MN_Y:V.motY.MN,Jp_Z:0.5e-4,Jc_Z:0.2e-4,Jr_Z:V.motZ['Jr_1e-4']*1e-4,Jfr_Z:V.motZ['Jfr_1e-4']*1e-4,MN_Z:V.motZ.MN,P_Z:0.016,eta_Z:0.93,P_Y:0.025,eta_Y:0.93});require('fs').writeFileSync(${JSON.stringify(plotDataPath)}, JSON.stringify(d));`]);
+// Generate images
+run('python', [path.join(ROOT, 'gen_images.py'), plotDataPath, variantDir]);
+// Clean up plot data
+fs.unlinkSync(plotDataPath);
+
+console.log(`\nDONE. Output folder: ${variantDir}`);
+console.log(`  - varianta.csv`);
+console.log(`  - ${docxName}`);
+console.log(`  - ciclograma.png`);
+console.log(`  - diagrame_sarcina.png`);

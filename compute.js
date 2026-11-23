@@ -297,7 +297,7 @@ function compute(inp) {
     A.belt_ales = beltTip;
     const _bw = b.b / 1000;
     A.mr = CAT.constant.rho_otel * Math.PI * (A.dp_m / 2) ** 2 * _bw;
-    A.Jroti = 2 * A.mr * (A.dp_m / 2) ** 2;
+    A.Jroti = A.mr * (A.dp_m / 2) ** 2;
     A.mcurea = 2 * (S + 0.3) * b.mp;
     A.Jcurea = A.mcurea * (A.dp_m / 2) ** 2;
     A.Jtr_plus_Jc_i2 = (A.Jroti + A.Jcurea + V.Jc) / (A.i ** 2);
