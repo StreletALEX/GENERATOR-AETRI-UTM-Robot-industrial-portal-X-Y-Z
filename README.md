@@ -139,7 +139,10 @@ The number of units (paragraphs, tables, rows, cells, math slots) is fixed by th
 - Wheel width follows belt width (`V.bw`); reductor adoption = largest ratio with `A.nr·i ≤ 2850`.
 - Belt selection: keep AT10-32 if `fe_mid(X) ≥ 14,85 Hz`; otherwise narrowest belt with `fe_mid ≥ 15 Hz` and `Fadm ≥ 1,3·Fmax` on X; Y adopts the same belt.
 
-## Notes
+## Links
+
+- **Google Sheets (calcule proprii):** https://docs.google.com/spreadsheets/d/1bRw9yzjg03oeN_UIkqtAu2Wey8ANcNXVui0gPObW4Vw/edit?usp=sharing
+- **GitHub repo:** https://github.com/StreletALEX/GENERATOR-AETRI-UTM-Robot-industrial-portal-X-Y-Z
 
 - The v20 source docx must stay untouched (it is the regression baseline).
 - `gen_dump.js` invokes generators so function-valued paras/math survive `JSON.stringify`.
