@@ -284,7 +284,7 @@ function build(V) {
   T(789, () => `Mhold=FG rredη=${f(V.FG_piesa,1)}·2,546·10-30,93=${f(D.Mhold_p,2)} N·m`);
   T(794, () => `E=12 mΣX vmax2=12·${fN(V.mSX_piesa)}·${f(kX.vmax,3)}2=${fi(V.Ekin_X)} J`);
   T(797, () => `n=60 vP=60·0,250,016=937,5 rot/min`);
-  T(800, () => `nr=60 vπ dp=60·0,25π·0,10186=46,9 rot/min`);
+  T(800, () => `nr=60 vπ dp=60·0,25π·${f(Y.dp_m, 5)}=${f(60 * 0.25 / (Math.PI * Y.dp_m), 1)} rot/min`);
   T(802, () => `nmot=nr i=46,9·${Y.i}=${fi(60 * 0.25 / (Math.PI * Y.dp / 1000) * Y.i)} rot/min`);
   T(811, () => `a=9S2t2=9·${fN(inp.SX)}2·${f(V.tX_whatif,2)}2=${f(V.a_whatif,1)} m/s2`);
   T(814, () => `a=9S2t2=9·${fN(inp.SX)}2·${f(V.tX_fez,1)}2=${f(V.a_fez,2)} m/s2`);

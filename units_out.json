@@ -1789,7 +1789,7 @@
   {
    "id": 277,
    "type": "para",
-   "text": "unde: vmax = 1,0385 m/s — viteza maximă a axei Y (§1.4; cu patru zecimale, ca la celelalte axe); dp = 0,10186 m — diametrul primitiv, în metri (calculat mai sus); i = 16, respectiv 20 — rapoartele reductoarelor planetare cu două trepte (tabelul A.4). Raportul 20 ar depăși limita de 2850 rot/min ✗; raportul 16 dă 2492 rot/min ✓ și este cel mai mare care încape. Celelalte trei roți se calculează identic; rezultatele sunt în tabelul 2.3. În tabelul 2.3 coloana i arată pentru celelalte roți cel mai mare dintre rapoartele din catalog (3, 4, 5, 7, 10, 12, 16, 20, 25, 40, 50, 100) care încadrează motorul sub 2850 rot/min — rapoarte de comparație; doar rândul roții adoptate (z = 40) poartă raportul adoptat mai sus."
+   "text": "unde: vmax = 1,0385 m/s — viteza maximă a axei Y (§1.4; cu patru zecimale, ca la celelalte axe); dp = 0,12732 m — diametrul primitiv, în metri (calculat mai sus); i = 16, respectiv 20 — rapoartele reductoarelor planetare cu două trepte (tabelul A.4). Raportul 20 ar depăși limita de 2850 rot/min ✗; raportul 16 dă 2492 rot/min ✓ și este cel mai mare care încape. Celelalte trei roți se calculează identic; rezultatele sunt în tabelul 2.3. În tabelul 2.3 coloana i arată pentru celelalte roți cel mai mare dintre rapoartele din catalog (3, 4, 5, 7, 10, 12, 16, 20, 25, 40, 50, 100) care încadrează motorul sub 2850 rot/min — rapoarte de comparație; doar rândul roții adoptate (z = 40) poartă raportul adoptat mai sus."
   },
   {
    "id": 278,
@@ -1880,7 +1880,7 @@
   {
    "id": 287,
    "type": "para",
-   "text": "unde: Fmax = 188,4 N — forța de vârf a axei Y (tabelul 2.2); dp = 0,10186 m — diametrul primitiv al roții (calculat mai sus); ηc = 0,96 — randamentul curelei dințate (tabelul A.8); 1,2 — rezerva proprie transmisiilor cu curea (Îndrumar, §2.6.2). Condiția: 15,0 N·m ≤ Mmax = 30 N·m ✓. Cuplul echivalent la ieșire se obține cu (2.17) din cuplurile la ieșire ale celor șase faze, calculate ca Mout de mai sus (cu (2.13): împărțire la ηc când motorul antrenează, F > 0; înmulțire cu ηc când sarcina antrenează, F < 0), adică 12,49; 2,40; −7,09; 10,84; 2,34; −5,68 N·m pentru forțele din tabelul 2.2, în ordinea rândurilor axei Y:"
+   "text": "unde: Fmax = 188,4 N — forța de vârf a axei Y (tabelul 2.2); dp = 0,12732 m — diametrul primitiv al roții (calculat mai sus); ηc = 0,96 — randamentul curelei dințate (tabelul A.8); 1,2 — rezerva proprie transmisiilor cu curea (Îndrumar, §2.6.2). Condiția: 15,0 N·m ≤ Mmax = 30 N·m ✓. Cuplul echivalent la ieșire se obține cu (2.17) din cuplurile la ieșire ale celor șase faze, calculate ca Mout de mai sus (cu (2.13): împărțire la ηc când motorul antrenează, F > 0; înmulțire cu ηc când sarcina antrenează, F < 0), adică 12,49; 2,40; −7,09; 10,84; 2,34; −5,68 N·m pentru forțele din tabelul 2.2, în ordinea rândurilor axei Y:"
   },
   {
    "id": 288,
@@ -4375,7 +4375,7 @@
   {
    "id": 711,
    "type": "para",
-   "text": "unde: P = 16 mm (Z, §2.4.1) — pasul șurubului; 2²⁰ = 1 048 576 — numărul de poziții pe rotație al encoderului absolut de 20 de biți EA-20-12 (tabelul A.11); dp = 101,86 mm — diametrul primitiv al roții (§2.4.2); i = 16 pe Y, respectiv 12 pe X — rapoartele reductorului; deplasarea pe rotația motorului este πdp/i = 25,0 mm pe Y și 26,7 mm pe X. Toate ≪ 0,03 mm ✓."
+   "text": "unde: P = 16 mm (Z, §2.4.1) — pasul șurubului; 2²⁰ = 1 048 576 — numărul de poziții pe rotație al encoderului absolut de 20 de biți EA-20-12 (tabelul A.11); dp = 127,32 mm (Y) și 101,86 mm (X) — diametrele primitive ale roților (§2.4.2); i = 16 pe Y, respectiv 12 pe X — rapoartele reductorului; deplasarea pe rotația motorului este πdp/i = 25,0 mm pe Y și 26,7 mm pe X. Toate ≪ 0,03 mm ✓."
   },
   {
    "id": 712,
@@ -5024,12 +5024,12 @@
   {
    "id": 800,
    "type": "math",
-   "text": "nr=60 vπ dp=60·0,25π·0,10186=46,9 rot/min"
+   "text": "nr=60 vπ dp=60·0,25π·0,12732=37,5 rot/min"
   },
   {
    "id": 801,
    "type": "para",
-   "text": "⟦nr=60 vπ dp=60·0,25π·0,10186=46,9 rot/min⟧"
+   "text": "⟦nr=60 vπ dp=60·0,25π·0,12732=37,5 rot/min⟧"
   },
   {
    "id": 802,
@@ -5044,7 +5044,7 @@
   {
    "id": 804,
    "type": "para",
-   "text": "deci pragurile SLS: ≈ 940 rot/min la motorul Z și ≈ 600 rot/min la motorul Y și ≈ 450 rot/min la motorul X, unde: v = 0,25 m/s — viteza limitată sigur la organul de lucru (ISO 10218-1, viteza redusă de reglaj); P = 0,016 m (Z, §2.4.1) — pasul șurubului; dp = 0,10186 m — diametrul primitiv al roții de curea (§2.4.2); i = 16 (Y) și 12 (X) — rapoartele reductorului (§2.4.2). Standarde: ISO 12100, ISO 10218-1/-2, ISO 13849-1 (PL d, cat. 3), EN 60204-1, IEC 61800-5-2, IEC 61496-3 (scanner)."
+   "text": "deci pragurile SLS: ≈ 940 rot/min la motorul Z și ≈ 600 rot/min la motorul Y și ≈ 450 rot/min la motorul X, unde: v = 0,25 m/s — viteza limitată sigur la organul de lucru (ISO 10218-1, viteza redusă de reglaj); P = 0,016 m (Z, §2.4.1) — pasul șurubului; dp = 0,12732 m — diametrul primitiv al roții de curea (§2.4.2); i = 16 (Y) și 12 (X) — rapoartele reductorului (§2.4.2). Standarde: ISO 12100, ISO 10218-1/-2, ISO 13849-1 (PL d, cat. 3), EN 60204-1, IEC 61800-5-2, IEC 61496-3 (scanner)."
   },
   {
    "id": 805,
