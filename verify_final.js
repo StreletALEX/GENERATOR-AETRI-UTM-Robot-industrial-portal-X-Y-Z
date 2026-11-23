@@ -39,7 +39,7 @@ srcMath.forEach((u, k) => {
   const rawWant = gen();
   let want = rawWant;
   if (typeof rawWant === 'string') {
-    want = rawWant.replace(/\{[^}]*\}/g, function(m) { return m.replace(/[{}]/g, '').replace(/\//g, ''); });
+    want = rawWant.replace(/\\sqrt/g, '').replace(/\u221A/g, '').replace(/\{[^}]*\}/g, function(m) { return m.replace(/[{}]/g, '').replace(/\//g, ''); });
   }
   if (outMath[k].text !== want) bad(`math id ${u.id} (#${k}):\n  want ${JSON.stringify(want)}\n  got  ${JSON.stringify(outMath[k].text)}`);
 });
@@ -61,7 +61,7 @@ srcPara.forEach((u, k) => {
     const gen = M[paired.id];
     if (!gen) { bad(`⟦-para id ${u.id}: no math template id ${paired.id}`); return; }
     const rawWant = `⟦${gen()}⟧`;
-    const want = rawWant.replace(/\{[^}]*\}/g, function(m) { return m.replace(/[{}]/g, '').replace(/\//g, ''); });
+    const want = rawWant.replace(/\\sqrt/g, '').replace(/\u221A/g, '').replace(/\{[^}]*\}/g, function(m) { return m.replace(/[{}]/g, '').replace(/\//g, ''); });
     if (got !== want) bad(`⟦-para id ${u.id}: want ${JSON.stringify(want)} got ${JSON.stringify(got)}`);
   } else if (P[u.id]) {
     genN++;

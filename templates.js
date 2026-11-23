@@ -57,7 +57,7 @@ function build(V) {
   kin({ ta: 59, v: 62, a: 65, tmin: 68 }, kZ, inp.hZ, inp.tZ, inp.aadm);
   kin({ ta: 72, v: 75, a: 78, tmin: 81 }, kY, inp.SY, inp.tY, inp.aadm);
   kin({ ta: 85, v: 88, a: 91, tmin: 94 }, kX, inp.SX, inp.tX, inp.aadm);
-  T(102, () => `a = sqrt(${f(kX.a,2)}² + ${f(kY.a,2)}²) = ${f(V.a_rez,2)} m/s²`);
+  T(102, () => `a = √{${f(kX.a,2)}² + ${f(kY.a,2)}²} = ${f(V.a_rez,2)} m/s²`);
 
   // ---------- §2.1 masses ----------
   T(109, () => `mmort=mZ+mg=${fN(inp.mZ)}+${fN(inp.mg)}=${fN(V.mmort)} kg`);

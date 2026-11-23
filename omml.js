@@ -47,8 +47,9 @@ function parse(markup) {
       const last = nodes.pop();
       if (last && last.type === 'text') { nodes.push({ type: 'sub', base: last.value, idx: subText }); }
       else { if (last) nodes.push(last); nodes.push({ type: 'sub', base: '', idx: subText }); }
-    } else if (markup.startsWith('\\sqrt{', i)) {
-      const g = parseGroup(markup, i + 6);
+    } else if (markup.startsWith('\\sqrt{', i) || markup.startsWith('√{', i)) {
+      const offset = markup.startsWith('\\sqrt{', i) ? 6 : 2;
+      const g = parseGroup(markup, i + offset);
       flushText();
       nodes.push({ type: 'sqrt', radicand: g.content });
       i = g.end + 1;
