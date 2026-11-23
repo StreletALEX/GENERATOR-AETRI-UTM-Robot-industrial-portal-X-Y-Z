@@ -132,12 +132,12 @@ function build(V) {
     T(P.Mech, () => `Mout,ech=∑iMout,i2 tiTc=${f(A.ti,4)}·${A.Mout_faze.map(M => f(Math.abs(M),2)).join('2+')}2${f(V.Tc,1)}=${f(A.Mout_ech,1)} N·m`);
     T(P.Fbelt, () => `1,3 Fmax=1,3·${f(Fmax,1)}=${fi(A.F_belt_min)} N`);
     T(P.cCapat, () => `c=csp1L1+1L2=${f(A.belt[V.belt_ales].csp,2)}·106·10,15+1${f(S+0.15,2)}=${m10(A.c_capat,2,6)} N/m`);
-    T(P.feCapat, () => `fe = {1/2π}·sqrt({${m10(A.c_capat,2,6)}/${fN(A.m_piesa_ref)}}) = ${f(A.fe_capat,1)} Hz`);
+    T(P.feCapat, () => `fe = {1/2π}·√{{${f(A.c_capat / 1e6, 2)}·10⁶/${fN(A.m_piesa_ref)}}} = ${f(A.fe_capat,1)} Hz`);
     T(P.Lmij, () => `L1=L2=S+0,32=${fN(S)}+0,32=${f(A.L_mij,2)} m`);
     T(P.c25, () => `c=csp1L1+1L2=0,62·106·1${f(A.L_mij,2)}+1${f(A.L_mij,2)}=${m10(A.belt['AT10-25'].c_mid,2,6)} N/m`);
-    T(P.fe25, () => `fe = {1/2π}·sqrt({${m10(A.belt['AT10-25'].c_mid,2,6)}/${fN(A.m_piesa_ref)}}) = ${f(A.belt['AT10-25'].fe_mid,1)} Hz`);
+    T(P.fe25, () => `fe = {1/2π}·√{{${f(A.belt['AT10-25'].c_mid / 1e6, 2)}·10⁶/${fN(A.m_piesa_ref)}}} = ${f(A.belt['AT10-25'].fe_mid,1)} Hz`);
     T(P.c32, () => `c=csp1L1+1L2=${f(A.belt[V.belt_ales].csp,2)}·106·1${f(A.L_mij,2)}+1${f(A.L_mij,2)}=${m10(A.belt[V.belt_ales].c_mid,2,6)} N/m`);
-    T(P.fe32, () => `fe = {1/2π}·sqrt({${m10(A.belt[V.belt_ales].c_mid,2,6)}/${fN(A.m_piesa_ref)}}) = ${f(A.belt[V.belt_ales].fe_mid,1)} Hz`);
+    T(P.fe32, () => `fe = {1/2π}·√{{${f(A.belt[V.belt_ales].c_mid / 1e6, 2)}·10⁶/${fN(A.m_piesa_ref)}}} = ${f(A.belt[V.belt_ales].fe_mid,1)} Hz`);
     T(P.mcurea, () => `mcurea=2 S+0,3 m'=2·${fN(S)}+0,3·${fN(V.mp_belt)}=${f(A.mcurea,3)} kg`);
     T(P.Jcurea, () => `mcureadp22=${f(A.mcurea,3)}\u00B7${f(A.dp_m / 2, 5)}2=${m10(A.Jcurea,1,-4)} kg\u00B7m2`);
     T(P.mr2p, () => `m${A.ax}dp22=${fN(A.m_piesa_ref)}\u00B7${f(A.dp_m / 2, 5)}2=${f(A.mr2_piesa,4)} kg\u00B7m2`);

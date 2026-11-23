@@ -428,8 +428,10 @@ function main() {
       const gen = M[mathUnits[k].id];
       if (!gen) throw new Error(`no math template for id ${mathUnits[k].id}`);
       const genText = gen();
+      if (mathUnits[k].id === 304) console.error('DEBUG304:', JSON.stringify(genText));
       const hasMarkup = genText.indexOf('{') >= 0 && genText.indexOf('${') < 0;
       if (hasMarkup) {
+        console.error('DEBUG_MARKUP: using OMML for id', mathUnits[k].id);
         res += makeMathSpan(genText);
         stats.math++;
       } else {
