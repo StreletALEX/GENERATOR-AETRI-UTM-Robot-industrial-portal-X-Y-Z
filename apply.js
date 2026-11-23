@@ -427,6 +427,7 @@ function main() {
       const gen = M[mathUnits[k].id];
       if (!gen) throw new Error(`no math template for id ${mathUnits[k].id}`);
       const newTexts = slotRegions(docTexts, gen());
+      if (mathUnits[k].id === 322) console.error('DBG322 docTexts=' + JSON.stringify(docTexts) + ' gen=' + JSON.stringify(gen()) + ' result=' + JSON.stringify(newTexts));
       if (newTexts !== null) {
         res += applyRedistribution(spanXml, slots, newTexts);
         stats.math++;

@@ -139,19 +139,19 @@ function build(V) {
     T(P.c32, () => `c=csp1L1+1L2=${f(A.belt[V.belt_ales].csp,2)}·106·1${f(A.L_mij,2)}+1${f(A.L_mij,2)}=${m10(A.belt[V.belt_ales].c_mid,2,6)} N/m`);
     T(P.fe32, () => `fe=12πcm=12π${m10(A.belt[V.belt_ales].c_mid,2,6)}${fN(A.m_piesa_ref)}=${f(A.belt[V.belt_ales].fe_mid,1)} Hz`);
     T(P.mcurea, () => `mcurea=2 S+0,3 m'=2·${fN(S)}+0,3·${fN(V.mp_belt)}=${f(A.mcurea,3)} kg`);
-    T(P.Jcurea, () => `mcureadp22=${f(A.mcurea,3)}·0,050932=${m10(A.Jcurea,1,-4)} kg·m2`);
-    T(P.mr2p, () => `m${A.ax}dp22=${fN(A.m_piesa_ref)}·0,050932=${f(A.mr2_piesa,4)} kg·m2`);
-    T(P.mr2g, () => `m${A.ax}dp22=${fN(A.m_gol_ref)}·0,050932=${f(A.mr2_gol,4)} kg·m2`);
+    T(P.Jcurea, () => `mcureadp22=${f(A.mcurea,3)}\u00B7${f(A.dp_m / 2, 5)}2=${m10(A.Jcurea,1,-4)} kg\u00B7m2`);
+    T(P.mr2p, () => `m${A.ax}dp22=${fN(A.m_piesa_ref)}\u00B7${f(A.dp_m / 2, 5)}2=${f(A.mr2_piesa,4)} kg\u00B7m2`);
+    T(P.mr2g, () => `m${A.ax}dp22=${fN(A.m_gol_ref)}\u00B7${f(A.dp_m / 2, 5)}2=${f(A.mr2_gol,4)} kg\u00B7m2`);
     T(P.Jtri2, () => `Jtr+Jci2=${f(A.Jroti/1e-4,1)}+${f(A.Jcurea/1e-4,1)}+0,2·10-4${A.i}2=${m10(A.Jtr_plus_Jc_i2,2,-4)} kg·m2`);
     T(P.mr2i2, () => `m rtr2i2=${f(A.mr2_piesa,4)}${A.i}2=${m10(A.mr2_i2_piesa,2,-4)} kg·m2`);
   };
   belt({ nr: 267, nmot12: 270, nmot16: 272, rred: 275, Mout: 282, Mout12: 285, Mech: 288, Fbelt: 299, cCapat: 302, feCapat: 304, Lmij: 307, c25: 310, fe25: 312, c32: 315, fe32: 317, mcurea: 328, Jcurea: 331, mr2p: 334, mr2g: 336, Jtri2: 339, mr2i2: 342 }, Y, inp.SY, V.Fmax_Y);
   belt({ nr: 348, nmot12: 351, nmot16: 353, rred: 356, Mout: 363, Mout12: 366, Mech: 369, Fbelt: 373, cCapat: 376, feCapat: 378, Lmij: 381, c25: 384, fe25: 386, c32: 389, fe32: 391, mcurea: 396, Jcurea: 399, mr2p: 402, mr2g: 404, Jtri2: 407, mr2i2: 410 }, X, inp.SX, V.Fmax_X);
   T(263, () => `dp=z pπ=${Y.z_ales}·10π=${f(Y.dp, 2)} mm`);
-    T(292, () => `\u0394sjoc=joc60\u00B7\u03C0/180\u00B7dp/2=10\u00B760\u00B7\u03C0/180\u00B7${f(Y.dp / 2, 2)}=${f(Y.ds_joc_std,3)} mm`);
-    T(295, () => `\u0394sjoc=joc60\u00B7\u03C0/180\u00B7dp/2=5\u00B760\u00B7\u03C0/180\u00B7${f(Y.dp / 2, 2)}=${f(Y.ds_joc_R,3)} mm`);
-    T(322, () => `mr=\u03C1 \u00B7 \u03C0 \u00B7 (dp/2)\u00B2 \u00B7 b=7850\u00B7\u03C0\u00B7${f(Y.dp_m / 2, 5)}\u00B2\u00B7${f(V.bw_Y,3)}=${f(Y.mr,2)} kg`);
-    T(325, () => `Jro\u021Bi=2\u00B712 \u00B7 mr \u00B7 (dp/2)\u00B2=2\u00B712\u00B7${f(Y.mr,2)}\u00B7${f(Y.dp_m / 2, 5)}\u00B2=${m10(Y.Jroti,1,-4)} kg\u00B7m\u00B2`);
+  T(292, () => `\u0394sjoc=joc60\u00B7\u03C0180\u00B7dp2=10\u00B760\u00B7\u03C0180\u00B7${f(Y.dp / 2, 2)}=${f(Y.ds_joc_std,3)} mm`);
+  T(295, () => `\u0394sjoc=joc60\u00B7\u03C0180\u00B7dp2=5\u00B760\u00B7\u03C0180\u00B7${f(Y.dp / 2, 2)}=${f(Y.ds_joc_R,3)} mm`);
+  T(322, () => `mr=\u03C1 \u03C0dp22b=7850\u00B7\u03C0\u00B7${f(Y.dp_m / 2, 5)}\u00B2\u00B7${f(V.bw_Y,3)}=${f(Y.mr,2)} kg`);
+  T(325, () => `Jro\u021Bi=2\u00B712 mrdp22=2\u00B712\u00B7${f(Y.mr,2)}\u00B7${f(Y.dp_m / 2, 5)}\u00B2=${m10(Y.Jroti,1,-4)} kg\u00B7m2`);
 
   // ---------- §2.5 reduction ----------
   T(416, () => `εmot=arred=${f(kZ.a,3)}2,5465·10-3=${fi(V.eps_Z)} rad/s2`);

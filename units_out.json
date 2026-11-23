@@ -1905,12 +1905,12 @@
   {
    "id": 292,
    "type": "math",
-   "text": "Δsjoc=joc60·π180·dp2=1060·π180·50,93=0,185 mm"
+   "text": "Δsjoc=joc60·π180·dp2=10·60·π180·63,66=0,185 mm"
   },
   {
    "id": 293,
    "type": "para",
-   "text": "⟦Δsjoc=joc60·π180·dp2=1060·π180·50,93=0,185 mm⟧"
+   "text": "⟦Δsjoc=joc60·π180·dp2=10·60·π180·63,66=0,185 mm⟧"
   },
   {
    "id": 294,
@@ -1920,17 +1920,17 @@
   {
    "id": 295,
    "type": "math",
-   "text": "Δsjoc=joc60·π180·dp2=560·π180·50,93=0,093 mm"
+   "text": "Δsjoc=joc60·π180·dp2=5·60·π180·63,66=0,093 mm"
   },
   {
    "id": 296,
    "type": "para",
-   "text": "⟦Δsjoc=joc60·π180·dp2=560·π180·50,93=0,093 mm⟧"
+   "text": "⟦Δsjoc=joc60·π180·dp2=5·60·π180·63,66=0,093 mm⟧"
   },
   {
    "id": 297,
    "type": "para",
-   "text": "unde: joc = 10 arcmin, respectiv 5 arcmin — jocul unghiular al reductorului RP-060 cu două trepte, varianta standard și varianta -R (tabelul A.4); 60 și π/180 — conversia minutelor de arc în grade și a gradelor în radiani; dp/2 = 50,93 mm — raza primitivă a roții de curea, în milimetri (calculată mai sus). Repetabilitatea cerută este Δs = ±0,15 mm: varianta standard dă 0,185 mm — sub limită, dar consumă 123 % din ea, fără rezervă pentru elasticitatea curelei; varianta cu joc redus dă 0,093 mm, jumătate. Se adoptă RP-060-R, cu compensarea jocului în servoconvertor și apropierea unidirecțională a punctului B (paletizarea o permite: cutiile se așază mereu din același sens)."
+   "text": "unde: joc = 10 arcmin, respectiv 5 arcmin — jocul unghiular al reductorului RP-060 cu două trepte, varianta standard și varianta -R (tabelul A.4); 60 și π/180 — conversia minutelor de arc în grade și a gradelor în radiani; dp/2 = 63,66 mm — raza primitivă a roții de curea, în milimetri (calculată mai sus). Repetabilitatea cerută este Δs = ±0,15 mm: varianta standard dă 0,185 mm — sub limită, dar consumă 123 % din ea, fără rezervă pentru elasticitatea curelei; varianta cu joc redus dă 0,093 mm, jumătate. Se adoptă RP-060-R, cu compensarea jocului în servoconvertor și apropierea unidirecțională a punctului B (paletizarea o permite: cutiile se așază mereu din același sens)."
   },
   {
    "id": 298,
@@ -2045,7 +2045,7 @@
   {
    "id": 320,
    "type": "para",
-   "text": "Pe Y, centurile acceptabile (15 < fe < 30 Hz) sunt AT10-25 dă 28,7 Hz; cea cu csp cel mai mare ar fi AT10-25. Se adoptă însă AT10-75 (csp = 1,90·10⁶ N, fe = 50,3 Hz), pentru unificarea pieselor (roți, curele, întinzători). Regulatoarele axei se acordează pentru poziția cea mai elastică (§5.2)."
+   "text": "Pe Y, centurile acceptabile (15 < fe < 30 Hz) sunt AT10-25 dă 28,7 Hz; cea cu csp cel mai mare ar fi AT10-25. Se adoptă însă AT10-75 (csp = 1,90·10⁶ N, fe = 50,3 Hz), pentru rigiditate suficientă pe Y (pe X se folosește AT10-75). Regulatoarele axei se acordează pentru poziția cea mai elastică (§5.2)."
   },
   {
    "id": 321,
@@ -2055,12 +2055,12 @@
   {
    "id": 322,
    "type": "math",
-   "text": "mr=ρ πdp22b=7850·π·0,050932·0,075=7,50 kg"
+   "text": "mr=ρ πdp22b=7850·π·0,06366²·0,075=7,50 kg"
   },
   {
    "id": 323,
    "type": "para",
-   "text": "⟦mr=ρ πdp22b=7850·π·0,050932·0,075=7,50 kg⟧"
+   "text": "⟦mr=ρ πdp22b=7850·π·0,06366²·0,075=7,50 kg⟧"
   },
   {
    "id": 324,
@@ -2070,12 +2070,12 @@
   {
    "id": 325,
    "type": "math",
-   "text": "Jroți=2·12 mrdp22=2·12·7,50·0,050932=303,8·10-4 kg·m2"
+   "text": "Jroți=2·12 mrdp22=2·12·7,50·0,06366²=303,8·10-4 kg·m2"
   },
   {
    "id": 326,
    "type": "para",
-   "text": "⟦Jroți=2·12 mrdp22=2·12·7,50·0,050932=303,8·10-4 kg·m2⟧"
+   "text": "⟦Jroți=2·12 mrdp22=2·12·7,50·0,06366²=303,8·10-4 kg·m2⟧"
   },
   {
    "id": 327,
@@ -2100,12 +2100,12 @@
   {
    "id": 331,
    "type": "math",
-   "text": "mcureadp22=0,792·0,050932=32,1·10-4 kg·m2"
+   "text": "mcureadp22=0,792·0,063662=32,1·10-4 kg·m2"
   },
   {
    "id": 332,
    "type": "para",
-   "text": "⟦mcureadp22=0,792·0,050932=32,1·10-4 kg·m2⟧"
+   "text": "⟦mcureadp22=0,792·0,063662=32,1·10-4 kg·m2⟧"
   },
   {
    "id": 333,
@@ -2115,27 +2115,27 @@
   {
    "id": 334,
    "type": "math",
-   "text": "mΣYdp22=63,5·0,050932=0,2574 kg·m2"
+   "text": "mΣYdp22=63,5·0,063662=0,2574 kg·m2"
   },
   {
    "id": 335,
    "type": "para",
-   "text": "⟦mΣYdp22=63,5·0,050932=0,2574 kg·m2⟧"
+   "text": "⟦mΣYdp22=63,5·0,063662=0,2574 kg·m2⟧"
   },
   {
    "id": 336,
    "type": "math",
-   "text": "mΣYdp22=53,5·0,050932=0,2168 kg·m2"
+   "text": "mΣYdp22=53,5·0,063662=0,2168 kg·m2"
   },
   {
    "id": 337,
    "type": "para",
-   "text": "⟦mΣYdp22=53,5·0,050932=0,2168 kg·m2⟧"
+   "text": "⟦mΣYdp22=53,5·0,063662=0,2168 kg·m2⟧"
   },
   {
    "id": 338,
    "type": "para",
-   "text": "unde: ρ = 7850 kg/m³ — densitatea oțelului (valoare adoptată, proprietate de material); dp/2 = 0,05093 m — raza primitivă a roții; b = 0,075 m — lățimea curelei AT10-75 (tabelul A.8); S = 0,9 m — cursa (fișa individuală); 0,3 m — capetele curelei (Îndrumar, §2.6.2); m′ = 0,33 kg/m — masa pe metru a curelei AT10-75 (tabelul A.8); mΣY = 63,5 kg cu piesă, 53,5 kg în gol (§2.1). Toate se reduc la arborele motorului împărțind la i² — elementele rotative ale transmisiei împreună cu cupla dintre motor și reductor (Jc = 0,2·10⁻⁴ kg·m², capăt de arbore sub 20 mm, Îndrumar, §2.6.1):"
+   "text": "unde: ρ = 7850 kg/m³ — densitatea oțelului (valoare adoptată, proprietate de material); dp/2 = 0,06366 m — raza primitivă a roții; b = 0,075 m — lățimea curelei AT10-75 (tabelul A.8); S = 0,9 m — cursa (fișa individuală); 0,3 m — capetele curelei (Îndrumar, §2.6.2); m′ = 0,33 kg/m — masa pe metru a curelei AT10-75 (tabelul A.8); mΣY = 63,5 kg cu piesă, 53,5 kg în gol (§2.1). Toate se reduc la arborele motorului împărțind la i² — elementele rotative ale transmisiei împreună cu cupla dintre motor și reductor (Jc = 0,2·10⁻⁴ kg·m², capăt de arbore sub 20 mm, Îndrumar, §2.6.1):"
   },
   {
    "id": 339,

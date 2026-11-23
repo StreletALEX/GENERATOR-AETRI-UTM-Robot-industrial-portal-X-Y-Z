@@ -111,7 +111,7 @@ if (csvContent) {
 
 const docxName = (variant === 13) ? 'Varianta mea.docx' : `Varianta ${variant}.docx`;
 const docxPath = path.join(variantDir, docxName);
-const unitsFile = path.join(ROOT, `units_${variant}.json`);
+const unitsFile = (variant === 13) ? path.join(ROOT, 'units_out.json') : path.join(ROOT, `units_${variant}.json`);
 
 // ---------- run pipeline ----------
 console.log(`\n=== Generating variant ${variant} ===`);

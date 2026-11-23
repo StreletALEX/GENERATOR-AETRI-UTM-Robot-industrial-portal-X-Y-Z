@@ -176,9 +176,9 @@ function buildTables(V) {
     ['2', 'servomotor axa Y, cu encoder absolut', mY.tip, `${f(mY.PN_kW, 1)} kW, ${f(mY.MN, 2)} N·m`, '1'],
     ['3', 'servomotor axa X, cu encoder absolut', mX.tip, `${f(mX.PN_kW, 1)} kW, ${f(mX.MN, 2)} N·m`, '1'],
     ['4', 'reductor planetar axele X și Y, joc redus', Y.i === X.i ? `RP-060-R, i = ${Y.i}` : `RP-060-R, i = ${Y.i} (Y), ${X.i} (X)`, `${fi(rp.MN)} / ${fi(rp.Mmax)} N·m, 5 arcmin`, '2'],
-    ['5', `roți dințate AT10 z = ${Y.z_ales}, b = ${fi(V.bw * 1000)} mm`, '—', `dp ${f(Y.dp, 1)} mm`, '4'],
-    ['6', `curea dințată ${V.belt_ales}, axa X, L ≈ ${f(LX, 1)} m (2 · ${fN(inp.SX + 0.3)} m + π dp)`, V.belt_ales, `Fadm ${fi(beltAles.Fadm)} N`, '1'],
-    ['7', `curea dințată ${V.belt_ales}, axa Y, L ≈ ${f(LY, 1)} m (2 · ${fN(inp.SY + 0.3)} m + π dp)`, V.belt_ales, `Fadm ${fi(beltAles.Fadm)} N`, '1'],
+    ['5', `roți dințate AT10 z = ${Y.z_ales}, b = ${fi(V.bw_Y * 1000)} mm`, '—', `dp ${f(Y.dp, 1)} mm`, '4'],
+    ['6', `curea dințată ${V.belt_X}, axa X, L ≈ ${f(LX, 1)} m (2 · ${fN(inp.SX + 0.3)} m + π dp)`, V.belt_X, `Fadm ${fi(V.axX.belt[V.belt_X].Fadm)} N`, '1'],
+    ['7', `curea dințată ${V.belt_Y}, axa Y, L ≈ ${f(LY, 1)} m (2 · ${fN(inp.SY + 0.3)} m + π dp)`, V.belt_Y, `Fadm ${fi(V.axY.belt[V.belt_Y].Fadm)} N`, '1'],
     ['8', 'șurub cu bile axa Z, cu piuliță și lagăre', `ȘB 16×16, L = ${fi(V.L_surub * 1000)} mm`, `Ca ${fi(sb.Ca)} N`, '1'],
     ['9', `contragreutate ${fN(V.mcw)} kg cu rolă și cablu`, '—', '—', '1'],
     ['10', 'cuplă elastică cu burduf', '—', '—', '3'],
@@ -214,7 +214,11 @@ function buildTables(V) {
 
     ['RP-060-R', `${Y.i === X.i ? `i = ${Y.i} (2 trepte)` : `i = ${Y.i} (Y), ${X.i} (X) (2 trepte)`}; MN ${fi(rp.MN)} N·m; Mmax ${fi(rp.Mmax)} N·m; J1 ${fN(rp['J1_1e-4'])}·10${M4}; J2 ${fN(rp['J2_1e-4'])}·10${M4} kg·m${SUP2}; η 0,94; joc 10 arcmin (2 trepte, standard), 5 arcmin (varianta cu joc redus); nin,max ${fi(rp.nin_max)}; 1,0 kg`],
     ['ȘB 16×16', `dr ${f(sb.dr, 1)} mm; Ca ${fi(sb.Ca)} N; C0a ${fiG(sb.C0a)} N; J′ ${fN(sb['Jp_1e-4'])}·10${M4} kg·m${SUP2}/m; η 0,93`],
-    [V.belt_ales, `b = ${fi(V.bw * 1000)} mm; Fadm ${fi(beltAles.Fadm)} N; csp ${f(beltAles.csp_1e6, 2)}·10${SUP6} N; ${fN(beltAles.mp_kg_m)} kg/m; roți z = ${Y.z_ales}, dp = ${f(Y.dp, 1)} mm (AT10-25: 900 N, 0,62·10${SUP6} N${V.belt_ales === 'AT10-32' ? '; AT10-75: csp 1,9·10' + SUP6 + ' N' : '; AT10-32: 1200 N, 0,80·10' + SUP6 + ' N'})`],
+    ...(V.belt_Y !== V.belt_X ? [
+      [V.belt_Y + ' (Y) / ' + V.belt_X + ' (X)', `Y: b = ${fi(V.axY.belt[V.belt_Y].b)} mm; Fadm ${fi(V.axY.belt[V.belt_Y].Fadm)} N; csp ${f(V.axY.belt[V.belt_Y].csp, 2)}·10${SUP6} N; ${fN(V.axY.belt[V.belt_Y].mp)} kg/m (roți z = ${Y.z_ales}, dp = ${f(Y.dp, 1)} mm) | X: b = ${fi(V.axX.belt[V.belt_X].b)} mm; Fadm ${fi(V.axX.belt[V.belt_X].Fadm)} N; csp ${f(V.axX.belt[V.belt_X].csp, 2)}·10${SUP6} N; ${fN(V.axX.belt[V.belt_X].mp)} kg/m (roți z = ${X.z_ales}, dp = ${f(X.dp, 1)} mm)`],
+    ] : [
+      [V.belt_ales, `b = ${fi(V.bw * 1000)} mm; Fadm ${fi(beltAles.Fadm)} N; csp ${f(beltAles.csp_1e6, 2)}·10${SUP6} N; ${fN(beltAles.mp_kg_m)} kg/m; roți z = ${Y.z_ales}, dp = ${f(Y.dp, 1)} mm (AT10-25: 900 N, 0,62·10${SUP6} N${V.belt_ales === 'AT10-32' ? '; AT10-75: csp 1,9·10' + SUP6 + ' N' : '; AT10-32: 1200 N, 0,80·10' + SUP6 + ' N'})`],
+    ]),
     [conv.tip, `${conv.alim.replace('×', ' × ')}; ${fi(conv.IN)} / ${fi(conv.Imax)} A; ≤ ${fN(conv.Pmotor_max_kW)} kW; chopper intern ${fi(conv.Pbr_W)} W; Rmin ${fi(conv.Rmin_ohm)} Ω; Udc ${fi(conv.Udc)} V; STO; EtherCAT`],
   ];
 
