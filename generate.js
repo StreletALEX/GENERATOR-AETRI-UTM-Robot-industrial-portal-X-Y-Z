@@ -92,12 +92,15 @@ const variantDir = path.join(BASE, `Varianta ${variant}`);
 fs.mkdirSync(variantDir, { recursive: true });
 
 // copy CSV if exists
-const srcCsv = path.join(BASE, 'New folder', 'varianta.csv');
-// also check if there's a variant-specific CSV
+const csvCandidates = [
+  path.join(BASE, 'varianta.csv'),
+  path.join(BASE, 'New folder', 'varianta.csv'),
+];
+let srcCsv = csvCandidates.find(p => fs.existsSync(p));
 let csvContent = null;
 if (dataFile && dataFile.toLowerCase().endsWith('.csv')) {
   csvContent = fs.readFileSync(dataFile, 'utf8');
-} else if (fs.existsSync(srcCsv)) {
+} else if (srcCsv) {
   csvContent = fs.readFileSync(srcCsv, 'utf8');
   // update varianta number in CSV
   csvContent = csvContent.replace(/^varianta,\d+/m, `varianta,${variant}`);
