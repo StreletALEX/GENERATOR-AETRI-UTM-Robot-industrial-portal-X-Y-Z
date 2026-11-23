@@ -445,6 +445,13 @@ function main() {
     let data;
     if (entry.entryName === 'word/document.xml') data = Buffer.from(outXml, 'utf8');
     else if (entry.entryName === 'docProps/core.xml') data = Buffer.from(zip.readAsText(entry).replace('(varianta 20)', `(varianta ${v})`), 'utf8');
+    else if (entry.entryName === 'word/settings.xml') {
+      let s = zip.readAsText(entry);
+      if (!s.includes('w:updateFields')) {
+        s = s.replace('</w:settings>', '<w:updateFields w:val="true"/></w:settings>');
+      }
+      data = Buffer.from(s, 'utf8');
+    }
     else data = zip.readFile(entry);
     newZip.addFile(entry.entryName, data);
   }

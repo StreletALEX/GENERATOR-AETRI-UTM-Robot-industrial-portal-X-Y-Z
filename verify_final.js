@@ -114,7 +114,7 @@ console.log('table cells checked:', cellN);
   const namesA = za.getEntries().map(e => e.entryName).sort();
   const namesB = zo.getEntries().map(e => e.entryName).sort();
   if (JSON.stringify(namesA) !== JSON.stringify(namesB)) bad(`zip entry lists differ: ${JSON.stringify(namesA)} vs ${JSON.stringify(namesB)}`);
-  const exceptions = new Set(['word/document.xml', 'docProps/core.xml']);
+  const exceptions = new Set(['word/document.xml', 'docProps/core.xml', 'word/settings.xml']);
   for (const name of namesA) {
     if (exceptions.has(name)) continue;
     const a = za.getEntry(name).getData();
