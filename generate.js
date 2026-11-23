@@ -39,7 +39,7 @@ function parseCSV(text) {
     out[k] = isNaN(num) ? v : num;
   }
   // normalize keys to the compute.js field names
-  const map = { Mp:'mp', Mg:'mg', sx:'SX', tx:'tX', Mx:'mX', F0x:'F0X', sy:'SY', ty:'tY', My:'mY', F0y:'F0Y', sz:'hZ', tz:'tZ', Mz:'mZ', a:'alpha', F0z:'F0Z', Tp:'tp', Aadm:'aadm', '????':'ds', Lh:'Lh', Tamb:'Tamb' };
+  const map = { Mp:'mp', Mg:'mg', sx:'SX', tx:'tX', Mx:'mX', F0x:'F0X', sy:'SY', ty:'tY', My:'mY', F0y:'F0Y', sz:'hZ', tz:'tZ', Mz:'mZ', a:'alpha', F0z:'F0Z', Tp:'tp', Aadm:'aadm', '????':'ds', S:'ds', Lh:'Lh', Tamb:'Tamb' };
   const norm = {};
   for (const [k, v] of Object.entries(out)) {
     if (k === '_variant') { norm._variant = v; continue; }
